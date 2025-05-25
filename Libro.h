@@ -1,33 +1,38 @@
 
 
+
 class Libro {
 
 private:
 
-    char _isbn[13];
-    char _nombreDelLibro[50];
+    char _isbn[20];
+    char _nombreDeLibro[50];
+    char _nombreDelAutor[50];
     char _genero[50];
     int _codLibro;
     int _codAutor;
-    int cantidadEjemplares;
+    int _cantidadEjemplares;
     //Fecha fechaDePublicacion;
-    bool Estado;
+    bool _estado = true;
 
 public:
 
     //setters
-    char setISBN(char isbn[13]);
-    char setNombreDeLibro(char nombreDelLibro);
-    char setGenero(char genero);
-    int setCodLibro(int codLibro);
-    int setCodAutor(int codAutor);
-    int setCantidadEjemplares(int cantidadEjemplares);
+    void setISBN(char isbn[13]);
+    void setNombreDeLibro(char nombreDelLibro[50]);
+    void setnombreDelAutor(char nnombreDelAutor[50]);
+    void setGenero(char genero[30]);
+    void setCodLibro(int codLibro);
+    void setCodAutor(int codAutor);
+    void setCantidadEjemplares(int cantidadEjemplares);
     // Fecha setFechaDePublicacion(Fecha FechaDePublicacion);
-    bool setEstado(bool estado);
+    void setEstado(bool estado);
 
     //getters
     char* getISBN();
     char* getNombreDeLibro();
+    char* getNombreDelAutor();
+    char* getGenero();
     int getCodLibro();
     int getCodAutor();
     int getCantidadEjemplares();
@@ -36,9 +41,9 @@ public:
 
 
     //metodos
+    void cargarLibro();
     void mostrarInfo();
     void disponible();
-
 
 };
 

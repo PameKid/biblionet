@@ -32,10 +32,21 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="Libro.cpp">
-			<Option target="&lt;{~None~}&gt;" />
+		<Unit filename="ArchivoLibro.cpp">
+			<Option target="Debug" />
 		</Unit>
-		<Unit filename="Libro.h" />
+		<Unit filename="ArchivoLibro.h">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="Libro.cpp">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="Libro.h">
+			<Option compile="1" />
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="ManagerLibro.cpp" />
+		<Unit filename="ManagerLibro.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

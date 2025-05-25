@@ -3,3 +3,31 @@
 	<iostream>
 	<locale.h>
 
+1748213765 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\main.cpp
+	<iostream>
+	<locale.h>
+	"ManagerLibro.h"
+
+1748204402 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\libro.h
+
+1748196862 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\libro.cpp
+	<iostream>
+	<string.h>
+	"Libro.h"
+
+1748204402 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\libro.h
+
+1748213749 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\managerlibro.cpp
+	"ManagerLibro.h"
+	<iostream>
+
+1748212455 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\managerlibro.h
+	"ArchivoLibro.h"
+
+1748213485 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\archivolibro.cpp
+	"ArchivoLibro.h"
+	<iostream>
+
+1748213473 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\archivolibro.h
+	"Libro.h"
+

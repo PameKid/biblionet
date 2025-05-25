@@ -1,33 +1,35 @@
+
 #include <iostream>
-#include <locale.h>
+#include<string.h>
+#include "Libro.h"
 
 using namespace std;
 
-char Libro::setISBN(char isbn[13]){
+void Libro::setISBN(char isbn[20]){
     strcpy(this->_isbn, isbn);
 }
 
-char Libro::setNombreDeLibro(char nombreDelLibro){
-    strcpy(this->_nombreDelLibro,nombreDelLibro);
+void Libro::setNombreDeLibro(char nombreDelLibro[50]){
+    strcpy(this->_nombreDeLibro,nombreDelLibro);
 }
 
-char Libro::setGenero(char genero){
+void Libro::setGenero(char genero[50]){
     strcpy(this->_genero, genero);
 }
 
-int Libro::setCodLibro(int codLibro){
+void Libro::setCodLibro(int codLibro){
     _codLibro = codLibro;
 }
-int Libro::setCodAutor(int codAutor){
+void Libro::setCodAutor(int codAutor){
     _codAutor = codAutor;
 }
-int Libro::setCantidadEjemplares(int cantidadEjemplares){
+void Libro::setCantidadEjemplares(int cantidadEjemplares){
     _cantidadEjemplares = cantidadEjemplares;
 }
 
 // Fecha::Libro setFechaDePublicacion(Fecha FechaDePublicacion);
 
-bool Libro::setEstado(bool estado){
+void Libro::setEstado(bool estado){
      _estado = estado;
 }
 
@@ -37,7 +39,7 @@ char* Libro::getISBN(){
 }
 
 char* Libro::getNombreDeLibro(){
-    return _NombreDeLibro;
+    return _nombreDeLibro;
 }
 
 int Libro::getCodLibro(){
@@ -47,15 +49,46 @@ int Libro::getCodLibro(){
 int Libro::getCodAutor(){
     return _codAutor;
 }
-int getCantidadEjemplares(){
+
+int Libro::getCantidadEjemplares(){
     return _cantidadEjemplares;
 }
 //Fecha Libro:: getFechaDePublicacion(){}
-bool Libroo::getEstado(){
+bool Libro::getEstado(){
     return _estado;
 }
 
-//metodos
-void Libro::mostrarInfo(){}
-void Libro::disponible(){}
+void Libro::cargarLibro(){
+    cout << "Ingrese el nombre del Libro: " << endl;
+    cin.ignore();
+    cin.getline(_nombreDeLibro, 50);
+    cout << "Ingrese el nombre del autor del libro: " << endl;
+    //cin.ignore();
+    cin.getline(_nombreDelAutor,50);
+    cout << "Ingrese el código del libro:" << endl;
+    cin >> _codLibro;
+    cout << "Ingrese el código del autor: " << endl;
+    cin >>_codAutor;
+    cout << "Ingrese el ISBN del libro " << endl;
+    cin.ignore();
+    cin.getline(_isbn, 20);
+    cout << "Ingrese el género del libro: " << endl;
+    //cin.ignore();
+    cin.getline(_genero,50);
+    cout << "Ingrese la cantidad de ejemplares del libro: " << endl;
+    cin >> _cantidadEjemplares;
+    //cout << "Ingrese la fecha de publicación << endl;
 
+}
+
+void Libro::mostrarInfo(){
+    cout << "Los datos ingresados son los siguientes: " << endl;
+    cout << "Nombre del Libro: " << _nombreDeLibro << endl;
+    cout << "Nombre del autor del libro: " << _nombreDelAutor << endl;
+    cout << "Código del libro:" <<  _codLibro << endl;
+    cout << "Código del autor: " << _codAutor << endl;
+    cout << " ISBN del libro " << _isbn << endl;
+    cout << "Género del libro: " <<  _genero << endl;
+    cout << "Cantidad de ejemplares del libro: " << _cantidadEjemplares << endl;
+
+}

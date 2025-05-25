@@ -1,5 +1,7 @@
+//#pragma once
 #include <iostream>
 #include <locale.h>
+#include "ManagerLibro.h"
 
 using namespace std;
 
@@ -24,12 +26,27 @@ int main()
     cin >> opcion;
     system("cls");
 
+    //Libro l1;
+    ManagerLibro ml;
+
     switch(opcion){
 
         case 1:
+            //l1.cargarLibro();
+
+            //l1.mostrarInfo();
+
+            //ml.agregarLibro();
+            ml.listarLibros();
+            //ml.contarRegistros();
+
+            system("pause");
+            //system("cls");
 
             break;
         case 2:
+            ml.buscarLibroPorCodigo();
+            system("pause");
 
             break;
         case 3:
@@ -53,6 +70,6 @@ int main()
 
         system("pause");
         }
-    return 0;
     }
+    return 0;
 }
