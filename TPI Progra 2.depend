@@ -31,3 +31,31 @@
 1748213473 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\archivolibro.h
 	"Libro.h"
 
+1748274274 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\archivolibro.cpp
+	"ArchivoLibro.h"
+	<iostream>
+
+1748274274 c:\users\bgh\desktop\programacion 2 tpint\biblionet\archivolibro.h
+	"Libro.h"
+
+1748274274 c:\users\bgh\desktop\programacion 2 tpint\biblionet\libro.h
+
+1748274274 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\libro.cpp
+	<iostream>
+	<string.h>
+	"Libro.h"
+
+1748274274 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\libro.h
+
+1748274274 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\main.cpp
+	<iostream>
+	<locale.h>
+	"ManagerLibro.h"
+
+1748274274 c:\users\bgh\desktop\programacion 2 tpint\biblionet\managerlibro.h
+	"ArchivoLibro.h"
+
+1748274274 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\managerlibro.cpp
+	"ManagerLibro.h"
+	<iostream>
+
