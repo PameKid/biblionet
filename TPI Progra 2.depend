@@ -65,3 +65,13 @@
 1748274504 c:\users\bgh\desktop\programacion 2 tpint\biblionet\fecha.h
 	<string>
 
+1748275727 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\persona.cpp
+	"Persona.h"
+	<string>
+	<iostream>
+
+1748275727 c:\users\bgh\desktop\programacion 2 tpint\biblionet\persona.h
+	<string>
+	<iostream>
+	"fecha.h"
+
