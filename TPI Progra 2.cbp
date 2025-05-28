@@ -38,6 +38,8 @@
 		<Unit filename="ArchivoLibro.h">
 			<Option target="Debug" />
 		</Unit>
+		<Unit filename="ArchivoSocio.cpp" />
+		<Unit filename="ArchivoSocio.h" />
 		<Unit filename="Libro.cpp">
 			<Option target="Debug" />
 		</Unit>
@@ -47,7 +49,15 @@
 		</Unit>
 		<Unit filename="ManagerLibro.cpp" />
 		<Unit filename="ManagerLibro.h" />
+		<Unit filename="ManagerSocio.cpp" />
+		<Unit filename="ManagerSocio.h" />
+		<Unit filename="fecha.cpp" />
+		<Unit filename="fecha.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="persona.cpp" />
+		<Unit filename="persona.h" />
+		<Unit filename="socio.cpp" />
+		<Unit filename="socio.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

@@ -31,7 +31,7 @@
 1748213473 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\archivolibro.h
 	"Libro.h"
 
-1748274274 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\archivolibro.cpp
+1748443845 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\archivolibro.cpp
 	"ArchivoLibro.h"
 	<iostream>
 
@@ -53,10 +53,10 @@
 	"ManagerLibro.h"
 	"ManagerSocio.h"
 
-1748274274 c:\users\bgh\desktop\programacion 2 tpint\biblionet\managerlibro.h
+1748443845 c:\users\bgh\desktop\programacion 2 tpint\biblionet\managerlibro.h
 	"ArchivoLibro.h"
 
-1748274274 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\managerlibro.cpp
+1748443845 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\managerlibro.cpp
 	"ManagerLibro.h"
 	<iostream>
 

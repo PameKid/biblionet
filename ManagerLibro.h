@@ -9,9 +9,10 @@ public:
     void agregarLibro();
     void listarLibros();
     void contarRegistros();
-    void bajaLibro();
-    void modificarLibro();
     void buscarLibroPorCodigo();
+    void bajaLogicaLibro();
+    void modificarLibro();
+    Libro obtenerLibroPorCodigo(int codLibro);
 
 };
 
