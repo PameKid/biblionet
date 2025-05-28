@@ -25,6 +25,16 @@ Persona :: Persona (string nombre, string apellido, Fecha fechaDeNacimiento, boo
 string Persona ::getNombre()
 {
     return _nombre;
+
+}
+void Persona:: setNombre(string nombre)
+{
+    _nombre=nombre;
+
+}
+string Persona :: getApellido()
+{
+    return _apellido;
 }
 
 void Persona ::setApellido(string apellido)
@@ -36,17 +46,28 @@ bool Persona :: getEstado()
 {
     return _estado;
 }
-void Persona::setEstado(bool Estado)
+void Persona::setEstado(bool estado)
 {
-    _estado= 0;
+    _estado=estado;
 }
 
 Fecha Persona:: getFecaDeNacimiento()
 {
     return _fechaDeNacimiento;
 }
+
 void Persona :: setFechaDeNacimiento(Fecha fechaDeNacimiento)
 {
-
     _fechaDeNacimiento= fechaDeNacimiento;
+}
+
+void Persona:: cargarPersona()
+{
+
+    cout << "Nombre del socio: " ;
+    cin >>  _nombre;
+    cout << "Apellido del socio: ";
+    cin >> _apellido;
+    _fechaDeNacimiento.cargarFecha();
+
 }

@@ -2,6 +2,7 @@
 #include <iostream>
 #include <locale.h>
 #include "ManagerLibro.h"
+#include "ManagerSocio.h"
 
 using namespace std;
 
@@ -28,6 +29,7 @@ int main()
 
     //Libro l1;
     ManagerLibro ml;
+    ManagerSocio managerSocio;
 
     switch(opcion){
 
@@ -45,8 +47,11 @@ int main()
 
             break;
         case 2:
-            ml.buscarLibroPorCodigo();
-            system("pause");
+            //ml.buscarLibroPorCodigo();
+            //system("pause");
+            managerSocio.agregarSocio();
+            cout <<   endl;
+            managerSocio.listarSocios();
 
             break;
         case 3:

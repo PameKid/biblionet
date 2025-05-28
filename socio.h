@@ -11,7 +11,7 @@ class Socio : public Persona
 
 private:
     char _telefono [30];
-    char _DNI [30];
+    char _DNI [8];
     string _direccion;
     string _mail;
     int _codSocio;
@@ -36,6 +36,10 @@ public:
     void setCodSocio(int codSocio);
     void setTelefono(const char* telefono);
     void setDNI(const char* DNI);
+
+
+    void mostrarInfo();
+    void cargarSocio();
 
 
 };

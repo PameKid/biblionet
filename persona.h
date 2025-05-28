@@ -30,5 +30,6 @@ class Persona
     void setApellido (string apellido);
     void setEstado (bool estado);
     void setFechaDeNacimiento (Fecha fechaDeNacimiento);
+    void cargarPersona();
 } ;
         #endif // PERSONA_H_INCLUDED
