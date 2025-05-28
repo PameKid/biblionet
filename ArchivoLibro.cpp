@@ -79,7 +79,6 @@ void ArchivoLibro::obtenerVectorLibros(int cantRegistros, Libro *vecLibros){
 
 void ArchivoLibro::bajaArchivoLibro(){}
 void ArchivoLibro::modificarArchivoLibro(){}
-void ArchivoLibro::buscarArchivoPorCodigo(){}
 
 
 

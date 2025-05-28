@@ -37,7 +37,7 @@ int main()
             //l1.mostrarInfo();
 
             //ml.agregarLibro();
-            ml.listarLibros();
+           // ml.listarLibros();
             //ml.contarRegistros();
 
             system("pause");
@@ -45,12 +45,15 @@ int main()
 
             break;
         case 2:
-            ml.buscarLibroPorCodigo();
+            //ml.buscarLibroPorCodigo(3);
             system("pause");
 
             break;
         case 3:
 
+            ml.buscarLibroPorCodigo();
+
+            system("pause");
             break;
 
         case 4:

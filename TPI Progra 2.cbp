@@ -45,9 +45,17 @@
 			<Option compile="1" />
 			<Option target="Debug" />
 		</Unit>
-		<Unit filename="ManagerLibro.cpp" />
+		<Unit filename="ManagerLibro.cpp">
+			<Option target="Debug" />
+		</Unit>
 		<Unit filename="ManagerLibro.h" />
+		<Unit filename="fecha.cpp" />
+		<Unit filename="fecha.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="persona.cpp" />
+		<Unit filename="persona.h" />
+		<Unit filename="socio.cpp" />
+		<Unit filename="socio.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

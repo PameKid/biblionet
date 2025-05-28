@@ -10,6 +10,7 @@ void ManagerLibro::agregarLibro(){
     l1.cargarLibro();
     archilibro.agregarArchivoLibro(l1);
 }
+
 void ManagerLibro::listarLibros(){ //mostrar la lista de archivos
 
     ArchivoLibro arhivoLibro;
@@ -40,34 +41,50 @@ void ManagerLibro::contarRegistros(){
 }
 
 
-void ManagerLibro::bajaLibro(){}
+void ManagerLibro::bajaLogicaLibro(){
+
+
+
+}
 void ManagerLibro::modificarLibro(){}
 
-
-
 void ManagerLibro::buscarLibroPorCodigo(){
+    int codLibroSolicitado;
+    Libro libroSolicitado;
+    ManagerLibro ml;
 
-    //PEDIRLE AL USUARIO UN CODIGO
-    int ejemploCodig = 3;
+    cout << "Ingrese el código del libro que desea buscar" << endl;
+    cin >> codLibroSolicitado;
 
-    //HACER LA BUSQUEDA
+    libroSolicitado = ml.obtenerLibroPorCodigo(codLibroSolicitado);
+
+    cout << "Los datos del libro solicitado son los siguientes: " << endl;
+    libroSolicitado.mostrarInfo();
+}
+
+Libro ManagerLibro::obtenerLibroPorCodigo(int codLibro){
+
     ArchivoLibro arhivoLibro;
     int cantReg;
     Libro *vecLibros = nullptr;
+    Libro libroobtenido;
 
     cantReg = arhivoLibro.contarRegistros();
     vecLibros = new Libro[cantReg];
 
     arhivoLibro.obtenerVectorLibros(cantReg, vecLibros);
     for(int x=0; x<cantReg; x++){
-        if(vecLibros[x].getCodLibro()==ejemploCodig){
-            vecLibros[x].mostrarInfo();
+        if(vecLibros[x].getCodLibro()==codLibro){
+                //modificar solo debe devolcer un libro
+
+            libroobtenido = vecLibros[x];
+            //vecLibros[x].mostrarInfo();
             break;
         }
     }
 
     delete[]vecLibros;
-
+    return libroobtenido;
 
 }
 
