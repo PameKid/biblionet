@@ -102,3 +102,89 @@
 	"ArchivoSocio.h"
 	"socio.h"
 
+1748470134 source:c:\users\camilote\desktop\trabajo grupal progra2\biblionet\archivolibro.cpp
+	"ArchivoLibro.h"
+	<iostream>
+
+1748470134 c:\users\camilote\desktop\trabajo grupal progra2\biblionet\archivolibro.h
+	"Libro.h"
+
+1748470134 c:\users\camilote\desktop\trabajo grupal progra2\biblionet\libro.h
+
+1748470134 source:c:\users\camilote\desktop\trabajo grupal progra2\biblionet\libro.cpp
+	<iostream>
+	<string.h>
+	"Libro.h"
+
+1748470134 source:c:\users\camilote\desktop\trabajo grupal progra2\biblionet\libro.h
+
+1748480418 source:c:\users\camilote\desktop\trabajo grupal progra2\biblionet\main.cpp
+	<iostream>
+	"MenuLibros.h"
+	"MenuSocios.h"
+	"MenuPrestamos.hh"
+	"MenuPagos.h"
+	"MenuReportes.h"
+
+1748470134 c:\users\camilote\desktop\trabajo grupal progra2\biblionet\managerlibro.h
+	"ArchivoLibro.h"
+
+1748470134 c:\users\camilote\desktop\trabajo grupal progra2\biblionet\managersocio.h
+	"ArchivoSocio.h"
+	"socio.h"
+
+1748470134 c:\users\camilote\desktop\trabajo grupal progra2\biblionet\archivosocio.h
+	"socio.h"
+
+1748470134 c:\users\camilote\desktop\trabajo grupal progra2\biblionet\socio.h
+	"Persona.h"
+	<string>
+	<iostream>
+
+1748470134 c:\users\camilote\desktop\trabajo grupal progra2\biblionet\persona.h
+	<string>
+	<iostream>
+	"fecha.h"
+
+1748470134 c:\users\camilote\desktop\trabajo grupal progra2\biblionet\fecha.h
+	<string>
+
+1748479998 source:c:\users\camilote\desktop\trabajo grupal progra2\biblionet\managerlibro.cpp
+	"ManagerLibro.h"
+	<iostream>
+
+1748470134 source:c:\users\camilote\desktop\trabajo grupal progra2\biblionet\archivosocio.cpp
+	"ArchivoSocio.h"
+	<iostream>
+
+1748470134 source:c:\users\camilote\desktop\trabajo grupal progra2\biblionet\fecha.cpp
+	"Fecha.h"
+	<iostream>
+
+1748470134 source:c:\users\camilote\desktop\trabajo grupal progra2\biblionet\managersocio.cpp
+	"ManagerSocio.h"
+	<iostream>
+
+1748470134 source:c:\users\camilote\desktop\trabajo grupal progra2\biblionet\persona.cpp
+	"Persona.h"
+	<string>
+	<iostream>
+
+1748470134 source:c:\users\camilote\desktop\trabajo grupal progra2\biblionet\socio.cpp
+	<iostream>
+	"Socio.h"
+	<cstring>
+
+1748479437 c:\users\camilote\desktop\trabajo grupal progra2\biblionet\menulibros.h
+	"ManagerLibro.h"
+
+1748480310 c:\users\camilote\desktop\trabajo grupal progra2\biblionet\menusocios.h
+	"ManagerSocio.h"
+	"persona.h"
+
+1748473144 c:\users\camilote\desktop\trabajo grupal progra2\biblionet\menuprestamos.hh
+
+1748473144 c:\users\camilote\desktop\trabajo grupal progra2\biblionet\menupagos.h
+
+1748473144 c:\users\camilote\desktop\trabajo grupal progra2\biblionet\menureportes.h
+

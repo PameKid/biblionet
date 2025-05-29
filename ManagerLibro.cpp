@@ -16,7 +16,7 @@ void ManagerLibro::listarLibros(){ //mostrar la lista de archivos
     ArchivoLibro arhivoLibro;
     int cantReg;
     Libro *vecLibros = nullptr;
-    //arhivoLibro.leerArchivo();
+    arhivoLibro.leerArchivo();
 
     cantReg = arhivoLibro.contarRegistros();
     vecLibros = new Libro[cantReg];
@@ -78,7 +78,7 @@ Libro ManagerLibro::obtenerLibroPorCodigo(int codLibro){
                 //modificar solo debe devolcer un libro
 
             libroobtenido = vecLibros[x];
-            //vecLibros[x].mostrarInfo();
+           // vecLibros[x].mostrarInfo();
             break;
         }
     }

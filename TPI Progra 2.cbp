@@ -51,6 +51,11 @@
 		<Unit filename="ManagerLibro.h" />
 		<Unit filename="ManagerSocio.cpp" />
 		<Unit filename="ManagerSocio.h" />
+		<Unit filename="MenuLibros.h" />
+		<Unit filename="MenuPagos.h" />
+		<Unit filename="MenuPrestamos.hh" />
+		<Unit filename="MenuReportes.h" />
+		<Unit filename="MenuSocios.h" />
 		<Unit filename="fecha.cpp" />
 		<Unit filename="fecha.h" />
 		<Unit filename="main.cpp" />
