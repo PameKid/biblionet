@@ -11,27 +11,27 @@
 	"MenuPagos.h"
 	"MenuReportes.h"
 
-1748619142 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\libro.h
+1748631654 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\libro.h
 
-1748619470 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\libro.cpp
+1748631654 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\libro.cpp
 	<iostream>
 	<string.h>
 	"Libro.h"
 
-1748619142 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\libro.h
+1748631654 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\libro.h
 
-1748621385 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\managerlibro.cpp
+1748637607 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\managerlibro.cpp
 	"ManagerLibro.h"
 	<iostream>
 
 1748440498 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\managerlibro.h
 	"ArchivoLibro.h"
 
-1748621230 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\archivolibro.cpp
+1748629531 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\archivolibro.cpp
 	"ArchivoLibro.h"
 	<iostream>
 
-1748619142 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\archivolibro.h
+1748629531 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\archivolibro.h
 	"Libro.h"
 
 1748443845 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\archivolibro.cpp

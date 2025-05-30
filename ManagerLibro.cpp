@@ -67,7 +67,7 @@ void ManagerLibro::bajaLogicaLibro(){
 
    librobaja = obtenerLibroPorCodigo(codLibroBaja);
 
-   cout << "Presione 1 si el libro que desea dar de baja es el siguiente, 0 en caso contrario: " << endl;
+   cout << "Presione 1 si el libro que desea dar de baja es el siguiente. Presione 0 en caso contrario: " << endl;
    librobaja.mostrarInfo();
 
    cin >> opcion;
@@ -76,15 +76,33 @@ void ManagerLibro::bajaLogicaLibro(){
         librobaja.setEstado(false);
         librobaja.setCantidadEjemplares(100);
         archivobajaestado.modificarArchivoLibro(librobaja);
-        cout << "Se ha dado de baja correctament" << endl;
+        cout << "Se ha dado de baja correctamenta. " << endl;
    }
    else{
-    cout << "Se ha cancelado la baja" << endl;
+    cout << "Se ha cancelado la baja. " << endl;
    }
 
 
 }
-void ManagerLibro::modificarLibro(){}
+void ManagerLibro::modificarLibro(){
+    ManagerLibro libroparamodificar;
+    Libro libroobtenidoparamofificar;
+    ArchivoLibro archivoLibro;
+    int codLibro;
+
+    cout << "Ingrese el código del libro que desea modificar: " << endl;
+    cin >> codLibro;
+
+    libroobtenidoparamofificar = libroparamodificar.obtenerLibroPorCodigo(codLibro);
+
+    cout << "Corrobore que los datos del libro que quiere modificar sean correctos y presione la opcion indicada: " << endl;
+    libroobtenidoparamofificar.mostrarInfoParaModificar();
+
+
+
+
+
+}
 
 
 //metodos auxiliares

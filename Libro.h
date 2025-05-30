@@ -12,7 +12,7 @@ private:
     int _codLibro;
     int _codAutor;
     int _cantidadEjemplares;
-    //Fecha fechaDePublicacion;
+    int _anioDePublicacion;
     bool _estado = true;
     int _posicion;
 
@@ -26,7 +26,7 @@ public:
     void setCodLibro(int codLibro);
     void setCodAutor(int codAutor);
     void setCantidadEjemplares(int cantidadEjemplares);
-    // Fecha setFechaDePublicacion(Fecha FechaDePublicacion);
+    void setAnioDePublicacion(int anio);
     void setEstado(bool estado);
     void setPosicion(int posicion);
 
@@ -38,7 +38,7 @@ public:
     int getCodLibro();
     int getCodAutor();
     int getCantidadEjemplares();
-    //Fecha getFechaDePublicacion();
+    int getAnioDePublicacion();
     bool getEstado();
     int getPosicion();
 
@@ -46,6 +46,7 @@ public:
     //metodos
     void cargarLibro();
     void mostrarInfo();
+    void mostrarInfoParaModificar();
     void disponible();
 
 };
