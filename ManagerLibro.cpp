@@ -16,15 +16,17 @@ void ManagerLibro::listarLibros(){ //mostrar la lista de archivos
     ArchivoLibro arhivoLibro;
     int cantReg;
     Libro *vecLibros = nullptr;
-    arhivoLibro.leerArchivo();
 
     cantReg = arhivoLibro.contarRegistros();
     vecLibros = new Libro[cantReg];
 
     arhivoLibro.obtenerVectorLibros(cantReg, vecLibros);
-    for(int x=0; x<cantReg; x++){
     cout<<"cantidad registros: " << cantReg << endl;
+    for(int x=0; x<cantReg; x++){
+        if(vecLibros[x].getEstado()== true){
+        cout << "***************************" << endl;
         vecLibros[x].mostrarInfo();
+        }
     }
 
     delete[]vecLibros;
@@ -37,30 +39,56 @@ void ManagerLibro::contarRegistros(){
     contadorDeRegistros = archilibro.contarRegistros();
 
     cout << "Existen en el archivo: " << contadorDeRegistros << " registros " << endl;
-
 }
 
+void ManagerLibro::buscarLibroPorCodigo(){ //preguntar si esto puede ser un int y devolver el codigo del libro para darlo de baja
+    int codLibroSolicitado;
+    Libro libroSolicitado;
+
+    cout << "Ingrese el código del libro que desea buscar" << endl;
+    cin >> codLibroSolicitado;
+
+    libroSolicitado = obtenerLibroPorCodigo(codLibroSolicitado);
+
+    cout << "Corrobore que los datos sean correctos: " << endl;
+    libroSolicitado.mostrarInfo();
+}
 
 void ManagerLibro::bajaLogicaLibro(){
 
+    Libro librobaja;
+    ArchivoLibro archivobajaestado;
+    int codLibroBaja;
+    int opcion;
+
+
+    cout << "Ingrese el código del libro que desea eliminar" << endl;
+    cin >> codLibroBaja;
+
+   librobaja = obtenerLibroPorCodigo(codLibroBaja);
+
+   cout << "Presione 1 si el libro que desea dar de baja es el siguiente, 0 en caso contrario: " << endl;
+   librobaja.mostrarInfo();
+
+   cin >> opcion;
+
+   if(opcion == 1){
+        librobaja.setEstado(false);
+        librobaja.setCantidadEjemplares(100);
+        archivobajaestado.modificarArchivoLibro(librobaja);
+        cout << "Se ha dado de baja correctament" << endl;
+   }
+   else{
+    cout << "Se ha cancelado la baja" << endl;
+   }
 
 
 }
 void ManagerLibro::modificarLibro(){}
 
-void ManagerLibro::buscarLibroPorCodigo(){
-    int codLibroSolicitado;
-    Libro libroSolicitado;
-    ManagerLibro ml;
 
-    cout << "Ingrese el código del libro que desea buscar" << endl;
-    cin >> codLibroSolicitado;
+//metodos auxiliares
 
-    libroSolicitado = ml.obtenerLibroPorCodigo(codLibroSolicitado);
-
-    cout << "Los datos del libro solicitado son los siguientes: " << endl;
-    libroSolicitado.mostrarInfo();
-}
 
 Libro ManagerLibro::obtenerLibroPorCodigo(int codLibro){
 
@@ -74,10 +102,11 @@ Libro ManagerLibro::obtenerLibroPorCodigo(int codLibro){
 
     arhivoLibro.obtenerVectorLibros(cantReg, vecLibros);
     for(int x=0; x<cantReg; x++){
-        if(vecLibros[x].getCodLibro()==codLibro){
+        if(vecLibros[x].getCodLibro()==codLibro && vecLibros[x].getEstado() == true){ //valido que el estado del libro sea activo.
                 //modificar solo debe devolcer un libro
 
             libroobtenido = vecLibros[x];
+            libroobtenido.setPosicion(x);
            // vecLibros[x].mostrarInfo();
             break;
         }
@@ -85,7 +114,5 @@ Libro ManagerLibro::obtenerLibroPorCodigo(int codLibro){
 
     delete[]vecLibros;
     return libroobtenido;
-
 }
-
 

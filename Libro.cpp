@@ -33,6 +33,10 @@ void Libro::setEstado(bool estado){
      _estado = estado;
 }
 
+void Libro::setPosicion(int posicion){
+    _posicion = posicion;
+}
+
 //getters
 char* Libro::getISBN(){
     return _isbn;
@@ -57,6 +61,10 @@ int Libro::getCantidadEjemplares(){
 bool Libro::getEstado(){
     return _estado;
 }
+
+int Libro::getPosicion(){
+    return _posicion;
+    }
 
 void Libro::cargarLibro(){
     cout << "Ingrese el nombre del Libro: " << endl;
@@ -90,5 +98,6 @@ void Libro::mostrarInfo(){
     cout << " ISBN del libro " << _isbn << endl;
     cout << "Género del libro: " <<  _genero << endl;
     cout << "Cantidad de ejemplares del libro: " << _cantidadEjemplares << endl;
+    cout << "Estado: " << _estado;
 
 }

@@ -14,6 +14,7 @@ private:
     int _cantidadEjemplares;
     //Fecha fechaDePublicacion;
     bool _estado = true;
+    int _posicion;
 
 public:
 
@@ -27,6 +28,7 @@ public:
     void setCantidadEjemplares(int cantidadEjemplares);
     // Fecha setFechaDePublicacion(Fecha FechaDePublicacion);
     void setEstado(bool estado);
+    void setPosicion(int posicion);
 
     //getters
     char* getISBN();
@@ -38,6 +40,7 @@ public:
     int getCantidadEjemplares();
     //Fecha getFechaDePublicacion();
     bool getEstado();
+    int getPosicion();
 
 
     //metodos
