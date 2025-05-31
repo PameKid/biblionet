@@ -26,12 +26,12 @@ void menuLibros(){
         {
         case 1:
             ml.buscarLibroPorCodigo();
-            break;
              system("pause");
+            break;
         case 2:
             ml.contarRegistros();
-            break;
              system("pause");
+            break;
         case 3:
            ml.listarLibros();
             system("pause");
@@ -42,12 +42,12 @@ void menuLibros(){
              system("pause");
         case 5:
             ml.bajaLogicaLibro();
-            break;
              system("pause");
+            break;
         case 6:
             ml.modificarLibro();
-            break;
              system("pause");
+            break;
         case 0:
             return ;
             break;

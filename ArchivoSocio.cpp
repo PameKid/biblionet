@@ -107,14 +107,14 @@ Socio ArchivoSocio::obtenerSocioArchivo(int pos)
 }
 
 
-int ArchivoSocio::buscarArchivoSocio(int codigo) ///
+int ArchivoSocio::buscarArchivoSocio(int codigo)
 {
     Socio socio;
     int cantRegistro;
     FILE *pSocio;
     pSocio=fopen("Socio.dat","rb");
 
-    if(pSocio==nullptr)   ///NULL
+    if(pSocio==nullptr)
     {
         ///cout<<"ERROR DE ARCHIVO"<<endl;
         return -2;

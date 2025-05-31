@@ -77,8 +77,26 @@ void ArchivoLibro::obtenerVectorLibros(int cantRegistros, Libro *vecLibros){
 
 }
 
-void ArchivoLibro::bajaArchivoLibro(){}
-void ArchivoLibro::modificarArchivoLibro(){}
+int ArchivoLibro::modificarArchivoLibro(Libro libromodificado){
+    FILE* pArchivoLibro;
+
+    pArchivoLibro = fopen("libro.dat", "rb+");
+
+    if(pArchivoLibro == nullptr){
+        return -1;
+    }
+
+    //cout << "posicion: " << libromodificado.getPosicion(); para probar que carga la posicion ok
+    //system("pause");
+
+    fseek(pArchivoLibro,sizeof(Libro)*libromodificado.getPosicion(),0);
+
+    int modificado = fwrite(&libromodificado,sizeof(Libro),1,pArchivoLibro);
+    fclose(pArchivoLibro);
+
+    return modificado;
+}
+
 
 
 
