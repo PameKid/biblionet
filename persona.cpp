@@ -2,44 +2,44 @@
 #include <string>
 using namespace std;
 #include <iostream>
+#include <cstring>
 
 // Desarrollo constrcutores
 Persona::Persona()
 {
 
-    _nombre = "" ;
-    _apellido = "";
+//    _nombre = "" ;
+  //  _apellido = "";
     _fechaDeNacimiento = Fecha();
-    _estado = false;
+    _estado = true;
 }
-Persona :: Persona (string nombre, string apellido, Fecha fechaDeNacimiento, bool Estado)
+Persona :: Persona (const char* nombre, const char* apellido, Fecha fechaDeNacimiento, bool Estado)
 {
 
-    _nombre=nombre;
-    _apellido=apellido;
+    strcpy( _nombre,nombre);
+    strcpy( _apellido, apellido);
     _fechaDeNacimiento= fechaDeNacimiento;
     _estado=Estado;
 }
 
 // Desarrollo Getter y Setter.
-string Persona ::getNombre()
-{
-    return _nombre;
 
-}
-void Persona:: setNombre(string nombre)
-{
-    _nombre=nombre;
+string Persona :: getNombre(){
 
+return _nombre;
 }
-string Persona :: getApellido()
+void Persona::setNombre( char nombre[20])
 {
-    return _apellido;
+    strcpy(this->_nombre, nombre);
 }
+string Persona:: getApellido(){
 
-void Persona ::setApellido(string apellido)
+return _apellido;
+}
+void Persona::setApellido(char apellido[20])
 {
-    _apellido= apellido;
+    strcpy(this->_apellido, apellido);
+
 
 }
 bool Persona :: getEstado()
@@ -65,9 +65,11 @@ void Persona:: cargarPersona()
 {
 
     cout << "Nombre del socio: " ;
-    cin >>  _nombre;
+    cin.ignore();
+    cin.getline(_nombre, 20);
     cout << "Apellido del socio: ";
-    cin >> _apellido;
+    cin.ignore();
+    cin.getline(_apellido, 20);
     _fechaDeNacimiento.cargarFecha();
 
 }

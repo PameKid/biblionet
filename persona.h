@@ -12,22 +12,22 @@ class Persona
 
     private:
 
-    string _nombre;
-    string _apellido;
+    char _nombre[20];
+    char _apellido[20];
     Fecha _fechaDeNacimiento;
     bool _estado;
 
     public:
     Persona();
-    Persona ( string nombre, string apellido, Fecha fechaDeNacimiento, bool estado =false);
+    Persona ( const char* nombre, const char*  apellido, Fecha fechaDeNacimiento, bool estado =false);
 
     string getNombre();
     string getApellido();
     Fecha getFecaDeNacimiento();
     bool getEstado();
 
-    void setNombre (string nombre);
-    void setApellido (string apellido);
+    void setNombre (char nombre[]);
+    void setApellido ( char apellido[]);
     void setEstado (bool estado);
     void setFechaDeNacimiento (Fecha fechaDeNacimiento);
     void cargarPersona();

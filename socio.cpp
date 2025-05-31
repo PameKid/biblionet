@@ -11,25 +11,25 @@ Socio::Socio(): Persona()
 
 //Socio :: Socio() : Persona(string nombre, string apellido, Fecha fechaDeNacimiento, bool Estado)
 
-Socio :: Socio(string nombre, string apellido, Fecha fechaDeNacimiento, bool estado, const char* telefono, const char* DNI,string direccion,
-               string mail,int codSocio) : Persona( nombre,apellido, fechaDeNacimiento, estado)
+Socio :: Socio(const char* nombre, const char* apellido, Fecha fechaDeNacimiento, bool estado, const char* telefono, const char* DNI,const char* direccion,
+               const char* mail,int codSocio) : Persona( nombre,apellido, fechaDeNacimiento, estado)
 {
     strcpy (_telefono,telefono);
     strcpy (_DNI,DNI);
-    _direccion=direccion;
-    _mail=mail;
+    strcpy (_direccion,direccion);
+    strcpy(_mail,mail);
     _codSocio=codSocio;
 
 }
 
 
 // Getters
-string Socio::getDireccion()
+const char* Socio::getDireccion()
 {
     return _direccion;
 }
 
-string Socio::getMail()
+const char* Socio::getMail()
 {
     return _mail;
 }
@@ -50,14 +50,16 @@ const char* Socio::getDNI()
 }
 
 // Setters
-void Socio::setDireccion(string direccion)
+void Socio::setDireccion(const char* direccion)
 {
-    _direccion = direccion;
+    strncpy(_direccion, direccion, sizeof(_direccion));
+    _direccion[sizeof(_direccion)-1] = '\0';
 }
 
-void Socio::setMail(string mail)
+void Socio::setMail(const char* mail)
 {
-    _mail = mail;
+    strncpy(_mail, mail, sizeof(_mail));
+    _mail[sizeof(_mail)-1] = '\0';
 }
 
 void Socio::setCodSocio(int codSocio)
@@ -87,16 +89,18 @@ void Socio::cargarSocio()
     cin.ignore();
     cin.getline(_DNI, 8);
     cout << "Ingrese un mail: ";
-    cin >> _mail;
+    cin.ignore();
+    cin.getline(_mail, 30);
     cout << "Ingrese una direccion: ";
-    cin >> _direccion;
+    cin.ignore();
+    cin.getline(_direccion, 30);
 }
 
 void Socio::mostrarInfo()
 {
 
     cout << "Los datos ingresados son los siguientes: " << endl;
-    cout << "Nombre del Socio: " << getNombre()<< endl;
+    cout << "Nombre del Socio: " <<getNombre()<< endl;
     cout << "Apellido Socio: " << getApellido() << endl;
     cout << "Fecha de nacimiento:" << getFecaDeNacimiento().toString()<< endl;
     cout << "Telefono: " << _telefono<< endl;
@@ -104,4 +108,5 @@ void Socio::mostrarInfo()
     cout << "Mail: " <<  _mail << endl;
     cout << "Direccion: " << _direccion << endl;
     cout << "Codigo de Socio: "  << _codSocio << endl;
+    cout << "Estado del Socio: " << getEstado() << endl;
 };

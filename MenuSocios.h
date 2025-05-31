@@ -6,9 +6,11 @@
 
 using namespace std;
 
-void menuSocios(){
+void menuSocios()
+{
     int opc;
-    while(true){
+    while(true)
+    {
         system("cls");
         cout << "*******SOCIOS!*******" << endl;
         cout << "1. BUSCAR SOCIO POR DNI" << endl;
@@ -22,28 +24,28 @@ void menuSocios(){
         cin >>opc;
         system("cls");
         ManagerSocio ms;
-         switch(opc)
+        switch(opc)
         {
-       // case 1:
-       //     ms.buscarSocioPorCodigo();
-       //      system("pause");
+            // case 1:
+            //     ms.buscarSocioPorCodigo();
+            //      system("pause");
             break;
         case 2:
             ms.listarSocios();
-             system("pause");
+            system("pause");
             break;
         case 3:
             ms.agregarSocio();
+            system("pause");
             break;
+        case 4:
+            ms.bajaSocio();
              system("pause");
-       // case 4:
-       //     ms.bajaSocio();
-       //     break;
-       //       system("pause");
-       // case 5:
-       //     ms.modificarSocio();
-       //     break;
-       //      system("pause");
+            break;
+        // case 5:
+        //     ms.modificarSocio();
+        //     break;
+        //      system("pause");
         case 0:
             return;
             break;
