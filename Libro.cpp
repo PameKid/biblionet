@@ -112,20 +112,77 @@ void Libro::mostrarInfo(){
     cout << "ISBN del libro " << _isbn << endl;
     cout << "Género del libro: " <<  _genero << endl;
     cout << "Cantidad de ejemplares del libro: " << _cantidadEjemplares << endl;
+    cout << "Ingrese el año de publicación: " << _anioDePublicacion << endl;
     //cout << "Estado: " << _estado;
 }
 
 void Libro::mostrarInfoParaModificar(){
     cout << "Datos del libro: " << endl;
-    cout << "Si desea modificar el nombre del Libro: 1 " << _nombreDeLibro << endl;
-    cout << "Si desea modificar el nombre del autor del libro: 2 " << _nombreDelAutor << endl;
-    cout << "Si desea modificar el código del libro: 3 " <<  _codLibro << endl;
-    cout << "Si desea modificar el código del autor:  4 " << _codAutor << endl;
-    cout << "Si desea modificar el ISBN del libro 5 " << _isbn << endl;
-    cout << "Si desea modificar el género del libro:  6 " <<  _genero << endl;
-    cout << "Si desea modigicar la cantidad de ejemplares del libro: 7 " << _cantidadEjemplares << endl;
+    cout << "1. nombre del Libro: " << _nombreDeLibro << endl;
+    cout << "2. nombre del autor del libro: 2 " << _nombreDelAutor << endl;
+    cout << "3. código del libro: " <<  _codLibro << endl;
+    cout << "4. código del autor:  " << _codAutor << endl;
+    cout << "5. ISBN del libro " << _isbn << endl;
+    cout << "6. género del libro: " <<  _genero << endl;
+    cout << "7. cantidad de ejemplares del libro:  " << _cantidadEjemplares << endl;
+    cout << "8. año de publicación " << endl << endl;
     //cout << "Estado: " << _estado;
 
-    cout << "Elija cero si desea volver al menú anterior.  " << endl;
+    cout << "0. para guardar los cambios.  " << endl;
+}
+
+void Libro::cargarLibroModificado(int opcion){
+
+    switch(opcion)
+        {
+    case 1:
+        cout << "Ingrese el nuevo nombre del Libro: " << endl;
+        cin.ignore();
+        cin.getline(_nombreDeLibro, 50);
+
+        break;
+    case 2:
+        cout << "Ingrese el nuevo nombre del autor: " << endl;
+        cin.ignore();
+        cin.getline(_nombreDelAutor, 50);
+        break;
+
+    case 3:
+
+        cout << "Ingrese el nuevo código de libro: " << endl;
+        //cin.ignore();
+        cin >> _codLibro;
+        break;
+
+    case 4:
+        cout << "Ingrese el código de autor" << endl;
+        cin >> _codAutor;
+        break;
+    case 5:
+
+        cout << "Ingrese el ISBN: " << endl;
+        cin.getline(_isbn,20);
+        break;
+
+    case 6:
+        cout << "Ingrese género " << endl;
+        cin.ignore();
+        cin.getline(_genero, 20);
+        break;
+
+    case 7:
+
+        cout << "Ingrese cantidad de ejemplares: " << endl;
+        //cin.ignore();
+        cin >>(_cantidadEjemplares);
+        break;
+
+    case 8:
+
+        cout << "Ingrese el año de publicación del libro: " << endl;
+        cin >> _anioDePublicacion;
+        break;
+
+        }
 }
 

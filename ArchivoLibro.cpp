@@ -86,8 +86,9 @@ int ArchivoLibro::modificarArchivoLibro(Libro libromodificado){
         return -1;
     }
 
-    cout << "posicion: " << libromodificado.getPosicion();
-    system("pause");
+    //cout << "posicion: " << libromodificado.getPosicion(); para probar que carga la posicion ok
+    //system("pause");
+
     fseek(pArchivoLibro,sizeof(Libro)*libromodificado.getPosicion(),0);
 
     int modificado = fwrite(&libromodificado,sizeof(Libro),1,pArchivoLibro);

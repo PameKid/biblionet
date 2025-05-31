@@ -47,6 +47,7 @@ public:
     void cargarLibro();
     void mostrarInfo();
     void mostrarInfoParaModificar();
+    void cargarLibroModificado(int opcion);
     void disponible();
 
 };

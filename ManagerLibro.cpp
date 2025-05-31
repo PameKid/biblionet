@@ -85,22 +85,38 @@ void ManagerLibro::bajaLogicaLibro(){
 
 }
 void ManagerLibro::modificarLibro(){
-    ManagerLibro libroparamodificar;
-    Libro libroobtenidoparamofificar;
+
+    Libro libroModificado;
     ArchivoLibro archivoLibro;
     int codLibro;
+    int opcion;
 
     cout << "Ingrese el código del libro que desea modificar: " << endl;
     cin >> codLibro;
 
-    libroobtenidoparamofificar = libroparamodificar.obtenerLibroPorCodigo(codLibro);
+    libroModificado = obtenerLibroPorCodigo(codLibro);
 
-    cout << "Corrobore que los datos del libro que quiere modificar sean correctos y presione la opcion indicada: " << endl;
-    libroobtenidoparamofificar.mostrarInfoParaModificar();
+    cout << "Elija el dato que quiere modificar: " << endl;
+    libroModificado.mostrarInfoParaModificar();
+
+    cin >> opcion;
+
+    while (opcion != 0){
+
+        libroModificado.cargarLibroModificado(opcion);
+
+        system("cls");
+
+        libroModificado.mostrarInfoParaModificar();
+        cin >>opcion;
+    }
+
+    archivoLibro.modificarArchivoLibro (libroModificado);
 
 
 
-
+    cout << "Modificado correctamente " << endl;
+    system("pause");
 
 }
 

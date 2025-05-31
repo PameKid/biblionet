@@ -11,16 +11,16 @@
 	"MenuPagos.h"
 	"MenuReportes.h"
 
-1748631654 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\libro.h
+1748654945 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\libro.h
 
-1748631654 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\libro.cpp
+1748656771 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\libro.cpp
 	<iostream>
 	<string.h>
 	"Libro.h"
 
-1748631654 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\libro.h
+1748654945 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\libro.h
 
-1748637607 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\managerlibro.cpp
+1748657423 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\managerlibro.cpp
 	"ManagerLibro.h"
 	<iostream>
 
