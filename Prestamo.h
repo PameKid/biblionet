@@ -1,5 +1,6 @@
 #include <iostream>
 #include<string.h>
+#include "Fecha.h"
 
 using namespace std;
 
@@ -10,8 +11,8 @@ private:
     int _codLibro;
     int _codSocio;
     bool _estado;
-    //Fecha fechaPrestamo;
-    //Fecha fechaDevolucion;
+    Fecha _fechaEntrega;
+    Fecha _fechaDevolucion;
 
 public:
 
@@ -20,15 +21,15 @@ public:
     void setCodLibro(int codLibro);
     void setCodSocio (int codSocio);
     void setEstado(bool estado);
-    //void setFechaEntrega(Fecha fechaPrestamo);
-    //void setFechaDevolucion (Fecha fechaDevolucion);
+    void setFechaEntrega(Fecha fechaEntrega);
+    void setFechaDevolucion (Fecha fechaDevolucion);
 
 
     int getCodPrestamo();
     int getCodLibro();
     int getCodSocio();
-    //Fecha getFechaEntrega();
-    //Fecha getFechaDevolucion();
+    Fecha getFechaEntrega();
+    Fecha getFechaDevolucion();
 
     //metodos
 

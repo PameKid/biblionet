@@ -215,7 +215,7 @@
 	<iostream>
 	"fecha.h"
 
-1748485426 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\fecha.h
+1748898307 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\fecha.h
 	<string>
 
 1748485426 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\menuprestamos.hh
@@ -228,7 +228,7 @@
 	"ArchivoSocio.h"
 	<iostream>
 
-1748485426 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\fecha.cpp
+1748898316 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\fecha.cpp
 	"Fecha.h"
 	<iostream>
 
@@ -247,8 +247,11 @@
 	"Socio.h"
 	<cstring>
 
-1748879499 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\prestamo.cpp
+1748894614 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\prestamo.cpp
 	"Prestamo.h"
 
-1748879491 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\prestamo.h
+1748897795 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\prestamo.h
+	<iostream>
+	<string.h>
+	"Fecha.h"
 
