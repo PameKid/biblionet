@@ -10,9 +10,10 @@ public:
     int leerArchivoSocio();
     int contarRegistrosArchivoSocio();
     void obtenerVectorSocios(int cantRegistros, Socio* socios); //recibe un vector de libros y lo carga desde el archivo
-    void bajaArchivoSocio();
-    void modificarArchivoSocio();
-    void buscarArchivoSocio();
+    bool bajaArchivoSocio(int codigo);
+    int modificarArchivoSocio(Socio socio, int posicion);
+    int buscarArchivoSocio(int codigo);
+    Socio obtenerSocioArchivo(int pos) ;
 };
 
 
