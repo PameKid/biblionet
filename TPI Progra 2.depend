@@ -3,17 +3,12 @@
 	<iostream>
 	<locale.h>
 
-<<<<<<< HEAD
-1748213765 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\main.cpp
+1748473144 D
+
+1748485426 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\main.cpp
 	<iostream>
 	<locale.h>
 	"ManagerLibro.h"
-
-1748204402 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\libro.h
-
-1748196862 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\libro.cpp
-=======
-1748485426 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\main.cpp
 	<iostream>
 	"MenuLibros.h"
 	"MenuSocios.h"
@@ -24,112 +19,105 @@
 1748654945 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\libro.h
 
 1748656771 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\libro.cpp
->>>>>>> b4b0e8b2b5c5ce8463cebbe7b07cd959a8240777
+
+1748898229 0e8b2b5c5ce8463cebbe7b07cd959a8240777
 	<iostream>
 	<string.h>
 	"Libro.h"
+	"Libro.h"
 
-<<<<<<< HEAD
-1748204402 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\libro.h
-
-1748213749 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\managerlibro.cpp
-	"ManagerLibro.h"
-	<iostream>
-
-1748212455 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\managerlibro.h
-	"ArchivoLibro.h"
-
-1748213485 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\archivolibro.cpp
-	"ArchivoLibro.h"
-	<iostream>
-
-1748213473 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\archivolibro.h
-=======
 1748654945 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\libro.h
 
 1748657423 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\managerlibro.cpp
 	"ManagerLibro.h"
 	<iostream>
+	"ManagerLibro.h"
+	<iostream>
 
 1748440498 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\managerlibro.h
+	"ArchivoLibro.h"
 	"ArchivoLibro.h"
 
 1748657527 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\archivolibro.cpp
 	"ArchivoLibro.h"
 	<iostream>
-
-1748818853 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\archivolibro.h
->>>>>>> b4b0e8b2b5c5ce8463cebbe7b07cd959a8240777
-	"Libro.h"
-
-1748443845 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\archivolibro.cpp
 	"ArchivoLibro.h"
 	<iostream>
 
-1748274274 c:\users\bgh\desktop\programacion 2 tpint\biblionet\archivolibro.h
+1748818853 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\archivolibro.h
+
+1748729716 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\archivolibro.cpp
+	"ArchivoLibro.h"
+	<iostream>
+
+1748729716 c:\users\bgh\desktop\programacion 2 tpint\biblionet\archivolibro.h
 	"Libro.h"
 
-1748274274 c:\users\bgh\desktop\programacion 2 tpint\biblionet\libro.h
+1748729716 c:\users\bgh\desktop\programacion 2 tpint\biblionet\libro.h
 
-1748274274 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\libro.cpp
+1748729716 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\libro.cpp
 	<iostream>
 	<string.h>
 	"Libro.h"
 
-1748274274 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\libro.h
+1748729716 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\libro.h
 
-1748442867 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\main.cpp
+1748979126 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\main.cpp
 	<iostream>
-	<locale.h>
-	"ManagerLibro.h"
-	"ManagerSocio.h"
+	"MenuLibros.h"
+	"MenuSocios.h"
+	"MenuPrestamos.hh"
+	"MenuPagos.h"
+	"MenuReportes.h"
 
 1748443845 c:\users\bgh\desktop\programacion 2 tpint\biblionet\managerlibro.h
 	"ArchivoLibro.h"
 
-1748443845 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\managerlibro.cpp
+1748729716 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\managerlibro.cpp
 	"ManagerLibro.h"
 	<iostream>
 
-1748441967 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\fecha.cpp
+1748979126 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\fecha.cpp
 	"Fecha.h"
 	<iostream>
 
-1748441620 c:\users\bgh\desktop\programacion 2 tpint\biblionet\fecha.h
+1748979126 c:\users\bgh\desktop\programacion 2 tpint\biblionet\fecha.h
 	<string>
 
-1748442116 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\persona.cpp
+1748980019 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\persona.cpp
 	"Persona.h"
 	<string>
 	<iostream>
+	<cstring>
 
-1748442117 c:\users\bgh\desktop\programacion 2 tpint\biblionet\persona.h
+1748722802 c:\users\bgh\desktop\programacion 2 tpint\biblionet\persona.h
 	<string>
 	<iostream>
 	"fecha.h"
 
-1748442117 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\socio.cpp
+1748983019 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\socio.cpp
 	<iostream>
 	"Socio.h"
 	<cstring>
 
-1748441941 c:\users\bgh\desktop\programacion 2 tpint\biblionet\socio.h
+1748726015 c:\users\bgh\desktop\programacion 2 tpint\biblionet\socio.h
 	"Persona.h"
 	<string>
 	<iostream>
 
-1748443122 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\archivosocio.cpp
+1748983204 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\archivosocio.cpp
 	"ArchivoSocio.h"
 	<iostream>
+	<cstring>
 
-1748440335 c:\users\bgh\desktop\programacion 2 tpint\biblionet\archivosocio.h
+1748983102 c:\users\bgh\desktop\programacion 2 tpint\biblionet\archivosocio.h
 	"socio.h"
 
-1748443496 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\managersocio.cpp
+1748983019 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\managersocio.cpp
 	"ManagerSocio.h"
 	<iostream>
 
-1748442730 c:\users\bgh\desktop\programacion 2 tpint\biblionet\managersocio.h
+1748983019 c:\users\bgh\desktop\programacion 2 tpint\biblionet\managersocio.h
 	"ArchivoSocio.h"
 	"socio.h"
 
@@ -140,11 +128,7 @@
 1748470134 c:\users\camilote\desktop\trabajo grupal progra2\biblionet\archivolibro.h
 	"Libro.h"
 
-<<<<<<< HEAD
-1748484400 c:\users\camilote\desktop\trabajo grupal progra2\biblionet\libro.h
-=======
 1748470134 c:\users\camilote\desktop\trabajo grupal progra2\biblionet\libro.h
->>>>>>> b4b0e8b2b5c5ce8463cebbe7b07cd959a8240777
 
 1748470134 source:c:\users\camilote\desktop\trabajo grupal progra2\biblionet\libro.cpp
 	<iostream>
@@ -223,7 +207,6 @@
 
 1748473144 c:\users\camilote\desktop\trabajo grupal progra2\biblionet\menureportes.h
 
-<<<<<<< HEAD
 1748470134 source:c:\users\camiloide\onedrive\trabajo grupal progra2\biblionet\archivolibro.cpp
 	"ArchivoLibro.h"
 	<iostream>
@@ -386,7 +369,9 @@
 	<iostream>
 	"fecha.h"
 	"socio.h"
-=======
+
+1748827920 
+
 1748619628 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\menulibros.h
 	"ManagerLibro.h"
 
@@ -450,5 +435,43 @@
 	<iostream>
 	<string.h>
 	"Fecha.h"
->>>>>>> b4b0e8b2b5c5ce8463cebbe7b07cd959a8240777
+
+1748729716 c:\users\bgh\desktop\programacion 2 tpint\biblionet\menulibros.h
+	"ManagerLibro.h"
+
+1748983302 c:\users\bgh\desktop\programacion 2 tpint\biblionet\menusocios.h
+	"ManagerSocio.h"
+	"persona.h"
+
+1748531830 c:\users\bgh\desktop\programacion 2 tpint\biblionet\menuprestamos.hh
+
+1748531830 c:\users\bgh\desktop\programacion 2 tpint\biblionet\menupagos.h
+
+1748531830 c:\users\bgh\desktop\programacion 2 tpint\biblionet\menureportes.h
+
+1748979126 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\managerprestamo.cpp
+	"ManagerPrestamo.h"
+
+1748979126 c:\users\bgh\desktop\programacion 2 tpint\biblionet\managerprestamo.h
+	"Prestamo.h"
+
+1748979126 c:\users\bgh\desktop\programacion 2 tpint\biblionet\prestamo.h
+	<iostream>
+	<string.h>
+	"Fecha.h"
+
+1748979126 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\pagos.cpp
+	<iostream>
+	<string.h>
+	"fecha.h"
+	"socio.h"
+	"Pagos.h"
+
+1748979126 c:\users\bgh\desktop\programacion 2 tpint\biblionet\pagos.h
+	<iostream>
+	"fecha.h"
+	"socio.h"
+
+1748979126 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\prestamo.cpp
+	"Prestamo.h"
 

@@ -26,9 +26,9 @@ void menuSocios()
         ManagerSocio ms;
         switch(opc)
         {
-            // case 1:
-            //     ms.buscarSocioPorCodigo();
-            //      system("pause");
+             case 1:
+           ms.buscarSocioPorDni();
+                system("pause");
             break;
         case 2:
             ms.listarSocios();

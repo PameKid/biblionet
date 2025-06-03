@@ -11,7 +11,7 @@ public:
     void contarRegistrosSocios();
     void bajaSocio();
     void modificarSocio();
-    void buscarSocioPorCodigo();
+    void buscarSocioPorDni();
 };
 
 #endif // MANAGERSOCIO_H_INCLUDED

@@ -68,7 +68,7 @@ void Persona:: cargarPersona()
     cin.ignore();
     cin.getline(_nombre, 20);
     cout << "Apellido del socio: ";
-    cin.ignore();
+    //cin.ignore();
     cin.getline(_apellido, 20);
     _fechaDeNacimiento.cargarFecha();
 
