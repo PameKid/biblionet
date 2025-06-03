@@ -49,6 +49,18 @@ void Fecha :: cargarFecha(){
   cin>> _anio;
   cout << "Ingrese mes de nacimiento: ";
   cin>>_mes;
-  cout << "Ingrese dia de nacimienta: ";
+  cout << "Ingrese dia de nacimiento: ";
   cin >> _dia;
 }
+
+Fecha Fecha::cargarFechaPrestamo(){
+    cout << "Ingrese el anio de pago";
+    cin >> _anio;
+
+    cout << "Ingrese el mes de pago";
+    cin >> _mes;
+
+    cout <<"Ingrese el día de pago";
+    cin >> _dia;
+}
+
