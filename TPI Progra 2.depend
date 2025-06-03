@@ -3,6 +3,16 @@
 	<iostream>
 	<locale.h>
 
+<<<<<<< HEAD
+1748213765 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\main.cpp
+	<iostream>
+	<locale.h>
+	"ManagerLibro.h"
+
+1748204402 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\libro.h
+
+1748196862 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\libro.cpp
+=======
 1748485426 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\main.cpp
 	<iostream>
 	"MenuLibros.h"
@@ -14,10 +24,27 @@
 1748654945 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\libro.h
 
 1748656771 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\libro.cpp
+>>>>>>> b4b0e8b2b5c5ce8463cebbe7b07cd959a8240777
 	<iostream>
 	<string.h>
 	"Libro.h"
 
+<<<<<<< HEAD
+1748204402 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\libro.h
+
+1748213749 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\managerlibro.cpp
+	"ManagerLibro.h"
+	<iostream>
+
+1748212455 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\managerlibro.h
+	"ArchivoLibro.h"
+
+1748213485 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\archivolibro.cpp
+	"ArchivoLibro.h"
+	<iostream>
+
+1748213473 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\archivolibro.h
+=======
 1748654945 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\libro.h
 
 1748657423 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\managerlibro.cpp
@@ -32,6 +59,7 @@
 	<iostream>
 
 1748818853 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\archivolibro.h
+>>>>>>> b4b0e8b2b5c5ce8463cebbe7b07cd959a8240777
 	"Libro.h"
 
 1748443845 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\archivolibro.cpp
@@ -112,7 +140,11 @@
 1748470134 c:\users\camilote\desktop\trabajo grupal progra2\biblionet\archivolibro.h
 	"Libro.h"
 
+<<<<<<< HEAD
+1748484400 c:\users\camilote\desktop\trabajo grupal progra2\biblionet\libro.h
+=======
 1748470134 c:\users\camilote\desktop\trabajo grupal progra2\biblionet\libro.h
+>>>>>>> b4b0e8b2b5c5ce8463cebbe7b07cd959a8240777
 
 1748470134 source:c:\users\camilote\desktop\trabajo grupal progra2\biblionet\libro.cpp
 	<iostream>
@@ -191,6 +223,170 @@
 
 1748473144 c:\users\camilote\desktop\trabajo grupal progra2\biblionet\menureportes.h
 
+<<<<<<< HEAD
+1748470134 source:c:\users\camiloide\onedrive\trabajo grupal progra2\biblionet\archivolibro.cpp
+	"ArchivoLibro.h"
+	<iostream>
+
+1748470134 c:\users\camiloide\onedrive\trabajo grupal progra2\biblionet\archivolibro.h
+	"Libro.h"
+
+1748484400 c:\users\camiloide\onedrive\trabajo grupal progra2\biblionet\libro.h
+
+1748470134 source:c:\users\camiloide\onedrive\trabajo grupal progra2\biblionet\archivosocio.cpp
+	"ArchivoSocio.h"
+	<iostream>
+
+1748470134 c:\users\camiloide\onedrive\trabajo grupal progra2\biblionet\archivosocio.h
+	"socio.h"
+
+1748470134 c:\users\camiloide\onedrive\trabajo grupal progra2\biblionet\socio.h
+	"Persona.h"
+	<string>
+	<iostream>
+
+1748470134 c:\users\camiloide\onedrive\trabajo grupal progra2\biblionet\persona.h
+	<string>
+	<iostream>
+	"fecha.h"
+
+1748470134 c:\users\camiloide\onedrive\trabajo grupal progra2\biblionet\fecha.h
+	<string>
+
+1748470134 source:c:\users\camiloide\onedrive\trabajo grupal progra2\biblionet\fecha.cpp
+	"Fecha.h"
+	<iostream>
+
+1748470134 source:c:\users\camiloide\onedrive\trabajo grupal progra2\biblionet\libro.cpp
+	<iostream>
+	<string.h>
+	"Libro.h"
+
+1748484400 source:c:\users\camiloide\onedrive\trabajo grupal progra2\biblionet\libro.h
+
+1748479998 source:c:\users\camiloide\onedrive\trabajo grupal progra2\biblionet\managerlibro.cpp
+	"ManagerLibro.h"
+	<iostream>
+
+1748470134 c:\users\camiloide\onedrive\trabajo grupal progra2\biblionet\managerlibro.h
+	"ArchivoLibro.h"
+
+1748470134 source:c:\users\camiloide\onedrive\trabajo grupal progra2\biblionet\managersocio.cpp
+	"ManagerSocio.h"
+	<iostream>
+
+1748470134 c:\users\camiloide\onedrive\trabajo grupal progra2\biblionet\managersocio.h
+	"ArchivoSocio.h"
+	"socio.h"
+
+1748470134 source:c:\users\camiloide\onedrive\trabajo grupal progra2\biblionet\persona.cpp
+	"Persona.h"
+	<string>
+	<iostream>
+
+1748470134 source:c:\users\camiloide\onedrive\trabajo grupal progra2\biblionet\socio.cpp
+	<iostream>
+	"Socio.h"
+	<cstring>
+
+1748470134 source:c:\users\camilote\onedrive\trabajo grupal progra2\biblionet\archivolibro.cpp
+	"ArchivoLibro.h"
+	<iostream>
+
+1748470134 c:\users\camilote\onedrive\trabajo grupal progra2\biblionet\archivolibro.h
+	"Libro.h"
+
+1748484400 c:\users\camilote\onedrive\trabajo grupal progra2\biblionet\libro.h
+
+1748470134 source:c:\users\camilote\onedrive\trabajo grupal progra2\biblionet\archivosocio.cpp
+	"ArchivoSocio.h"
+	<iostream>
+
+1748470134 c:\users\camilote\onedrive\trabajo grupal progra2\biblionet\archivosocio.h
+	"socio.h"
+
+1748470134 c:\users\camilote\onedrive\trabajo grupal progra2\biblionet\socio.h
+	"Persona.h"
+	<string>
+	<iostream>
+
+1748470134 c:\users\camilote\onedrive\trabajo grupal progra2\biblionet\persona.h
+	<string>
+	<iostream>
+	"fecha.h"
+
+1748470134 c:\users\camilote\onedrive\trabajo grupal progra2\biblionet\fecha.h
+	<string>
+
+1748470134 source:c:\users\camilote\onedrive\trabajo grupal progra2\biblionet\fecha.cpp
+	"Fecha.h"
+	<iostream>
+
+1748470134 source:c:\users\camilote\onedrive\trabajo grupal progra2\biblionet\libro.cpp
+	<iostream>
+	<string.h>
+	"Libro.h"
+
+1748484400 source:c:\users\camilote\onedrive\trabajo grupal progra2\biblionet\libro.h
+
+1748479998 source:c:\users\camilote\onedrive\trabajo grupal progra2\biblionet\managerlibro.cpp
+	"ManagerLibro.h"
+	<iostream>
+
+1748470134 c:\users\camilote\onedrive\trabajo grupal progra2\biblionet\managerlibro.h
+	"ArchivoLibro.h"
+
+1748470134 source:c:\users\camilote\onedrive\trabajo grupal progra2\biblionet\managersocio.cpp
+	"ManagerSocio.h"
+	<iostream>
+
+1748470134 c:\users\camilote\onedrive\trabajo grupal progra2\biblionet\managersocio.h
+	"ArchivoSocio.h"
+	"socio.h"
+
+1748470134 source:c:\users\camilote\onedrive\trabajo grupal progra2\biblionet\persona.cpp
+	"Persona.h"
+	<string>
+	<iostream>
+
+1748470134 source:c:\users\camilote\onedrive\trabajo grupal progra2\biblionet\socio.cpp
+	<iostream>
+	"Socio.h"
+	<cstring>
+
+1748824422 source:c:\users\camilote\onedrive\trabajo grupal progra2\biblionet\main.cpp
+	<iostream>
+	"MenuLibros.h"
+	"MenuSocios.h"
+	"MenuPrestamos.hh"
+	"MenuPagos.h"
+	"MenuReportes.h"
+
+1748479437 c:\users\camilote\onedrive\trabajo grupal progra2\biblionet\menulibros.h
+	"ManagerLibro.h"
+
+1748480310 c:\users\camilote\onedrive\trabajo grupal progra2\biblionet\menusocios.h
+	"ManagerSocio.h"
+	"persona.h"
+
+1748473144 c:\users\camilote\onedrive\trabajo grupal progra2\biblionet\menuprestamos.hh
+
+1748473144 c:\users\camilote\onedrive\trabajo grupal progra2\biblionet\menupagos.h
+
+1748473144 c:\users\camilote\onedrive\trabajo grupal progra2\biblionet\menureportes.h
+
+1748828105 source:c:\users\camilote\onedrive\trabajo grupal progra2\biblionet\pagos.cpp
+	<iostream>
+	<string.h>
+	"fecha.h"
+	"socio.h"
+	"Pagos.h"
+
+1748827920 c:\users\camilote\onedrive\trabajo grupal progra2\biblionet\pagos.h
+	<iostream>
+	"fecha.h"
+	"socio.h"
+=======
 1748619628 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\menulibros.h
 	"ManagerLibro.h"
 
@@ -254,4 +450,5 @@
 	<iostream>
 	<string.h>
 	"Fecha.h"
+>>>>>>> b4b0e8b2b5c5ce8463cebbe7b07cd959a8240777
 

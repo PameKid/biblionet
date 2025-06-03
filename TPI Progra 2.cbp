@@ -62,6 +62,8 @@
 		<Unit filename="MenuPrestamos.hh" />
 		<Unit filename="MenuReportes.h" />
 		<Unit filename="MenuSocios.h" />
+		<Unit filename="Pagos.cpp" />
+		<Unit filename="Pagos.h" />
 		<Unit filename="Prestamo.cpp">
 			<Option target="Debug" />
 		</Unit>

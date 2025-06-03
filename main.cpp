@@ -8,6 +8,7 @@ using namespace std;
 
 int main()
 {
+    system("chcp 65001");
     setlocale(LC_ALL, "");
     int opc;
     while(true)
