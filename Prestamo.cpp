@@ -1,4 +1,3 @@
-
 #include "Prestamo.h"
 
 //setters y getters:

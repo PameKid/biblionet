@@ -49,6 +49,12 @@
 		</Unit>
 		<Unit filename="ManagerLibro.cpp" />
 		<Unit filename="ManagerLibro.h" />
+		<Unit filename="ManagerPrestamo.cpp">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="ManagerPrestamo.h">
+			<Option target="Debug" />
+		</Unit>
 		<Unit filename="ManagerSocio.cpp" />
 		<Unit filename="ManagerSocio.h" />
 		<Unit filename="MenuLibros.h" />
