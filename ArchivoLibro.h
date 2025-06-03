@@ -9,9 +9,9 @@ public:
     int leerArchivo();
     int contarRegistros();
     void obtenerVectorLibros(int cantRegistros, Libro* libros); //recibe un vector de libros y lo carga desde el archivo
-    void bajaArchivoLibro();
-    void modificarArchivoLibro();
     void buscarArchivoPorCodigo();
+    int modificarArchivoLibro(Libro libromodificado);
+
 
 
 };

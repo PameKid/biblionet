@@ -38,3 +38,16 @@ void ManagerSocio::listarSocios()  //mostrar la lista de archivos
 
     delete[]vecSocios;
 }
+
+void ManagerSocio::bajaSocio(){
+    int codigo;
+    ArchivoSocio archivoSocio;
+    cout<<"Ingrese codigo de Socio: ";
+    cin>>codigo;
+    if(archivoSocio.bajaArchivoSocio(codigo)==true){
+        cout<<"REGISTRO BORRADO"<<endl;
+    }
+    else{
+        cout<<"NO SE PUDO BORRAR EL REGISTRO"<<endl;
+    }
+}

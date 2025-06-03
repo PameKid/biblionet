@@ -12,27 +12,27 @@ class Socio : public Persona
 private:
     char _telefono [30];
     char _DNI [8];
-    string _direccion;
-    string _mail;
+    char _direccion[30];
+    char _mail[30];
     int _codSocio;
 
 
 public:
     Socio();
-    Socio(string nombre, string apellido, Fecha fechaDeNacimiento, bool estado, const char* telefono, const char* DNI,string direccion,
-                string mail,int codSocio) ;
+    Socio(const char* nombre, const char* apellido, Fecha fechaDeNacimiento, bool estado, const char* telefono, const char* DNI,const char* direccion,
+          const char* mail,int codSocio) ;
 
 
     // Getters
-    string getDireccion();
-    string getMail();
+    const char*getDireccion();
+    const char* getMail();
     int getCodSocio();
     const char* getTelefono();
     const char* getDNI();
 
     // Setters
-    void setDireccion(string direccion);
-    void setMail(string mail);
+    void setDireccion(const char*direccion);
+    void setMail(const char* mail);
     void setCodSocio(int codSocio);
     void setTelefono(const char* telefono);
     void setDNI(const char* DNI);
@@ -40,6 +40,7 @@ public:
 
     void mostrarInfo();
     void cargarSocio();
+
 
 
 };
