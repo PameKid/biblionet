@@ -443,10 +443,10 @@
 	"Socio.h"
 	<cstring>
 
-1749151739 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\prestamo.cpp
+1749162322 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\prestamo.cpp
 	"Prestamo.h"
 
-1749151714 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\prestamo.h
+1749162322 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\prestamo.h
 	<iostream>
 	<string.h>
 	"Fecha.h"
@@ -492,7 +492,7 @@
 1749144323 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\archivoprestamos.h
 	"Prestamo.h"
 
-1749151927 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\archivoprestamos.cpp
+1749162211 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\archivoprestamos.cpp
 	"ArchivoPrestamos.h"
 
 1748916141 estamos.h"

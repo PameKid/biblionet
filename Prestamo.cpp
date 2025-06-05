@@ -37,6 +37,10 @@ int Prestamo::getCodSocio(){
     return _codSocio;
 }
 
+bool Prestamo::getEstado(){
+    return _estado;
+}
+
 Fecha Prestamo::getFechaEntrega(){
     return _fechaPrestamo;
 }
@@ -66,5 +70,15 @@ void Prestamo::cargarPrestamo(){
 
     }
 
+    void Prestamo::mostrarInfo(){
+
+    cout << "Datos del prestamo: " << endl;
+    cout << "Codigo del prestamo: " << _codPrestamo << endl;
+    cout << "Codigo del libro: " << _codLibro << endl;
+    cout << "Código del socio:" <<  _codSocio << endl;
+    //cout << "Fecha de prestamo" << _fechaPrestamo << endl;
+    //calcular y mostrar la fecha de devolucion a partir de fecha actual
+    //cout << "Estado: " << _estado;
+}
+
     void Prestamo::cargarDevolucion(){}
-    //void Prestamo::mostrarInfo(){}

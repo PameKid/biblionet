@@ -17,9 +17,25 @@ int ArchivoPrestamo:: agregarArchivoPrestamo(Prestamo prestamonuevo){
 
 }
 int ArchivoPrestamo::leerArchivoPrestamos(){
+    Prestamo p1;
+    FILE* pPrestamo;
 
+    pPrestamo = fopen("prestamos.dat", "rb");
 
+    if(pPrestamo == nullptr){
+        cout << "No se pudo leer el archivo." << endl;
+        return -1;
+    }
+
+    while((fread(&p1,sizeof(Prestamo),1,pPrestamo))== 1){
+        if(p1.getEstado() == true){
+
+        p1.mostrarInfo();
+        }
+    }
+    fclose(pPrestamo);
 }
+
 int ArchivoPrestamo::contarRegistrosdePrestamos(){
     FILE* pPrestamo;
 

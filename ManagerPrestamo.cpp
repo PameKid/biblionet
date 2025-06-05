@@ -14,12 +14,13 @@ void ManagerPrestamo::altaPrestamo(){
 }
 void ManagerPrestamo::listarPrestamosActivos(){
     ArchivoPrestamo archiPrestamo;
-    int cantPrestamosRegistraados;
+    int cantPrestamosRegistrados;
     Prestamo prestamo;
 
+}
+void ManagerPrestamo::contarPrestamosActivos(){
 
 }
-void ManagerPrestamo::contarPrestamosActivos(){}
 void ManagerPrestamo::buscarPrestamosCodigo(){}
 void ManagerPrestamo::devolucionPrestamo(){} //guardo la fecha de devolucion
 void ManagerPrestamo::modificarDatosDelPrestamo(){}; //preguntar si es necesario

@@ -10,7 +10,7 @@ private:
     int _codPrestamo;
     int _codLibro;
     int _codSocio;
-    bool _estado;
+    bool _estado = true;
     Fecha _fechaPrestamo;
     Fecha _fechaDevolucion;
 
@@ -28,6 +28,7 @@ public:
     int getCodPrestamo();
     int getCodLibro();
     int getCodSocio();
+    bool getEstado();
     Fecha getFechaEntrega();
     Fecha getFechaDevolucion();
 
