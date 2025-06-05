@@ -16,12 +16,14 @@ void Prestamo::setCodSocio (int codSocio){
 void Prestamo::setEstado(bool estado){
         _estado = estado;
     }
-//void Prestamo::  setFechaEntrega(Fecha fechaPrestamo){
-        //_fechaPrestamos = fechaPrestamo;
-//}
-//void Prestamo::  setFechaDevolucion (Fecha fechaDevolucion){
-    //_fechaDevolucion = fechaDevolucion;
-//}
+
+void Prestamo::setFechaEntrega(Fecha fechaPrestamo){
+    _fechaPrestamo = fechaPrestamo;
+}
+
+void Prestamo::setFechaDevolucion (Fecha fechaDevolucion){
+    _fechaDevolucion = fechaDevolucion;
+}
 
 int Prestamo::getCodPrestamo(){
     return _codPrestamo;
@@ -36,7 +38,7 @@ int Prestamo::getCodSocio(){
 }
 
 Fecha Prestamo::getFechaEntrega(){
-    return _fechaEntrega;
+    return _fechaPrestamo;
 }
 
 Fecha Prestamo::getFechaDevolucion(){
@@ -56,13 +58,13 @@ void Prestamo::cargarPrestamo(){
     cin >> _codSocio;
 
     cout << "Ingrese la fecha de prestamo: " << endl;
-    _fechaEntrega.cargarFechaPrestamo();
+    _fechaPrestamo.cargarFechaPrestamo();
 
-
-//        _fechaDevolucion;
 
 //aca se debería llamar a una funcion para que calcule y muestre la fecha de devolucion.
+// _fechaDevolucion;
+
     }
 
     void Prestamo::cargarDevolucion(){}
-    void Prestamo::mostrarInfo(){}
+    //void Prestamo::mostrarInfo(){}

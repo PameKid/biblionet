@@ -9,8 +9,16 @@ void ManagerPrestamo::altaPrestamo(){
     p1.cargarPrestamo();
     archivoPrestamo.agregarArchivoPrestamo(p1);
 
+    //acá se debería interactuar con libro y restar un ejemplar hasta la fecha de devolucion.
+
 }
-void ManagerPrestamo::listarPrestamosActivos(){}
+void ManagerPrestamo::listarPrestamosActivos(){
+    ArchivoPrestamo archiPrestamo;
+    int cantPrestamosRegistraados;
+    Prestamo prestamo;
+
+
+}
 void ManagerPrestamo::contarPrestamosActivos(){}
 void ManagerPrestamo::buscarPrestamosCodigo(){}
 void ManagerPrestamo::devolucionPrestamo(){} //guardo la fecha de devolucion

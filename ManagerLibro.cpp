@@ -22,6 +22,7 @@ void ManagerLibro::listarLibros(){ //mostrar la lista de archivos
 
     arhivoLibro.obtenerVectorLibros(cantReg, vecLibros);
     cout<<"cantidad registros: " << cantReg << endl;
+
     for(int x=0; x<cantReg; x++){
         if(vecLibros[x].getEstado()== true){
         cout << "***************************" << endl;

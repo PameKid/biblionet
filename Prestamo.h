@@ -11,7 +11,7 @@ private:
     int _codLibro;
     int _codSocio;
     bool _estado;
-    Fecha _fechaEntrega;
+    Fecha _fechaPrestamo;
     Fecha _fechaDevolucion;
 
 public:

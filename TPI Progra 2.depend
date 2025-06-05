@@ -3,22 +3,35 @@
 	<iostream>
 	<locale.h>
 
-1748473144 D
-
-<<<<<<< HEAD
-1748911772 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\main.cpp
-=======
-1748485426 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\main.cpp
+1748979126 D
+	"ArchivoLibro.h"
 	<iostream>
-	<locale.h>
-	"ManagerLibro.h"
->>>>>>> bbce4eb92c19f7f54018126220327fec31dba36c
+
+1748911772 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\main.cpp
 	<iostream>
 	"MenuLibros.h"
 	"MenuSocios.h"
 	"MenuPrestamos.hh"
 	"MenuPagos.h"
 	"MenuReportes.h"
+
+1748979126 e4eb92c19f7f54018126220327fec31dba36c
+	<iostream>
+	"MenuLibros.h"
+	"MenuSocios.h"
+	"MenuPrestamos.hh"
+	"MenuPagos.h"
+	"MenuReportes.h"
+	"ArchivoLibro.h"
+	<iostream>
+	<iostream>
+	<string.h>
+	"fecha.h"
+	"socio.h"
+	"Pagos.h"
+	<iostream>
+	"fecha.h"
+	"socio.h"
 
 1748654945 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\libro.h
 
@@ -32,9 +45,7 @@
 
 1748654945 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\libro.h
 
-1748657423 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\managerlibro.cpp
-	"ManagerLibro.h"
-	<iostream>
+1749151927 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\managerlibro.cpp
 	"ManagerLibro.h"
 	<iostream>
 
@@ -43,17 +54,6 @@
 	"ArchivoLibro.h"
 
 1748657527 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\archivolibro.cpp
-	"ArchivoLibro.h"
-	<iostream>
-<<<<<<< HEAD
-	"ArchivoLibro.h"
-	<iostream>
-
-1748818853 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\archivolibro.h
-
-1748443845 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\archivolibro.cpp
-=======
->>>>>>> bbce4eb92c19f7f54018126220327fec31dba36c
 	"ArchivoLibro.h"
 	<iostream>
 
@@ -388,15 +388,15 @@
 1748619628 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\menulibros.h
 	"ManagerLibro.h"
 
-1748818853 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\menusocios.h
+1749145443 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\menusocios.h
 	"ManagerSocio.h"
 	"persona.h"
 
-1748485426 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\managersocio.h
+1749145443 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\managersocio.h
 	"ArchivoSocio.h"
 	"socio.h"
 
-1748818853 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\archivosocio.h
+1749145443 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\archivosocio.h
 	"socio.h"
 
 1748818853 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\socio.h
@@ -412,25 +412,27 @@
 1748898307 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\fecha.h
 	<string>
 
-1748903349 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\menuprestamos.hh
+1749149495 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\menuprestamos.hh
+	"ManagerPrestamo.h"
 
 1748485426 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\menupagos.h
 
 1748485426 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\menureportes.h
 
-1748818853 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\archivosocio.cpp
+1749145443 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\archivosocio.cpp
 	"ArchivoSocio.h"
 	<iostream>
+	<cstring>
 
 1748898316 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\fecha.cpp
 	"Fecha.h"
 	<iostream>
 
-1748818853 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\managersocio.cpp
+1749145443 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\managersocio.cpp
 	"ManagerSocio.h"
 	<iostream>
 
-1748818853 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\persona.cpp
+1749145443 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\persona.cpp
 	"Persona.h"
 	<string>
 	<iostream>
@@ -441,23 +443,22 @@
 	"Socio.h"
 	<cstring>
 
-1748915317 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\prestamo.cpp
+1749151739 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\prestamo.cpp
 	"Prestamo.h"
 
-1749143992 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\prestamo.h
+1749151714 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\prestamo.h
 	<iostream>
 	<string.h>
 	"Fecha.h"
 
-<<<<<<< HEAD
-1749144547 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\managerprestamo.cpp
+1749151444 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\managerprestamo.cpp
 	"ManagerPrestamo.h"
 
 1749144618 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\managerprestamo.h
 	"ArchivoPrestamos.h"
 
 1748911772 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\pagos.cpp
-=======
+
 1748729716 c:\users\bgh\desktop\programacion 2 tpint\biblionet\menulibros.h
 	"ManagerLibro.h"
 
@@ -483,30 +484,19 @@
 	"Fecha.h"
 
 1748979126 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\pagos.cpp
->>>>>>> bbce4eb92c19f7f54018126220327fec31dba36c
-	<iostream>
-	<string.h>
-	"fecha.h"
-	"socio.h"
-	"Pagos.h"
 
-<<<<<<< HEAD
 1748911772 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\pagos.h
-=======
-1748979126 c:\users\bgh\desktop\programacion 2 tpint\biblionet\pagos.h
->>>>>>> bbce4eb92c19f7f54018126220327fec31dba36c
-	<iostream>
-	"fecha.h"
-	"socio.h"
 
-<<<<<<< HEAD
+1748979126 c:\users\bgh\desktop\programacion 2 tpint\biblionet\pagos.h
+
 1749144323 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\archivoprestamos.h
 	"Prestamo.h"
 
-1748916141 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\archivoprestamos.cpp
+1749151927 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\archivoprestamos.cpp
 	"ArchivoPrestamos.h"
-=======
+
+1748916141 estamos.h"
+
 1748979126 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\prestamo.cpp
 	"Prestamo.h"
->>>>>>> bbce4eb92c19f7f54018126220327fec31dba36c
 
