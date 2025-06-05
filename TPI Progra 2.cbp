@@ -38,6 +38,12 @@
 		<Unit filename="ArchivoLibro.h">
 			<Option target="Debug" />
 		</Unit>
+		<Unit filename="ArchivoPrestamos.cpp">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="ArchivoPrestamos.h">
+			<Option target="Debug" />
+		</Unit>
 		<Unit filename="ArchivoSocio.cpp" />
 		<Unit filename="ArchivoSocio.h" />
 		<Unit filename="Libro.cpp">

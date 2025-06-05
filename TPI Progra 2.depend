@@ -3,17 +3,9 @@
 	<iostream>
 	<locale.h>
 
-<<<<<<< HEAD
-1748213765 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\main.cpp
-	<iostream>
-	<locale.h>
-	"ManagerLibro.h"
+1748473144 D
 
-1748204402 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\libro.h
-
-1748196862 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\libro.cpp
-=======
-1748485426 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\main.cpp
+1748911772 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\main.cpp
 	<iostream>
 	"MenuLibros.h"
 	"MenuSocios.h"
@@ -24,43 +16,32 @@
 1748654945 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\libro.h
 
 1748656771 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\libro.cpp
->>>>>>> b4b0e8b2b5c5ce8463cebbe7b07cd959a8240777
+
+1748898229 0e8b2b5c5ce8463cebbe7b07cd959a8240777
 	<iostream>
 	<string.h>
 	"Libro.h"
+	"Libro.h"
 
-<<<<<<< HEAD
-1748204402 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\libro.h
-
-1748213749 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\managerlibro.cpp
-	"ManagerLibro.h"
-	<iostream>
-
-1748212455 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\managerlibro.h
-	"ArchivoLibro.h"
-
-1748213485 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\archivolibro.cpp
-	"ArchivoLibro.h"
-	<iostream>
-
-1748213473 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\archivolibro.h
-=======
 1748654945 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\libro.h
 
 1748657423 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\managerlibro.cpp
 	"ManagerLibro.h"
 	<iostream>
+	"ManagerLibro.h"
+	<iostream>
 
 1748440498 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\managerlibro.h
+	"ArchivoLibro.h"
 	"ArchivoLibro.h"
 
 1748657527 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\archivolibro.cpp
 	"ArchivoLibro.h"
 	<iostream>
+	"ArchivoLibro.h"
+	<iostream>
 
 1748818853 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\archivolibro.h
->>>>>>> b4b0e8b2b5c5ce8463cebbe7b07cd959a8240777
-	"Libro.h"
 
 1748443845 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\archivolibro.cpp
 	"ArchivoLibro.h"
@@ -140,11 +121,7 @@
 1748470134 c:\users\camilote\desktop\trabajo grupal progra2\biblionet\archivolibro.h
 	"Libro.h"
 
-<<<<<<< HEAD
-1748484400 c:\users\camilote\desktop\trabajo grupal progra2\biblionet\libro.h
-=======
 1748470134 c:\users\camilote\desktop\trabajo grupal progra2\biblionet\libro.h
->>>>>>> b4b0e8b2b5c5ce8463cebbe7b07cd959a8240777
 
 1748470134 source:c:\users\camilote\desktop\trabajo grupal progra2\biblionet\libro.cpp
 	<iostream>
@@ -223,7 +200,6 @@
 
 1748473144 c:\users\camilote\desktop\trabajo grupal progra2\biblionet\menureportes.h
 
-<<<<<<< HEAD
 1748470134 source:c:\users\camiloide\onedrive\trabajo grupal progra2\biblionet\archivolibro.cpp
 	"ArchivoLibro.h"
 	<iostream>
@@ -386,7 +362,9 @@
 	<iostream>
 	"fecha.h"
 	"socio.h"
-=======
+
+1748827920 
+
 1748619628 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\menulibros.h
 	"ManagerLibro.h"
 
@@ -443,12 +421,35 @@
 	"Socio.h"
 	<cstring>
 
-1748905018 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\prestamo.cpp
+1748915317 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\prestamo.cpp
 	"Prestamo.h"
 
-1748898229 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\prestamo.h
+1749143992 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\prestamo.h
 	<iostream>
 	<string.h>
 	"Fecha.h"
->>>>>>> b4b0e8b2b5c5ce8463cebbe7b07cd959a8240777
+
+1749144547 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\managerprestamo.cpp
+	"ManagerPrestamo.h"
+
+1749144618 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\managerprestamo.h
+	"ArchivoPrestamos.h"
+
+1748911772 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\pagos.cpp
+	<iostream>
+	<string.h>
+	"fecha.h"
+	"socio.h"
+	"Pagos.h"
+
+1748911772 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\pagos.h
+	<iostream>
+	"fecha.h"
+	"socio.h"
+
+1749144323 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\archivoprestamos.h
+	"Prestamo.h"
+
+1748916141 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\archivoprestamos.cpp
+	"ArchivoPrestamos.h"
 

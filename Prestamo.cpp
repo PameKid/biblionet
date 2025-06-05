@@ -45,18 +45,18 @@ Fecha Prestamo::getFechaDevolucion(){
 
     //metodos
 
-    void Prestamo::cargarPrestamo(){
-        cout << "Ingrese el codigo del prestamos: " << endl;
-        cin >> _codPrestamo;
+void Prestamo::cargarPrestamo(){
+    cout << "Ingrese el codigo del prestamos: " << endl;
+    cin >> _codPrestamo;
 
-        cout << "Ingrese el código del libro: " << endl;
-        cin >> _codLibro;
+    cout << "Ingrese el código del libro: " << endl;
+    cin >> _codLibro;
 
-        cout << "Ingrese el codigo del socio:  " << endl;
-        cin >> _codSocio;
+    cout << "Ingrese el codigo del socio:  " << endl;
+    cin >> _codSocio;
 
-        cout << "Ingrese la fecha de prestamo: " << endl;
-        _fechaEntrega.cargarFechaPrestamo();
+    cout << "Ingrese la fecha de prestamo: " << endl;
+    _fechaEntrega.cargarFechaPrestamo();
 
 
 //        _fechaDevolucion;
