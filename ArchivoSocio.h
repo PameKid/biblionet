@@ -14,6 +14,8 @@ public:
     int modificarArchivoSocio(Socio socio, int posicion);
     int buscarArchivoSocio(int codigo);
     Socio obtenerSocioArchivo(int pos) ;
+    int buscarSocioDni(char dni[]);
+
 };
 
 

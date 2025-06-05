@@ -1,5 +1,6 @@
 #include "ArchivoSocio.h"
 #include <iostream>
+#include<cstring>
 
 
 int ArchivoSocio::agregarArchivoSocio(Socio socioNuevo)
@@ -165,3 +166,35 @@ int ArchivoSocio::modificarArchivoSocio(Socio socio, int posicion)
     return escribio;
 }
 
+
+int ArchivoSocio::buscarSocioDni(char dni[]) {
+
+    Socio socio;
+    int cantRegistro;
+    FILE *pSocio;
+    pSocio=fopen("Socio.dat","rb");
+
+    if(pSocio==nullptr)
+    {
+        ///cout<<"ERROR DE ARCHIVO"<<endl;
+        return -2;
+    }
+
+    int pos=0;
+    while(fread(&socio,sizeof(socio),1,pSocio)==1)
+    {
+        if(strcmp (socio.getDNI(),dni) == 0 )
+        {
+            return pos;
+        }
+        pos++;
+    }
+
+    fclose(pSocio);
+    return -1;
+
+
+
+
+
+}

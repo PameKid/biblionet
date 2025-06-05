@@ -39,15 +39,45 @@ void ManagerSocio::listarSocios()  //mostrar la lista de archivos
     delete[]vecSocios;
 }
 
-void ManagerSocio::bajaSocio(){
+void ManagerSocio::bajaSocio()
+{
     int codigo;
     ArchivoSocio archivoSocio;
     cout<<"Ingrese codigo de Socio: ";
     cin>>codigo;
-    if(archivoSocio.bajaArchivoSocio(codigo)==true){
+    if(archivoSocio.bajaArchivoSocio(codigo)==true)
+    {
         cout<<"REGISTRO BORRADO"<<endl;
     }
-    else{
+    else
+    {
         cout<<"NO SE PUDO BORRAR EL REGISTRO"<<endl;
     }
+}
+
+void ManagerSocio::buscarSocioPorDni()
+{
+    ArchivoSocio archivoSocio;
+    Socio socio;
+    char dni [8];
+    cout <<"Ingrese DNI: ";
+
+    cin.ignore();
+    cin.getline(dni,8);
+
+
+    int posicion= archivoSocio.buscarSocioDni(dni);
+
+    if (posicion < 0 )
+    {
+        cout << "No existe el Socio";
+
+    }
+    else
+    {
+        socio= archivoSocio.obtenerSocioArchivo(posicion);
+
+        socio.mostrarInfo();
+    }
+
 }
