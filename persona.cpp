@@ -9,7 +9,7 @@ Persona::Persona()
 {
 
 //    _nombre = "" ;
-  //  _apellido = "";
+    //  _apellido = "";
     _fechaDeNacimiento = Fecha();
     _estado = true;
 }
@@ -24,17 +24,19 @@ Persona :: Persona (const char* nombre, const char* apellido, Fecha fechaDeNacim
 
 // Desarrollo Getter y Setter.
 
-string Persona :: getNombre(){
+string Persona :: getNombre()
+{
 
-return _nombre;
+    return _nombre;
 }
 void Persona::setNombre( char nombre[20])
 {
     strcpy(this->_nombre, nombre);
 }
-string Persona:: getApellido(){
+string Persona:: getApellido()
+{
 
-return _apellido;
+    return _apellido;
 }
 void Persona::setApellido(char apellido[20])
 {
@@ -61,15 +63,16 @@ void Persona :: setFechaDeNacimiento(Fecha fechaDeNacimiento)
     _fechaDeNacimiento= fechaDeNacimiento;
 }
 
-void Persona:: cargarPersona()
+void Persona::cargarPersona()
 {
-
-    cout << "Nombre del socio: " ;
     cin.ignore();
-    cin.getline(_nombre, 20);
-    cout << "Apellido del socio: ";
-    //cin.ignore();
-    cin.getline(_apellido, 20);
-    _fechaDeNacimiento.cargarFecha();
 
+    cout << "Nombre del socio: ";
+    cin.getline(_nombre, 20);
+
+    cout << "Apellido del socio: ";
+    cin.getline(_apellido, 20);
+
+    _fechaDeNacimiento.cargarFecha();
 }
+

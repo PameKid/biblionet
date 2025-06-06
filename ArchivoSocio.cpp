@@ -139,18 +139,19 @@ int ArchivoSocio::buscarArchivoSocio(int codigo)
 bool ArchivoSocio::bajaArchivoSocio(int codigo)
 {
     Socio socio;
-    int pos= buscarArchivoSocio(codigo);
-    if(pos==-1) return false;
-    socio=obtenerSocioArchivo(pos);
+    //int pos= buscarArchivoSocio(codigo);
+    //if(pos==-1) return false;
+    //socio=obtenerSocioArchivo(pos);
+    socio=obtenerSocioArchivo(codigo);
     if(socio.getCodSocio()==-1)
     {
         return false;
     }
     socio.setEstado(false);
-    return modificarArchivoSocio(socio,pos);
+    return modificarArchivoSocio(socio);
 }
 
-int ArchivoSocio::modificarArchivoSocio(Socio socio, int posicion)
+int ArchivoSocio::modificarArchivoSocio(Socio socio)
 {
     FILE *pSocio;
     pSocio=fopen("Socio.dat","rb+");
@@ -159,7 +160,7 @@ int ArchivoSocio::modificarArchivoSocio(Socio socio, int posicion)
         return -1;
     }
 
-    fseek(pSocio, posicion*sizeof(socio),0);
+    fseek(pSocio, socio.getPosicion()*sizeof(socio),0);
     int escribio=fwrite(&socio, sizeof(socio),1,pSocio);
 
     fclose(pSocio);
@@ -192,9 +193,29 @@ int ArchivoSocio::buscarSocioDni(char dni[]) {
 
     fclose(pSocio);
     return -1;
+}
 
+Socio ArchivoSocio::obtenerSocioPorCodigo(int codSocio)
+{
+    ArchivoSocio arhivoSocio;
+    int cantReg;
+    Socio *vecSocios = nullptr;
+    Socio socioObtenido;
 
+    cantReg = arhivoSocio.contarRegistrosArchivoSocio();
+    vecSocios = new Socio[cantReg];
 
+    arhivoSocio.obtenerVectorSocios(cantReg, vecSocios);
+    for(int x=0; x<cantReg; x++)
+    {
+        if(vecSocios[x].getCodSocio()==codSocio && vecSocios[x].getEstado() == true)  //valido que el estado del libro sea activo.
+        {
+            socioObtenido = vecSocios[x];
+            socioObtenido.setPosicion(x);
+            break;
+        }
+    }
 
-
+    delete[]vecSocios;
+    return socioObtenido;
 }

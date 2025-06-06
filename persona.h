@@ -1,11 +1,10 @@
 #ifndef PERSONA_H_INCLUDED
 #define PERSONA_H_INCLUDED
 #include <string>
-using namespace std;
 #include <iostream>
 #include "fecha.h"
 
-
+using namespace std;
 
 class Persona
 {

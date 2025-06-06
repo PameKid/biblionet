@@ -42,10 +42,10 @@ void menuSocios()
             ms.bajaSocio();
              system("pause");
             break;
-        // case 5:
-        //     ms.modificarSocio();
-        //     break;
-        //      system("pause");
+         case 5:
+             ms.modificarSocio();
+            system("pause");
+             break;
         case 0:
             return;
             break;

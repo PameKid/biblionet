@@ -11,12 +11,11 @@ public:
     int contarRegistrosArchivoSocio();
     void obtenerVectorSocios(int cantRegistros, Socio* socios); //recibe un vector de libros y lo carga desde el archivo
     bool bajaArchivoSocio(int codigo);
-    int modificarArchivoSocio(Socio socio, int posicion);
+    int modificarArchivoSocio(Socio socio);
     int buscarArchivoSocio(int codigo);
     Socio obtenerSocioArchivo(int pos) ;
     int buscarSocioDni(char dni[]);
-
+    Socio obtenerSocioPorCodigo(int codSocio);
 };
-
 
 #endif // ARCHIVOSOCIO_H_INCLUDED

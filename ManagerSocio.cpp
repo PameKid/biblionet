@@ -1,5 +1,6 @@
 #include "ManagerSocio.h"
 #include <iostream>
+#include "ArchivoSocio.h"
 
 
 void ManagerSocio::agregarSocio()
@@ -20,11 +21,9 @@ void ManagerSocio::agregarSocio()
 
 void ManagerSocio::listarSocios()  //mostrar la lista de archivos
 {
-
     ArchivoSocio arhivoSocio;
     int cantReg;
     Socio*vecSocios = nullptr;
-
 
     cantReg = arhivoSocio.contarRegistrosArchivoSocio();
     vecSocios = new Socio[cantReg];
@@ -65,7 +64,6 @@ void ManagerSocio::buscarSocioPorDni()
     cin.ignore();
     cin.getline(dni,8);
 
-
     int posicion= archivoSocio.buscarSocioDni(dni);
 
     if (posicion < 0 )
@@ -80,4 +78,38 @@ void ManagerSocio::buscarSocioPorDni()
         socio.mostrarInfo();
     }
 
+}
+
+void ManagerSocio::modificarSocio()
+{
+
+    Socio socioModificado;
+    ArchivoSocio archivoSocio;
+    int codSocio;
+    int opcion;
+
+    cout << "Ingrese el código del Socio que desea modificar: " << endl;
+    cin >> codSocio;
+
+    socioModificado = archivoSocio.obtenerSocioPorCodigo(codSocio);
+    cout << "Socio a modificar: " << socioModificado.getNombre()<< " " << socioModificado.getApellido()<<endl;
+    cout << "Elija el dato que quiere modificar: " << endl;
+    socioModificado.mostrarInfoParaModificar();
+
+    cin >> opcion;
+
+    while (opcion != 0)
+    {
+        socioModificado.cargarSocioModificado(opcion);
+
+        system("cls");
+
+        socioModificado.mostrarInfoParaModificar();
+        cin >>opcion;
+    }
+
+    archivoSocio.modificarArchivoSocio(socioModificado);
+
+    cout << "Modificado correctamente " << endl;
+    system("pause");
 }
