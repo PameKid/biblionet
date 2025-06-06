@@ -219,3 +219,25 @@ Socio ArchivoSocio::obtenerSocioPorCodigo(int codSocio)
     delete[]vecSocios;
     return socioObtenido;
 }
+
+bool ArchivoSocio::existeSocio(int codSocio){
+
+    FILE * pArchivoSocio;
+    Socio s1;
+
+    pArchivoSocio = fopen("libro.dat","rb");
+
+    if(pArchivoSocio == nullptr){
+        return false;
+    }
+
+    while((fread(&s1,sizeof(Socio),1,pArchivoSocio))== 1){
+        if(s1.getCodSocio() == codSocio){
+           fclose(pArchivoSocio);
+           return true;
+           }
+    }
+
+    fclose(pArchivoSocio);
+    return false;
+}

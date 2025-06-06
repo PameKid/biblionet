@@ -11,6 +11,7 @@ public:
     void obtenerVectorLibros(int cantRegistros, Libro* libros); //recibe un vector de libros y lo carga desde el archivo
     void buscarArchivoPorCodigo();
     int modificarArchivoLibro(Libro libromodificado);
+    bool existeLibro(int codLibro); // interactua con prestamo
 
 
 

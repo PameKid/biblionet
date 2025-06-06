@@ -19,6 +19,7 @@ int ArchivoLibro::agregarArchivoLibro(Libro libronuevo){
     return 2; //regresa 2 si se guardó correctamente
 }
 
+//recorre el archivo de libros y
 int ArchivoLibro::leerArchivo(){
     Libro l1;
     FILE* plibro;
@@ -78,6 +79,7 @@ void ArchivoLibro::obtenerVectorLibros(int cantRegistros, Libro *vecLibros){
 
 }
 
+//Recibe un objeto libro modificado y lo guarda en el archivo
 int ArchivoLibro::modificarArchivoLibro(Libro libromodificado){
     FILE* pArchivoLibro;
 
@@ -96,6 +98,29 @@ int ArchivoLibro::modificarArchivoLibro(Libro libromodificado){
     fclose(pArchivoLibro);
 
     return modificado;
+}
+
+//metodos para interactuar con prestamos. Recibe el codigo del libro y corrobora que este en el archivo, devuelve true.
+
+bool ArchivoLibro::existeLibro(int codLibro){
+    FILE * pArchivoLibro;
+    Libro l1;
+
+    pArchivoLibro = fopen("libro.dat","rb");
+
+    if(pArchivoLibro == nullptr){
+        return false;
+    }
+
+    while((fread(&l1,sizeof(Libro),1,pArchivoLibro))== 1){
+        if(l1.getCodLibro() == codLibro){
+           fclose(pArchivoLibro);
+           return true;
+           }
+    }
+
+    fclose(pArchivoLibro);
+    return false;
 }
 
 

@@ -16,6 +16,7 @@ public:
     Socio obtenerSocioArchivo(int pos) ;
     int buscarSocioDni(char dni[]);
     Socio obtenerSocioPorCodigo(int codSocio);
+    bool existeSocio(int codSocio); //interactua con prestamo para validarlo
 };
 
 #endif // ARCHIVOSOCIO_H_INCLUDED
