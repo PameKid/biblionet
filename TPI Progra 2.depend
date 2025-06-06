@@ -53,7 +53,7 @@
 	"ArchivoLibro.h"
 	"ArchivoLibro.h"
 
-1748657527 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\archivolibro.cpp
+1749219198 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\archivolibro.cpp
 	"ArchivoLibro.h"
 	<iostream>
 
@@ -409,10 +409,10 @@
 	<iostream>
 	"fecha.h"
 
-1748898307 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\fecha.h
+1749222512 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\fecha.h
 	<string>
 
-1749149495 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\menuprestamos.hh
+1749219576 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\menuprestamos.hh
 	"ManagerPrestamo.h"
 
 1748485426 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\menupagos.h
@@ -424,9 +424,10 @@
 	<iostream>
 	<cstring>
 
-1748898316 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\fecha.cpp
+1749223745 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\fecha.cpp
 	"Fecha.h"
 	<iostream>
+	<ctime>
 
 1749145443 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\managersocio.cpp
 	"ManagerSocio.h"
@@ -446,15 +447,15 @@
 1749162322 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\prestamo.cpp
 	"Prestamo.h"
 
-1749162322 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\prestamo.h
+1749217698 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\prestamo.h
 	<iostream>
 	<string.h>
 	"Fecha.h"
 
-1749151444 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\managerprestamo.cpp
+1749224431 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\managerprestamo.cpp
 	"ManagerPrestamo.h"
 
-1749144618 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\managerprestamo.h
+1749217709 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\managerprestamo.h
 	"ArchivoPrestamos.h"
 
 1748911772 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\pagos.cpp

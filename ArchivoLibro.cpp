@@ -38,6 +38,7 @@ int ArchivoLibro::leerArchivo(){
     }
     fclose(plibro);
 }
+
 int ArchivoLibro::contarRegistros(){
     FILE* plibro;
 
