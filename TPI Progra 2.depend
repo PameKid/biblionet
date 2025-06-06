@@ -409,7 +409,7 @@
 	<iostream>
 	"fecha.h"
 
-1749222512 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\fecha.h
+1749226634 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\fecha.h
 	<string>
 
 1749219576 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\menuprestamos.hh
@@ -424,7 +424,7 @@
 	<iostream>
 	<cstring>
 
-1749223745 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\fecha.cpp
+1749226756 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\fecha.cpp
 	"Fecha.h"
 	<iostream>
 	<ctime>
@@ -452,7 +452,7 @@
 	<string.h>
 	"Fecha.h"
 
-1749224431 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\managerprestamo.cpp
+1749226872 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\managerprestamo.cpp
 	"ManagerPrestamo.h"
 
 1749217709 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\managerprestamo.h

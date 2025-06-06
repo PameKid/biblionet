@@ -6,9 +6,18 @@ void ManagerPrestamo::cargarPrestamo(Prestamo objetoPrestamo){
     int codigoSocio;
     Fecha fechaPrestamo;
 
+    cout << "NUEVO PRÉSTAMO " << endl;
+    cout << "***************" << endl;
+
+    fechaPrestamo.cargarFechaActual();
+    objetoPrestamo.setFechaEntrega(fechaPrestamo);
+    fechaPrestamo.mostrarFecha();
+
+
     cout << "Ingrese el codigo del prestamo: " << endl;
     cin >> codigoPrestamo;
     objetoPrestamo.setCodPrestamo(codigoPrestamo);
+
 
     cout << "Ingrese el código del libro: " << endl;
     cin >> codigoLibro;
@@ -18,8 +27,6 @@ void ManagerPrestamo::cargarPrestamo(Prestamo objetoPrestamo){
     cin >> codigoSocio;
     objetoPrestamo.setCodSocio(codigoSocio);
 
-    cout << "Fecha actual : " << endl;
-    fechaPrestamo.cargarFechaActual();
 
     cout << "Los datos fueron guardados correctamente: " << endl;
 
@@ -33,7 +40,7 @@ void ManagerPrestamo::altaPrestamo(){
     ArchivoPrestamo archivoPrestamo;
     Prestamo p1;
 
-    p1.cargarPrestamo();
+    cargarPrestamo(p1);
     archivoPrestamo.agregarArchivoPrestamo(p1);
 
     //acá se debería interactuar con libro y restar un ejemplar hasta la fecha de devolucion.

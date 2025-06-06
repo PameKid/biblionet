@@ -70,7 +70,15 @@ Fecha Fecha::cargarFechaActual(){
     struct tm* timeinfo;
 
     time(&rawtime);
+    timeinfo = localtime(&rawtime);
 
-    cout << timeinfo->tm_mday << "/" << timeinfo->tm_mon+1 << "/"<< timeinfo->tm_year+1900 << endl;
+    _anio = timeinfo->tm_year+1900;
+    _mes = timeinfo->tm_mon+1;
+    _dia = timeinfo->tm_mday;
 }
 
+void Fecha::mostrarFecha(){
+
+    cout << "Fecha: " << _dia << "/" << _mes << "/"<< _anio << endl;
+
+}
