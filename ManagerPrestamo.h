@@ -1,4 +1,4 @@
-#include "Prestamo.h"
+#include "ArchivoPrestamos.h"
 
 class ManagerPrestamo{
 
