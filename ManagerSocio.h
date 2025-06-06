@@ -12,6 +12,7 @@ public:
     void bajaSocio();
     void modificarSocio();
     void buscarSocioPorDni();
+
 };
 
 #endif // MANAGERSOCIO_H_INCLUDED

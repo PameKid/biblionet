@@ -48,6 +48,11 @@ const char* Socio::getDNI()
 {
     return _DNI;
 }
+int Socio::getPosicion()
+{
+    return _posicion;
+}
+
 
 // Setters
 void Socio::setDireccion(const char* direccion)
@@ -78,28 +83,33 @@ void Socio::setDNI(const char* DNI)
     strncpy(_DNI, DNI, sizeof(_DNI));
     _DNI[sizeof(_DNI)-1] = '\0';
 }
+void Socio::setPosicion(int posicion)
+{
+    _posicion = posicion;
+}
 
 void Socio::cargarSocio()
 {
     cargarPersona();
-    cout <<"Ingrese un numero de telefono: ";
     cin.ignore();
+
+    cout << "Ingrese un numero de telefono: ";
     cin.getline(_telefono, 30);
+
     cout << "Ingrese su numero de DNI: ";
-    cin.ignore();
     cin.getline(_DNI, 8);
+
     cout << "Ingrese un mail: ";
-    cin.ignore();
     cin.getline(_mail, 30);
+
     cout << "Ingrese una direccion: ";
-    cin.ignore();
     cin.getline(_direccion, 30);
 }
 
 void Socio::mostrarInfo()
 {
-
-    cout << "Los datos ingresados son los siguientes: " << endl;
+    //cout << "Los datos ingresados son los siguientes: " << endl;
+    cout<<endl;
     cout << "Nombre del Socio: " <<getNombre()<< endl;
     cout << "Apellido Socio: " << getApellido() << endl;
     cout << "Fecha de nacimiento:" << getFecaDeNacimiento().toString()<< endl;
@@ -110,3 +120,42 @@ void Socio::mostrarInfo()
     cout << "Codigo de Socio: "  << _codSocio << endl;
     cout << "Estado del Socio: " << getEstado() << endl;
 };
+
+
+void Socio::mostrarInfoParaModificar()
+{
+    cout << "Datos del Socio: " << endl;
+
+    cout << "1. mail del Socio:  " << _mail << endl;
+    cout << "2. direccion del Socio" << _direccion << endl;
+    cout << "3. telefono del Socio: " <<  _telefono << endl;
+    cout << "0. para guardar los cambios.  " << endl;
+}
+
+void Socio::cargarSocioModificado(int opcion)
+{
+
+    switch(opcion)
+    {
+    case 1:
+        cout << "Ingrese el nuevo mail del Socio: " << endl;
+        cin.ignore();
+        cin.getline(_mail,30);
+
+        break;
+    case 2:
+        cout << "Ingrese la nueva direccion del socio: " << endl;
+        cin.ignore();
+        cin.getline(_direccion, 30);
+        break;
+
+    case 3:
+
+        cout << "Ingrese el nuevo telefono del socio: " << endl;
+        cin.ignore();
+        cin.getline( _telefono,30);
+        break;
+
+
+    }
+}

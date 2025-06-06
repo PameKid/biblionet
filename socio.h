@@ -2,9 +2,9 @@
 #define SOCIO_H_INCLUDED
 #include "Persona.h"
 #include <string>
-using namespace std;
 #include <iostream>
 
+using namespace std;
 
 class Socio : public Persona
 {
@@ -15,6 +15,7 @@ private:
     char _direccion[30];
     char _mail[30];
     int _codSocio;
+    int _posicion;
 
 
 public:
@@ -29,6 +30,7 @@ public:
     int getCodSocio();
     const char* getTelefono();
     const char* getDNI();
+    int getPosicion();
 
     // Setters
     void setDireccion(const char*direccion);
@@ -36,10 +38,12 @@ public:
     void setCodSocio(int codSocio);
     void setTelefono(const char* telefono);
     void setDNI(const char* DNI);
-
+    void setPosicion(int posicion);
 
     void mostrarInfo();
     void cargarSocio();
+    void mostrarInfoParaModificar();
+    void cargarSocioModificado(int opcion);
 
 
 

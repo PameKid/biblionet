@@ -90,34 +90,35 @@
 	<iostream>
 	<cstring>
 
-1748722802 c:\users\bgh\desktop\programacion 2 tpint\biblionet\persona.h
+1749177596 c:\users\bgh\desktop\programacion 2 tpint\biblionet\persona.h
 	<string>
 	<iostream>
 	"fecha.h"
 
-1748983019 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\socio.cpp
+1749177170 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\socio.cpp
 	<iostream>
 	"Socio.h"
 	<cstring>
 
-1748726015 c:\users\bgh\desktop\programacion 2 tpint\biblionet\socio.h
+1749177595 c:\users\bgh\desktop\programacion 2 tpint\biblionet\socio.h
 	"Persona.h"
 	<string>
 	<iostream>
 
-1748983204 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\archivosocio.cpp
+1749175405 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\archivosocio.cpp
 	"ArchivoSocio.h"
 	<iostream>
 	<cstring>
 
-1748983102 c:\users\bgh\desktop\programacion 2 tpint\biblionet\archivosocio.h
+1749175316 c:\users\bgh\desktop\programacion 2 tpint\biblionet\archivosocio.h
 	"socio.h"
 
-1748983019 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\managersocio.cpp
+1749176098 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\managersocio.cpp
 	"ManagerSocio.h"
 	<iostream>
+	"ArchivoSocio.h"
 
-1748983019 c:\users\bgh\desktop\programacion 2 tpint\biblionet\managersocio.h
+1749175288 c:\users\bgh\desktop\programacion 2 tpint\biblionet\managersocio.h
 	"ArchivoSocio.h"
 	"socio.h"
 
@@ -439,7 +440,7 @@
 1748729716 c:\users\bgh\desktop\programacion 2 tpint\biblionet\menulibros.h
 	"ManagerLibro.h"
 
-1748983302 c:\users\bgh\desktop\programacion 2 tpint\biblionet\menusocios.h
+1749175935 c:\users\bgh\desktop\programacion 2 tpint\biblionet\menusocios.h
 	"ManagerSocio.h"
 	"persona.h"
 
