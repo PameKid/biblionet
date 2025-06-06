@@ -72,13 +72,16 @@ void Prestamo::cargarPrestamo(){
 
     void Prestamo::mostrarInfo(){
 
-    cout << "Datos del prestamo: " << endl;
+    cout << "DATOS DEL PRESTAMO : " << endl;
+    cout << "********************" << endl;
     cout << "Codigo del prestamo: " << _codPrestamo << endl;
     cout << "Codigo del libro: " << _codLibro << endl;
     cout << "Código del socio:" <<  _codSocio << endl;
-    //cout << "Fecha de prestamo" << _fechaPrestamo << endl;
+     _fechaPrestamo.mostrarFecha();
+
     //calcular y mostrar la fecha de devolucion a partir de fecha actual
     //cout << "Estado: " << _estado;
+    cout << "----------------------------------------------" << endl;
 }
 
     void Prestamo::cargarDevolucion(){}
