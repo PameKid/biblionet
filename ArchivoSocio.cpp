@@ -5,9 +5,7 @@
 
 int ArchivoSocio::agregarArchivoSocio(Socio socioNuevo)
 {
-
     FILE* psocio;
-
     psocio = fopen("Socio.dat", "ab");
 
     if(psocio == nullptr)
@@ -17,7 +15,6 @@ int ArchivoSocio::agregarArchivoSocio(Socio socioNuevo)
     }
 
     fwrite(&socioNuevo, sizeof(Socio),1,psocio);
-
     fclose(psocio);
 
     return 2; //regresa 2 si se guardó correctamente
@@ -139,9 +136,6 @@ int ArchivoSocio::buscarArchivoSocio(int codigo)
 bool ArchivoSocio::bajaArchivoSocio(int codigo)
 {
     Socio socio;
-    //int pos= buscarArchivoSocio(codigo);
-    //if(pos==-1) return false;
-    //socio=obtenerSocioArchivo(pos);
     socio=obtenerSocioArchivo(codigo);
     if(socio.getCodSocio()==-1)
     {
@@ -168,7 +162,8 @@ int ArchivoSocio::modificarArchivoSocio(Socio socio)
 }
 
 
-int ArchivoSocio::buscarSocioDni(char dni[]) {
+int ArchivoSocio::buscarSocioDni(char dni[])
+{
 
     Socio socio;
     int cantRegistro;

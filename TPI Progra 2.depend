@@ -86,7 +86,7 @@
 1748443845 c:\users\bgh\desktop\programacion 2 tpint\biblionet\managerlibro.h
 	"ArchivoLibro.h"
 
-1748729716 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\managerlibro.cpp
+1749218269 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\managerlibro.cpp
 	"ManagerLibro.h"
 	<iostream>
 
@@ -97,7 +97,7 @@
 1748979126 c:\users\bgh\desktop\programacion 2 tpint\biblionet\fecha.h
 	<string>
 
-1748980019 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\persona.cpp
+1749177594 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\persona.cpp
 	"Persona.h"
 	<string>
 	<iostream>
@@ -108,7 +108,7 @@
 	<iostream>
 	"fecha.h"
 
-1749177170 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\socio.cpp
+1749177596 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\socio.cpp
 	<iostream>
 	"Socio.h"
 	<cstring>
@@ -118,7 +118,7 @@
 	<string>
 	<iostream>
 
-1749175405 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\archivosocio.cpp
+1749234129 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\archivosocio.cpp
 	"ArchivoSocio.h"
 	<iostream>
 	<cstring>
@@ -467,19 +467,20 @@
 	"ManagerSocio.h"
 	"persona.h"
 
-1748531830 c:\users\bgh\desktop\programacion 2 tpint\biblionet\menuprestamos.hh
+1749218269 c:\users\bgh\desktop\programacion 2 tpint\biblionet\menuprestamos.hh
+	"ManagerPrestamo.h"
 
 1748531830 c:\users\bgh\desktop\programacion 2 tpint\biblionet\menupagos.h
 
 1748531830 c:\users\bgh\desktop\programacion 2 tpint\biblionet\menureportes.h
 
-1748979126 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\managerprestamo.cpp
+1749218269 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\managerprestamo.cpp
 	"ManagerPrestamo.h"
 
-1748979126 c:\users\bgh\desktop\programacion 2 tpint\biblionet\managerprestamo.h
-	"Prestamo.h"
+1749218269 c:\users\bgh\desktop\programacion 2 tpint\biblionet\managerprestamo.h
+	"ArchivoPrestamos.h"
 
-1748979126 c:\users\bgh\desktop\programacion 2 tpint\biblionet\prestamo.h
+1749218269 c:\users\bgh\desktop\programacion 2 tpint\biblionet\prestamo.h
 	<iostream>
 	<string.h>
 	"Fecha.h"
@@ -498,6 +499,12 @@
 
 1748916141 estamos.h"
 
-1748979126 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\prestamo.cpp
+1749218269 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\prestamo.cpp
 	"Prestamo.h"
+
+1749218269 c:\users\bgh\desktop\programacion 2 tpint\biblionet\archivoprestamos.h
+	"Prestamo.h"
+
+1749218269 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\archivoprestamos.cpp
+	"ArchivoPrestamos.h"
 
