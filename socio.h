@@ -11,8 +11,8 @@ class Socio : public Persona
 
 private:
     char _telefono [30];
-    char _DNI [8];
-    char _direccion[30];
+    char _DNI [9];
+    char _direccion[50];
     char _mail[30];
     int _codSocio;
     int _posicion;

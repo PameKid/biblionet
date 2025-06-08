@@ -24,26 +24,26 @@ void menuAutor()
         ManagerAutor mA;
         switch(opc)
         {
-             case 1:
-           //ms.buscarSocioPorDni();
-             //   system("pause");
-            //break;
+        case 1:
+            mA.buscarAutorPorNombre();
+            system("pause");
+            break;
         case 2:
-            //ms.listarSocios();
-            //system("pause");
-            //break;
+            mA.listarAutores();
+            system("pause");
+            break;
         case 3:
             mA.agregarAutor();
             system("pause");
             break;
         case 4:
-            //ms.bajaSocio();
-             //system("pause");
-            //break;
-         case 5:
-             //ms.modificarSocio();
-            //system("pause");
-             //break;
+        //ms.bajaSocio();
+        //system("pause");
+        //break;
+        case 5:
+        //ms.modificarSocio();
+        //system("pause");
+        //break;
         case 0:
             return;
             break;

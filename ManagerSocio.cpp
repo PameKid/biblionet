@@ -57,11 +57,11 @@ void ManagerSocio::buscarSocioPorDni()
 {
     ArchivoSocio archivoSocio;
     Socio socio;
-    char dni [8];
+    char dni [9];
     cout <<"Ingrese DNI: ";
 
     cin.ignore();
-    cin.getline(dni,8);
+    cin.getline(dni,9);
 
     int posicion= archivoSocio.buscarSocioDni(dni);
 

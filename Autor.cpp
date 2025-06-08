@@ -48,7 +48,7 @@ void Autor::mostrarInfo()
 {
     mostrartInfoPersona();
     cout << "Direccion: " << _nacionalidad << endl;
-    cout << "Codigo de Socio: "  << _codAutor << endl;
+    cout << "Codigo de Autor: "  << _codAutor << endl;
 }
 
 

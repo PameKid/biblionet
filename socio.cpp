@@ -45,6 +45,7 @@ const char* Socio::getDNI()
 {
     return _DNI;
 }
+
 int Socio::getPosicion()
 {
     return _posicion;
@@ -94,15 +95,13 @@ void Socio::cargarSocio()
     cin.getline(_telefono, 30);
 
     cout << "Ingrese su numero de DNI: ";
-    cin.getline(_DNI, 8);
+    cin.getline(_DNI, 9);
 
     cout << "Ingrese un mail: ";
-    cin.ignore();
     cin.getline(_mail, 30);
 
     cout << "Ingrese una direccion: ";
-    cin.ignore();
-    cin.getline(_direccion, 30);
+    cin.getline(_direccion, 50);
 }
 
 void Socio::mostrarInfo()

@@ -164,9 +164,7 @@ int ArchivoSocio::modificarArchivoSocio(Socio socio)
 
 int ArchivoSocio::buscarSocioDni(char dni[])
 {
-
     Socio socio;
-    int cantRegistro;
     FILE *pSocio;
     pSocio=fopen("Socio.dat","rb");
 
@@ -179,7 +177,7 @@ int ArchivoSocio::buscarSocioDni(char dni[])
     int pos=0;
     while(fread(&socio,sizeof(socio),1,pSocio)==1)
     {
-        if(strcmp (socio.getDNI(),dni) == 0 )
+        if(strcmp(socio.getDNI(),dni) == 0 )
         {
             return pos;
         }

@@ -13,8 +13,8 @@ public:
     //bool bajaArchivoSocio(int codigo);
     //int modificarArchivoSocio(Socio socio);
    // int buscarArchivoSocio(int codigo);
-    //Socio obtenerSocioArchivo(int pos) ;
-    //int buscarSocioDni(char dni[]);
+    Autor obtenerAutorArchivo(int pos) ;
+    int buscarAutorPorNombre(char nombre[]);
     //Socio obtenerSocioPorCodigo(int codSocio);
     //bool existeSocio(int codSocio); //interactua con prestamo para validarlo
 };

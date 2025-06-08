@@ -7,15 +7,11 @@ using namespace std;
 // Desarrollo constrcutores
 Persona::Persona()
 {
-
-//    _nombre = "" ;
-    //  _apellido = "";
     _fechaDeNacimiento = Fecha();
     _estado = true;
 }
 Persona :: Persona (const char* nombre, const char* apellido, Fecha fechaDeNacimiento, bool Estado)
 {
-
     strcpy( _nombre,nombre);
     strcpy( _apellido, apellido);
     _fechaDeNacimiento= fechaDeNacimiento;
@@ -24,20 +20,21 @@ Persona :: Persona (const char* nombre, const char* apellido, Fecha fechaDeNacim
 
 // Desarrollo Getter y Setter.
 
-string Persona :: getNombre()
+const char* Persona :: getNombre()
 {
-
     return _nombre;
 }
+
 void Persona::setNombre( char nombre[20])
 {
     strcpy(this->_nombre, nombre);
 }
-string Persona:: getApellido()
-{
 
+const char* Persona:: getApellido()
+{
     return _apellido;
 }
+
 void Persona::setApellido(char apellido[20])
 {
     strcpy(this->_apellido, apellido);

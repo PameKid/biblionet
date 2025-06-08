@@ -20,8 +20,8 @@ class Persona
     Persona();
     Persona ( const char* nombre, const char*  apellido, Fecha fechaDeNacimiento, bool estado =false);
 
-    string getNombre();
-    string getApellido();
+    const char* getNombre();
+     const char* getApellido();
     Fecha getFecaDeNacimiento();
     bool getEstado();
 

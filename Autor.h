@@ -29,5 +29,6 @@ public:
 
     void mostrarInfo();
     void cargarAutor();
+
 };
 #endif // AUTOR_H_INCLUDED

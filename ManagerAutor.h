@@ -7,7 +7,7 @@ class ManagerAutor
 {
 
 public:
-    void bucarAutorPorNombre();
+    void buscarAutorPorNombre();
     void listarAutores();
     void agregarAutor();
     void bajaAutor();

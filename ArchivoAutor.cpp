@@ -1,5 +1,7 @@
 #include "Autor.h"
 #include "ArchivoAutor.h"
+#include <cstring>
+using namespace std;
 
 
 int ArchivoAutor::agregarAutor(Autor autorNuevo)
@@ -58,4 +60,49 @@ void ArchivoAutor::obtenerVectorAutores(int cantRegistros, Autor *vecAutor)   //
     fclose(pAutor);
 }
 
+int ArchivoAutor:: buscarAutorPorNombre(char nombre []){
+
+    Autor autor;
+    FILE *pAutor;
+    pAutor=fopen("Autor.dat","rb");
+
+    if(pAutor==nullptr)
+    {
+        ///cout<<"ERROR DE ARCHIVO"<<endl;
+        return -2;
+    }
+
+    int pos=0;
+    while(fread(&autor,sizeof(Autor),1,pAutor)==1)
+    {
+        cout<<"NOMBRE: "<<autor.getNombre()<<endl;
+        if(strcmp(autor.getNombre(), nombre) == 0 )
+        {
+            return pos;
+        }
+        pos++;
+    }
+
+    fclose(pAutor);
+    return -1;
+}
+
+
+Autor ArchivoAutor::obtenerAutorArchivo(int pos)
+{
+    Autor autor;
+    FILE *pAutor;
+    pAutor=fopen("Autor.dat","rb");
+    autor.setCodAutor(-1);
+    if(pAutor==nullptr)   ///NULL
+    {
+        /// cout<<"ERROR DE ARCHIVO"<<endl;
+        return autor;
+    }
+
+    fseek(pAutor,pos*sizeof(autor),0);
+    fread(&autor, sizeof(autor),1,pAutor);
+    fclose(pAutor);
+    return autor;
+}
 

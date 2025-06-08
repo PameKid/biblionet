@@ -34,3 +34,26 @@ void ManagerAutor::listarAutores()  //mostrar la lista de archivos
 
     delete[]vecAutor;
 }
+
+void ManagerAutor::buscarAutorPorNombre()
+{
+    ArchivoAutor ArchivoAutor;
+    Autor autor;
+    char nombre [20];
+    cout <<"Ingrese Nombre: ";
+
+    cin.ignore();
+    cin.getline(nombre,20);
+
+    int posicion= ArchivoAutor.buscarAutorPorNombre(nombre);
+
+    if (posicion < 0 )
+    {
+        cout << "No existe el Autor";
+    }
+    else
+    {
+        autor= ArchivoAutor.obtenerAutorArchivo(posicion);
+        autor.mostrarInfo();
+    }
+}

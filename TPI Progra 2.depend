@@ -100,28 +100,28 @@
 1749337159 c:\users\bgh\desktop\programacion 2 tpint\biblionet\fecha.h
 	<string>
 
-1749342574 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\persona.cpp
+1749396588 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\persona.cpp
 	"Persona.h"
 	<string>
 	<iostream>
 	<cstring>
 
-1749342599 c:\users\bgh\desktop\programacion 2 tpint\biblionet\persona.h
+1749396588 c:\users\bgh\desktop\programacion 2 tpint\biblionet\persona.h
 	<string>
 	<iostream>
 	"fecha.h"
 
-1749342638 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\socio.cpp
+1749396349 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\socio.cpp
 	<iostream>
 	"Socio.h"
 	<cstring>
 
-1749177595 c:\users\bgh\desktop\programacion 2 tpint\biblionet\socio.h
+1749394106 c:\users\bgh\desktop\programacion 2 tpint\biblionet\socio.h
 	"Persona.h"
 	<string>
 	<iostream>
 
-1749342453 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\archivosocio.cpp
+1749396893 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\archivosocio.cpp
 	"ArchivoSocio.h"
 	<iostream>
 	<cstring>
@@ -129,7 +129,7 @@
 1749337809 c:\users\bgh\desktop\programacion 2 tpint\biblionet\archivosocio.h
 	"socio.h"
 
-1749340756 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\managersocio.cpp
+1749395861 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\managersocio.cpp
 	"ManagerSocio.h"
 	<iostream>
 	"ArchivoSocio.h"
@@ -517,29 +517,30 @@
 1749218269 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\archivoprestamos.cpp
 	"ArchivoPrestamos.h"
 
-1749342697 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\autor.cpp
+1749394451 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\autor.cpp
 	"Autor.h"
 
-1749342768 c:\users\bgh\desktop\programacion 2 tpint\biblionet\autor.h
+1749395812 c:\users\bgh\desktop\programacion 2 tpint\biblionet\autor.h
 	"Persona.h"
 	<string>
 	<iostream>
 	<cstring>
 
-1749342453 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\archivoautor.cpp
+1749396082 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\archivoautor.cpp
 	"Autor.h"
 	"ArchivoAutor.h"
+	<cstring>
 
-1749342453 c:\users\bgh\desktop\programacion 2 tpint\biblionet\archivoautor.h
+1749395850 c:\users\bgh\desktop\programacion 2 tpint\biblionet\archivoautor.h
 	"Autor.h"
 
-1749342712 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\managerautor.cpp
+1749396769 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\managerautor.cpp
 	"ManagerAutor.h"
 
-1749342453 c:\users\bgh\desktop\programacion 2 tpint\biblionet\managerautor.h
+1749395974 c:\users\bgh\desktop\programacion 2 tpint\biblionet\managerautor.h
 	"Autor.h"
 	"ArchivoAutor.h"
 
-1749341758 c:\users\bgh\desktop\programacion 2 tpint\biblionet\menuautor.h
+1749396655 c:\users\bgh\desktop\programacion 2 tpint\biblionet\menuautor.h
 	"ManagerAutor.h"
 
