@@ -2,6 +2,7 @@
 #include <iostream>
 #include<string.h>
 #include "Libro.h"
+#include "ArchivoAutor.h"
 
 using namespace std;
 
@@ -73,6 +74,10 @@ int Libro::getPosicion(){
     }
 
 void Libro::cargarLibro(){
+    bool existeCodAutor; //se guarda el dato de la validacion
+    ArchivoAutor archivoAutor;
+
+
     cout << "Ingrese el nombre del Libro: " << endl;
     cin.ignore();
     cin.getline(_nombreDeLibro, 50);
@@ -86,6 +91,15 @@ void Libro::cargarLibro(){
 
     cout << "Ingrese el código del autor: " << endl;
     cin >>_codAutor;
+
+    existeCodAutor = archivoAutor.existeCodigoAutor(_codAutor);
+
+    while (existeCodAutor == false){
+        cout << "El código ingresado no existe, intente con otro: " << endl;
+        cin >> _codAutor;
+        existeCodAutor = archivoAutor.existeCodigoAutor(_codAutor);
+    }
+
 
     cout << "Ingrese el ISBN del libro " << endl;
     cin.ignore();

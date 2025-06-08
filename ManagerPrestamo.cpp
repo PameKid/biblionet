@@ -41,7 +41,6 @@ void ManagerPrestamo::cargarPrestamo(Prestamo objetoPrestamo){
         existeLibro = archiLibro.existeLibro(codigoLibro);
     }
 
-
     //todo ok settea el codigo en el objeto
     objetoPrestamo.setCodLibro(codigoLibro);
 

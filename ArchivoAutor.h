@@ -17,6 +17,8 @@ public:
     int buscarAutorPorNombre(char nombre[]);
     //Socio obtenerSocioPorCodigo(int codSocio);
     //bool existeSocio(int codSocio); //interactua con prestamo para validarlo
+
+    bool existeCodigoAutor(int codAutor);
 };
 
 
