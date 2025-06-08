@@ -213,24 +213,53 @@ Socio ArchivoSocio::obtenerSocioPorCodigo(int codSocio)
     return socioObtenido;
 }
 
-bool ArchivoSocio::existeSocio(int codSocio){
-
+bool ArchivoSocio::existeSocio(int codSocio)
+{
     FILE * pArchivoSocio;
     Socio s1;
 
-    pArchivoSocio = fopen("libro.dat","rb");
+    pArchivoSocio = fopen("Socio.dat","rb");
 
-    if(pArchivoSocio == nullptr){
+    if(pArchivoSocio == nullptr)
+    {
         return false;
     }
 
-    while((fread(&s1,sizeof(Socio),1,pArchivoSocio))== 1){
-        if(s1.getCodSocio() == codSocio){
-           fclose(pArchivoSocio);
-           return true;
-           }
+    while((fread(&s1,sizeof(Socio),1,pArchivoSocio))== 1)
+    {
+        if(s1.getCodSocio() == codSocio)
+        {
+            fclose(pArchivoSocio);
+            return true;
+        }
     }
 
     fclose(pArchivoSocio);
     return false;
 }
+
+bool ArchivoSocio :: existeSocioPorDni(char dni[])
+{
+    FILE * pArchivoSocio;
+    Socio socio;
+
+    pArchivoSocio = fopen("Socio.dat","rb");
+
+    if(pArchivoSocio == nullptr)
+    {
+        return false;
+    }
+
+    while((fread(&socio,sizeof(Socio),1,pArchivoSocio))== 1)
+    {
+        if(strcmp(socio.getDNI(), dni)==0)
+        {
+            fclose(pArchivoSocio);
+            return true;
+        }
+    }
+
+    fclose(pArchivoSocio);
+    return false;
+}
+

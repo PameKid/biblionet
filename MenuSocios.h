@@ -35,7 +35,7 @@ void menuSocios()
             system("pause");
             break;
         case 3:
-            ms.agregarSocio();
+            ms.cargarSocio();
             system("pause");
             break;
         case 4:

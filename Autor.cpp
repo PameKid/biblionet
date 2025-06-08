@@ -5,7 +5,7 @@ Autor:: Autor(): Persona()
 {
 }
 
-Autor :: Autor (const char* nombre, const char* apellido, Fecha fechaDeNacimiento, bool estado, const char* nacionalidad,int codAutor) : Persona( nombre,apellido, fechaDeNacimiento, estado)
+Autor :: Autor (const char* nombre, const char* apellido, Fecha fechaDeNacimiento, bool estado, const char* nacionalidad,int codAutor) : Persona( nombre,apellido, fechaDeNacimiento)
 {
     strcpy (_nacionalidad,nacionalidad);
     _codAutor=codAutor;

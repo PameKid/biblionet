@@ -8,15 +8,13 @@ Socio::Socio(): Persona()
 {
 }
 
-Socio :: Socio(const char* nombre, const char* apellido, Fecha fechaDeNacimiento, bool estado, const char* telefono, const char* DNI,const char* direccion,
-               const char* mail,int codSocio) : Persona( nombre,apellido, fechaDeNacimiento, estado)
+Socio :: Socio(const char* nombre, const char* apellido, Fecha fechaDeNacimiento, const char* telefono, const char* DNI,const char* direccion,
+               const char* mail) : Persona( nombre,apellido, fechaDeNacimiento)
 {
     strcpy (_telefono,telefono);
     strcpy (_DNI,DNI);
     strcpy (_direccion,direccion);
     strcpy(_mail,mail);
-    _codSocio=codSocio;
-
 }
 
 
@@ -86,23 +84,7 @@ void Socio::setPosicion(int posicion)
     _posicion = posicion;
 }
 
-void Socio::cargarSocio()
-{
-    cargarPersona();
-    cin.ignore();
 
-    cout << "Ingrese un numero de telefono: ";
-    cin.getline(_telefono, 30);
-
-    cout << "Ingrese su numero de DNI: ";
-    cin.getline(_DNI, 9);
-
-    cout << "Ingrese un mail: ";
-    cin.getline(_mail, 30);
-
-    cout << "Ingrese una direccion: ";
-    cin.getline(_direccion, 50);
-}
 
 void Socio::mostrarInfo()
 {

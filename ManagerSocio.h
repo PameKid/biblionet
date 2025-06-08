@@ -6,13 +6,12 @@
 class ManagerSocio{
 
 public:
-    void agregarSocio();
+    void cargarSocio();
     void listarSocios();
     void contarRegistrosSocios();
     void bajaSocio();
     void modificarSocio();
     void buscarSocioPorDni();
-
 };
 
 #endif // MANAGERSOCIO_H_INCLUDED
