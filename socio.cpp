@@ -8,9 +8,6 @@ Socio::Socio(): Persona()
 {
 }
 
-
-//Socio :: Socio() : Persona(string nombre, string apellido, Fecha fechaDeNacimiento, bool Estado)
-
 Socio :: Socio(const char* nombre, const char* apellido, Fecha fechaDeNacimiento, bool estado, const char* telefono, const char* DNI,const char* direccion,
                const char* mail,int codSocio) : Persona( nombre,apellido, fechaDeNacimiento, estado)
 {
@@ -111,10 +108,7 @@ void Socio::cargarSocio()
 void Socio::mostrarInfo()
 {
     //cout << "Los datos ingresados son los siguientes: " << endl;
-    cout<<endl;
-    cout << "Nombre del Socio: " <<getNombre()<< endl;
-    cout << "Apellido Socio: " << getApellido() << endl;
-    cout << "Fecha de nacimiento:" << getFecaDeNacimiento().toString()<< endl;
+    mostrartInfoPersona();
     cout << "Telefono: " << _telefono<< endl;
     cout << "DNI: " << _DNI << endl;
     cout << "Mail: " <<  _mail << endl;

@@ -13,8 +13,8 @@ void menuPrestamos(){
         system("cls");
         cout << "*******PRESTAMOS!*******" << endl;
         cout << "1. NUEVO PRESTAMO" << endl;
-        cout << "2. DEVOLUCION LIBRO" << endl;
-        cout << "3. LISTA DE PRESTAMOS ACTIVOS" << endl;
+        cout << "2. LISTA DE PRESTAMOS ACTIVOS" << endl;
+        cout << "3. DEVOLUCION LIBRO" << endl;
         cout << "4. BUSCAR PRESTAMO" << endl;
         cout << "0. VOLVER AL MENU ANTERIOR" << endl;
         cout << "---------------------------------" << endl;
@@ -28,9 +28,9 @@ void menuPrestamos(){
         case 1:
             mp.altaPrestamo();
            break;
-        //case 2:
-          //  menuSocios();
-          //  break;
+        case 2:
+            mp.listarPrestamosActivos();
+            break;
         //case 3:
           //  menuPrestamos();
           //  break;

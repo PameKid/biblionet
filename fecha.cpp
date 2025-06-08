@@ -1,5 +1,6 @@
 #include "Fecha.h"
 #include <iostream>
+#include <ctime>
 
 using namespace std;
 
@@ -54,13 +55,30 @@ void Fecha :: cargarFecha(){
 }
 
 Fecha Fecha::cargarFechaPrestamo(){
-    cout << "Ingrese el anio de pago";
+    cout << "Ingrese el anio de pago: " << endl;
     cin >> _anio;
 
-    cout << "Ingrese el mes de pago";
+    cout << "Ingrese el mes de pago: " << endl;
     cin >> _mes;
 
-    cout <<"Ingrese el día de pago";
+    cout <<"Ingrese el día de pago: " << endl;
     cin >> _dia;
 }
 
+Fecha Fecha::cargarFechaActual(){
+    time_t rawtime;
+    struct tm* timeinfo;
+
+    time(&rawtime);
+    timeinfo = localtime(&rawtime);
+
+    _anio = timeinfo->tm_year+1900;
+    _mes = timeinfo->tm_mon+1;
+    _dia = timeinfo->tm_mday;
+}
+
+void Fecha::mostrarFecha(){
+
+    cout << "Fecha: " << _dia << "/" << _mes << "/"<< _anio << endl;
+
+}

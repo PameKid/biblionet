@@ -67,12 +67,20 @@ void Persona::cargarPersona()
 {
     cin.ignore();
 
-    cout << "Nombre del socio: ";
+    cout << "Ingrese Nombre: ";
     cin.getline(_nombre, 20);
 
-    cout << "Apellido del socio: ";
+    cout << "Ingrese Apellido: ";
     cin.getline(_apellido, 20);
 
     _fechaDeNacimiento.cargarFecha();
+}
+
+void Persona::mostrartInfoPersona()
+{
+    cout<<endl;
+    cout << "Nombre: " <<getNombre()<< endl;
+    cout << "Apellido: " << getApellido() << endl;
+    cout << "Fecha de nacimiento:" << getFecaDeNacimiento().toString()<< endl;
 }
 

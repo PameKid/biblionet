@@ -53,17 +53,18 @@
 	"ArchivoLibro.h"
 	"ArchivoLibro.h"
 
-1748657527 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\archivolibro.cpp
+1749246155 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\archivolibro.cpp
 	"ArchivoLibro.h"
 	<iostream>
 
-1748818853 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\archivolibro.h
+1749250114 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\archivolibro.h
+	"Libro.h"
 
-1748729716 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\archivolibro.cpp
+1749337159 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\archivolibro.cpp
 	"ArchivoLibro.h"
 	<iostream>
 
-1748729716 c:\users\bgh\desktop\programacion 2 tpint\biblionet\archivolibro.h
+1749337159 c:\users\bgh\desktop\programacion 2 tpint\biblionet\archivolibro.h
 	"Libro.h"
 
 1748729716 c:\users\bgh\desktop\programacion 2 tpint\biblionet\libro.h
@@ -75,13 +76,14 @@
 
 1748729716 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\libro.h
 
-1748979126 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\main.cpp
+1749341713 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\main.cpp
 	<iostream>
 	"MenuLibros.h"
 	"MenuSocios.h"
 	"MenuPrestamos.hh"
 	"MenuPagos.h"
 	"MenuReportes.h"
+	"MenuAutor.h"
 
 1748443845 c:\users\bgh\desktop\programacion 2 tpint\biblionet\managerlibro.h
 	"ArchivoLibro.h"
@@ -90,25 +92,26 @@
 	"ManagerLibro.h"
 	<iostream>
 
-1748979126 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\fecha.cpp
+1749337159 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\fecha.cpp
 	"Fecha.h"
 	<iostream>
+	<ctime>
 
-1748979126 c:\users\bgh\desktop\programacion 2 tpint\biblionet\fecha.h
+1749337159 c:\users\bgh\desktop\programacion 2 tpint\biblionet\fecha.h
 	<string>
 
-1749177594 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\persona.cpp
+1749342574 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\persona.cpp
 	"Persona.h"
 	<string>
 	<iostream>
 	<cstring>
 
-1749177596 c:\users\bgh\desktop\programacion 2 tpint\biblionet\persona.h
+1749342599 c:\users\bgh\desktop\programacion 2 tpint\biblionet\persona.h
 	<string>
 	<iostream>
 	"fecha.h"
 
-1749177596 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\socio.cpp
+1749342638 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\socio.cpp
 	<iostream>
 	"Socio.h"
 	<cstring>
@@ -118,15 +121,15 @@
 	<string>
 	<iostream>
 
-1749234129 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\archivosocio.cpp
+1749342453 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\archivosocio.cpp
 	"ArchivoSocio.h"
 	<iostream>
 	<cstring>
 
-1749175316 c:\users\bgh\desktop\programacion 2 tpint\biblionet\archivosocio.h
+1749337809 c:\users\bgh\desktop\programacion 2 tpint\biblionet\archivosocio.h
 	"socio.h"
 
-1749176098 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\managersocio.cpp
+1749340756 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\managersocio.cpp
 	"ManagerSocio.h"
 	<iostream>
 	"ArchivoSocio.h"
@@ -389,73 +392,77 @@
 1748619628 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\menulibros.h
 	"ManagerLibro.h"
 
-1749145443 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\menusocios.h
+1749227385 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\menusocios.h
 	"ManagerSocio.h"
 	"persona.h"
 
-1749145443 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\managersocio.h
+1749227385 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\managersocio.h
 	"ArchivoSocio.h"
 	"socio.h"
 
-1749145443 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\archivosocio.h
+1749253090 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\archivosocio.h
 	"socio.h"
 
-1748818853 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\socio.h
+1749227385 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\socio.h
 	"Persona.h"
 	<string>
 	<iostream>
 
-1748818853 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\persona.h
+1749227385 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\persona.h
 	<string>
 	<iostream>
 	"fecha.h"
 
-1748898307 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\fecha.h
+1749226634 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\fecha.h
 	<string>
 
-1749149495 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\menuprestamos.hh
+1749219576 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\menuprestamos.hh
 	"ManagerPrestamo.h"
 
 1748485426 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\menupagos.h
 
 1748485426 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\menureportes.h
 
-1749145443 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\archivosocio.cpp
+1749253209 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\archivosocio.cpp
 	"ArchivoSocio.h"
 	<iostream>
 	<cstring>
 
-1748898316 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\fecha.cpp
+1749226756 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\fecha.cpp
 	"Fecha.h"
 	<iostream>
+	<ctime>
 
-1749145443 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\managersocio.cpp
+1749227385 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\managersocio.cpp
 	"ManagerSocio.h"
 	<iostream>
+	"ArchivoSocio.h"
 
-1749145443 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\persona.cpp
+1749227385 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\persona.cpp
 	"Persona.h"
 	<string>
 	<iostream>
 	<cstring>
 
-1748818853 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\socio.cpp
+1749227385 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\socio.cpp
 	<iostream>
 	"Socio.h"
 	<cstring>
 
-1749162322 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\prestamo.cpp
+1749235453 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\prestamo.cpp
 	"Prestamo.h"
 
-1749162322 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\prestamo.h
+1749217698 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\prestamo.h
 	<iostream>
 	<string.h>
 	"Fecha.h"
 
-1749151444 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\managerprestamo.cpp
+1749253252 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\managerprestamo.cpp
 	"ManagerPrestamo.h"
+	"ArchivoLibro.h"
+	"ArchivoSocio.h"
 
-1749144618 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\managerprestamo.h
+1749217709 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\managerprestamo.h
 	"ArchivoPrestamos.h"
 
 1748911772 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\pagos.cpp
@@ -467,17 +474,19 @@
 	"ManagerSocio.h"
 	"persona.h"
 
-1749218269 c:\users\bgh\desktop\programacion 2 tpint\biblionet\menuprestamos.hh
+1749337159 c:\users\bgh\desktop\programacion 2 tpint\biblionet\menuprestamos.hh
 	"ManagerPrestamo.h"
 
 1748531830 c:\users\bgh\desktop\programacion 2 tpint\biblionet\menupagos.h
 
 1748531830 c:\users\bgh\desktop\programacion 2 tpint\biblionet\menureportes.h
 
-1749218269 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\managerprestamo.cpp
+1749337159 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\managerprestamo.cpp
 	"ManagerPrestamo.h"
+	"ArchivoLibro.h"
+	"ArchivoSocio.h"
 
-1749218269 c:\users\bgh\desktop\programacion 2 tpint\biblionet\managerprestamo.h
+1749337159 c:\users\bgh\desktop\programacion 2 tpint\biblionet\managerprestamo.h
 	"ArchivoPrestamos.h"
 
 1749218269 c:\users\bgh\desktop\programacion 2 tpint\biblionet\prestamo.h
@@ -499,7 +508,7 @@
 
 1748916141 estamos.h"
 
-1749218269 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\prestamo.cpp
+1749337159 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\prestamo.cpp
 	"Prestamo.h"
 
 1749218269 c:\users\bgh\desktop\programacion 2 tpint\biblionet\archivoprestamos.h
@@ -507,4 +516,30 @@
 
 1749218269 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\archivoprestamos.cpp
 	"ArchivoPrestamos.h"
+
+1749342697 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\autor.cpp
+	"Autor.h"
+
+1749342768 c:\users\bgh\desktop\programacion 2 tpint\biblionet\autor.h
+	"Persona.h"
+	<string>
+	<iostream>
+	<cstring>
+
+1749342453 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\archivoautor.cpp
+	"Autor.h"
+	"ArchivoAutor.h"
+
+1749342453 c:\users\bgh\desktop\programacion 2 tpint\biblionet\archivoautor.h
+	"Autor.h"
+
+1749342712 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\managerautor.cpp
+	"ManagerAutor.h"
+
+1749342453 c:\users\bgh\desktop\programacion 2 tpint\biblionet\managerautor.h
+	"Autor.h"
+	"ArchivoAutor.h"
+
+1749341758 c:\users\bgh\desktop\programacion 2 tpint\biblionet\menuautor.h
+	"ManagerAutor.h"
 

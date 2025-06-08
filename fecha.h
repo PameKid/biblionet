@@ -24,6 +24,8 @@ public:
     void cargarFecha();
 
     Fecha cargarFechaPrestamo();
+    Fecha cargarFechaActual();
+    void mostrarFecha();
 };
 
 

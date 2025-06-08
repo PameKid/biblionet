@@ -20,7 +20,7 @@ int ArchivoSocio::agregarArchivoSocio(Socio socioNuevo)
     return 2; //regresa 2 si se guardó correctamente
 }
 
-int ArchivoSocio ::leerArchivoSocio()
+/*int ArchivoSocio ::leerArchivoSocio()
 {
     Socio socio;
     FILE* psocio;
@@ -42,7 +42,7 @@ int ArchivoSocio ::leerArchivoSocio()
     fclose(psocio);
 
     return 0;
-}
+}    */
 
 int ArchivoSocio::contarRegistrosArchivoSocio()
 {
@@ -66,7 +66,7 @@ int ArchivoSocio::contarRegistrosArchivoSocio()
 }
 
 
-void ArchivoSocio::obtenerVectorSocios(int cantRegistros, Socio *vecSocios)
+void ArchivoSocio::obtenerVectorSocios(int cantRegistros, Socio *vecSocios)   // este es el que lista.
 {
     FILE* pSocio;
     pSocio = fopen("Socio.dat", "rb");
@@ -105,7 +105,7 @@ Socio ArchivoSocio::obtenerSocioArchivo(int pos)
 }
 
 
-int ArchivoSocio::buscarArchivoSocio(int codigo)
+/*int ArchivoSocio::buscarArchivoSocio(int codigo)
 {
     Socio socio;
     int cantRegistro;
@@ -130,7 +130,7 @@ int ArchivoSocio::buscarArchivoSocio(int codigo)
 
     fclose(pSocio);
     return -1;
-}
+} */
 
 
 bool ArchivoSocio::bajaArchivoSocio(int codigo)
@@ -213,4 +213,26 @@ Socio ArchivoSocio::obtenerSocioPorCodigo(int codSocio)
 
     delete[]vecSocios;
     return socioObtenido;
+}
+
+bool ArchivoSocio::existeSocio(int codSocio){
+
+    FILE * pArchivoSocio;
+    Socio s1;
+
+    pArchivoSocio = fopen("libro.dat","rb");
+
+    if(pArchivoSocio == nullptr){
+        return false;
+    }
+
+    while((fread(&s1,sizeof(Socio),1,pArchivoSocio))== 1){
+        if(s1.getCodSocio() == codSocio){
+           fclose(pArchivoSocio);
+           return true;
+           }
+    }
+
+    fclose(pArchivoSocio);
+    return false;
 }

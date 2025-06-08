@@ -5,11 +5,10 @@
 
 void ManagerSocio::agregarSocio()
 {
-    ArchivoSocio arhivoSocio;
-    int cantReg;
-    cantReg = arhivoSocio.contarRegistrosArchivoSocio();
-
     ArchivoSocio archivoSocio;
+    int cantReg;
+    cantReg = archivoSocio.contarRegistrosArchivoSocio();
+
     Socio nuevoSocio;
 
     nuevoSocio.cargarSocio();
@@ -69,20 +68,16 @@ void ManagerSocio::buscarSocioPorDni()
     if (posicion < 0 )
     {
         cout << "No existe el Socio";
-
     }
     else
     {
         socio= archivoSocio.obtenerSocioArchivo(posicion);
-
         socio.mostrarInfo();
     }
-
 }
 
 void ManagerSocio::modificarSocio()
 {
-
     Socio socioModificado;
     ArchivoSocio archivoSocio;
     int codSocio;
