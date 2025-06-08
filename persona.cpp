@@ -10,12 +10,12 @@ Persona::Persona()
     _fechaDeNacimiento = Fecha();
     _estado = true;
 }
-Persona :: Persona (const char* nombre, const char* apellido, Fecha fechaDeNacimiento, bool Estado)
+Persona :: Persona (const char* nombre, const char* apellido, Fecha fechaDeNacimiento)
 {
     strcpy( _nombre,nombre);
     strcpy( _apellido, apellido);
     _fechaDeNacimiento= fechaDeNacimiento;
-    _estado=Estado;
+    _estado=true;
 }
 
 // Desarrollo Getter y Setter.

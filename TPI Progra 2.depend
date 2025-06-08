@@ -97,7 +97,7 @@
 	"ManagerLibro.h"
 	<iostream>
 
-1749337159 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\fecha.cpp
+1749415497 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\fecha.cpp
 	"Fecha.h"
 	<iostream>
 	<ctime>
@@ -105,41 +105,41 @@
 1749337159 c:\users\bgh\desktop\programacion 2 tpint\biblionet\fecha.h
 	<string>
 
-1749396588 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\persona.cpp
+1749413714 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\persona.cpp
 	"Persona.h"
 	<string>
 	<iostream>
 	<cstring>
 
-1749396588 c:\users\bgh\desktop\programacion 2 tpint\biblionet\persona.h
+1749414167 c:\users\bgh\desktop\programacion 2 tpint\biblionet\persona.h
 	<string>
 	<iostream>
 	"fecha.h"
 
-1749396349 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\socio.cpp
+1749415105 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\socio.cpp
 	<iostream>
 	"Socio.h"
 	<cstring>
 
-1749394106 c:\users\bgh\desktop\programacion 2 tpint\biblionet\socio.h
+1749413714 c:\users\bgh\desktop\programacion 2 tpint\biblionet\socio.h
 	"Persona.h"
 	<string>
 	<iostream>
 
-1749396893 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\archivosocio.cpp
+1749415247 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\archivosocio.cpp
 	"ArchivoSocio.h"
 	<iostream>
 	<cstring>
 
-1749337809 c:\users\bgh\desktop\programacion 2 tpint\biblionet\archivosocio.h
+1749414466 c:\users\bgh\desktop\programacion 2 tpint\biblionet\archivosocio.h
 	"socio.h"
 
-1749395861 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\managersocio.cpp
+1749415609 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\managersocio.cpp
 	"ManagerSocio.h"
 	<iostream>
 	"ArchivoSocio.h"
 
-1749175288 c:\users\bgh\desktop\programacion 2 tpint\biblionet\managersocio.h
+1749414587 c:\users\bgh\desktop\programacion 2 tpint\biblionet\managersocio.h
 	"ArchivoSocio.h"
 	"socio.h"
 
@@ -475,7 +475,7 @@
 1748729716 c:\users\bgh\desktop\programacion 2 tpint\biblionet\menulibros.h
 	"ManagerLibro.h"
 
-1749175935 c:\users\bgh\desktop\programacion 2 tpint\biblionet\menusocios.h
+1749414554 c:\users\bgh\desktop\programacion 2 tpint\biblionet\menusocios.h
 	"ManagerSocio.h"
 	"persona.h"
 
@@ -522,7 +522,7 @@
 1749218269 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\archivoprestamos.cpp
 	"ArchivoPrestamos.h"
 
-1749394451 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\autor.cpp
+1749414424 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\autor.cpp
 	"Autor.h"
 
 1749395812 c:\users\bgh\desktop\programacion 2 tpint\biblionet\autor.h
@@ -531,12 +531,12 @@
 	<iostream>
 	<cstring>
 
-1749396082 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\archivoautor.cpp
+1749397005 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\archivoautor.cpp
 	"Autor.h"
 	"ArchivoAutor.h"
 	<cstring>
 
-1749395850 c:\users\bgh\desktop\programacion 2 tpint\biblionet\archivoautor.h
+1749417209 c:\users\bgh\desktop\programacion 2 tpint\biblionet\archivoautor.h
 	"Autor.h"
 
 1749396769 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\managerautor.cpp
@@ -587,7 +587,7 @@
 	<iostream>
 	<cstring>
 
-1749408601 c:\users\camiloide\desktop\tp nuevo\biblionet\persona.h
+1749417486 c:\users\camiloide\desktop\tp nuevo\biblionet\persona.h
 	<string>
 	<iostream>
 	"fecha.h"
@@ -619,7 +619,7 @@
 	"fecha.h"
 	"socio.h"
 
-1749408602 c:\users\camiloide\desktop\tp nuevo\biblionet\socio.h
+1749417486 c:\users\camiloide\desktop\tp nuevo\biblionet\socio.h
 	"Persona.h"
 	<string>
 	<iostream>
@@ -640,7 +640,7 @@
 	<iostream>
 	<cstring>
 
-1749408601 c:\users\camiloide\desktop\tp nuevo\biblionet\archivosocio.h
+1749417486 c:\users\camiloide\desktop\tp nuevo\biblionet\archivosocio.h
 	"socio.h"
 
 1749408601 source:c:\users\camiloide\desktop\tp nuevo\biblionet\autor.cpp
@@ -674,11 +674,11 @@
 1749408601 c:\users\camiloide\desktop\tp nuevo\biblionet\managerlibro.h
 	"ArchivoLibro.h"
 
-1749408601 c:\users\camiloide\desktop\tp nuevo\biblionet\menusocios.h
+1749417486 c:\users\camiloide\desktop\tp nuevo\biblionet\menusocios.h
 	"ManagerSocio.h"
 	"persona.h"
 
-1749408601 c:\users\camiloide\desktop\tp nuevo\biblionet\managersocio.h
+1749417486 c:\users\camiloide\desktop\tp nuevo\biblionet\managersocio.h
 	"ArchivoSocio.h"
 	"socio.h"
 
