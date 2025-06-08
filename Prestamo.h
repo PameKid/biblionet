@@ -7,7 +7,7 @@ using namespace std;
 class Prestamo{
 
 private:
-    int _codPrestamo;
+    char _codPrestamo[20];
     int _codLibro;
     int _codSocio;
     bool _estado = true;
@@ -17,7 +17,7 @@ private:
 public:
 
     //setters y getters:
-    void setCodPrestamo(int codPrestamo);
+    void setCodPrestamo(char codPrestamo[20]);
     void setCodLibro(int codLibro);
     void setCodSocio (int codSocio);
     void setEstado(bool estado);
@@ -25,7 +25,7 @@ public:
     void setFechaDevolucion (Fecha fechaDevolucion);
 
 
-    int getCodPrestamo();
+    char* getCodPrestamo();
     int getCodLibro();
     int getCodSocio();
     bool getEstado();

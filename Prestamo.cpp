@@ -1,8 +1,8 @@
 #include "Prestamo.h"
 
 //setters y getters:
-void Prestamo::setCodPrestamo(int codPrestamo){
-        _codPrestamo = codPrestamo;
+void Prestamo::setCodPrestamo(char codPrestamo[20]){
+       strcpy(this->_codPrestamo,codPrestamo);
     }
 
 void Prestamo::setCodLibro(int codLibro){
@@ -25,7 +25,7 @@ void Prestamo::setFechaDevolucion (Fecha fechaDevolucion){
     _fechaDevolucion = fechaDevolucion;
 }
 
-int Prestamo::getCodPrestamo(){
+char* Prestamo::getCodPrestamo(){
     return _codPrestamo;
 }
 

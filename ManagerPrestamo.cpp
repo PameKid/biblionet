@@ -1,13 +1,17 @@
 #include "ManagerPrestamo.h"
 #include "ArchivoLibro.h"
 #include "ArchivoSocio.h"
+#include <cstdio>
 
 void ManagerPrestamo::cargarPrestamo(Prestamo objetoPrestamo){
     //variables auxiliares
     int codigoLibro;
-    int codigoPrestamo;
+    char codigoPrestamo[20];
     int codigoSocio;
     Fecha fechaPrestamo;
+
+    char cadenaAuxiliar[20];
+
 
     bool existeLibro; //se guarda el resultado de la validacion
     ArchivoLibro archiLibro; //para el metodo para validar el codigo
@@ -25,9 +29,9 @@ void ManagerPrestamo::cargarPrestamo(Prestamo objetoPrestamo){
     fechaPrestamo.mostrarFecha();
 
     //carga y creacion del codigo prestamo: concatenar cod libro, codsocio y fecha
-    cout << "Ingrese el código del prestamo: " << endl;
-    cin >> codigoPrestamo;
-    objetoPrestamo.setCodPrestamo(codigoPrestamo);
+    //cout << "Ingrese el código del prestamo: " << endl;
+    //cin >> codigoPrestamo;
+    //objetoPrestamo.setCodPrestamo(codigoPrestamo);
 
 
     cout << "Ingrese el código del libro: " << endl;
@@ -58,6 +62,29 @@ void ManagerPrestamo::cargarPrestamo(Prestamo objetoPrestamo){
     //todo ok settea el objeto Prestamo
     objetoPrestamo.setCodSocio(codigoSocio);
 
+    //ARMADO DE CODIGO DE PRESTAMO
+    strcat(codigoPrestamo,"PR");
+
+    //sprintf transforma un entero a cadena. incluir cstdio
+    sprintf(cadenaAuxiliar, "%d", fechaPrestamo.getDia());
+    strcat(codigoPrestamo,cadenaAuxiliar);
+
+    sprintf(cadenaAuxiliar, "%d", fechaPrestamo.getMes());
+    strcat(codigoPrestamo,cadenaAuxiliar);
+
+    sprintf(cadenaAuxiliar, "%d", fechaPrestamo.getAnio());
+    strcat(codigoPrestamo,cadenaAuxiliar);
+
+    sprintf(cadenaAuxiliar, "%d", codigoLibro);
+    strcat(codigoPrestamo,cadenaAuxiliar);
+
+    sprintf(cadenaAuxiliar, "%d", codigoSocio);
+    strcat(codigoPrestamo,cadenaAuxiliar);
+
+    cout << "codigo de prestamo generado: " << codigoPrestamo << endl << endl;
+    system("pause");
+
+    //TERMINA ARMADO DE CODIGO DE PRESTAMO
 
     cout << "Los datos fueron guardados correctamente: " << endl;
 

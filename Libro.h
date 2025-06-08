@@ -19,7 +19,7 @@ private:
 public:
 
     //setters
-    void setISBN(char isbn[13]);
+    void setISBN(char isbn[20]);
     void setNombreDeLibro(char nombreDelLibro[50]);
     void setnombreDelAutor(char nnombreDelAutor[50]);
     void setGenero(char genero[30]);

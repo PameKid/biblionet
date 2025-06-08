@@ -34,9 +34,9 @@
 	"fecha.h"
 	"socio.h"
 
-1748654945 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\libro.h
+1749412236 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\libro.h
 
-1749405397 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\libro.cpp
+1749406571 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\libro.cpp
 	<iostream>
 	<string.h>
 	"Libro.h"
@@ -48,7 +48,7 @@
 	"Libro.h"
 	"Libro.h"
 
-1748654945 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\libro.h
+1749412236 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\libro.h
 
 1749151927 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\managerlibro.cpp
 	"ManagerLibro.h"
@@ -454,18 +454,19 @@
 	"Socio.h"
 	<cstring>
 
-1749235453 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\prestamo.cpp
+1749412788 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\prestamo.cpp
 	"Prestamo.h"
 
-1749217698 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\prestamo.h
+1749412788 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\prestamo.h
 	<iostream>
 	<string.h>
 	"Fecha.h"
 
-1749253252 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\managerprestamo.cpp
+1749415554 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\managerprestamo.cpp
 	"ManagerPrestamo.h"
 	"ArchivoLibro.h"
 	"ArchivoSocio.h"
+	<cstdio>
 
 1749217709 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\managerprestamo.h
 	"ArchivoPrestamos.h"
