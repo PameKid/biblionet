@@ -2,21 +2,56 @@
 #include <iostream>
 #include "ArchivoSocio.h"
 
-
-void ManagerSocio::agregarSocio()
+void ManagerSocio::cargarSocio()
 {
     ArchivoSocio archivoSocio;
+    bool validar;
+    char nombre[20];
+    char apellido [20];
+    char direccion [50];
+    char telefono[30];
+    char dni[9];
+    char mail[30];
+    Fecha fechaDeNacimiento;
+
+
     int cantReg;
+    cout << "Ingrese el dni: ";
+    cin >> dni;
+    validar = archivoSocio.existeSocioPorDni(dni);
+    if (validar == true)
+    {
+        cout <<"ESTE SOCIO YA EXISTE!"<<endl;
+        system ("pause");
+        return;
+    }
+    cin.ignore();
+    cout << "Ingrese nombre: ";
+    cin.getline(nombre,20);
+
+    cout << "Ingrese apellido: ";
+    cin.getline(apellido,20);
+
+    //cout << "Ingres Fecha: ";
+    fechaDeNacimiento.cargarFecha();
+
+    cin.ignore();
+    cout << "Ingrese un numero de telefono: ";
+    cin.getline(telefono,30);
+
+    cout << "Ingrese un mail: ";
+    cin.getline(mail, 30);
+
+    cout << "Ingrese una direccion: ";
+    cin.getline(direccion, 50);
+
+    Socio nuevoSocio(nombre,apellido,fechaDeNacimiento,telefono,dni,direccion,mail);
     cantReg = archivoSocio.contarRegistrosArchivoSocio();
-
-    Socio nuevoSocio;
-
-    nuevoSocio.cargarSocio();
-
     nuevoSocio.setCodSocio(cantReg+1);
-
     archivoSocio.agregarArchivoSocio(nuevoSocio);
+
 }
+
 
 void ManagerSocio::listarSocios()  //mostrar la lista de archivos
 {

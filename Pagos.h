@@ -11,7 +11,7 @@ class Pagos{
 private:
 
     int _codSocio;
-    int _codPago;
+    char _codPago[20];
     Fecha _fechaDePago;
     int _mesPagado;
     int _anioPagado;
@@ -21,7 +21,7 @@ private:
 public:
 
     void setCodSocio(int codSocio);
-    void setCodPago(int codPago);
+    void setCodPago(char codPago[20]);
     void setFechaDePago(Fecha fechaDePago);
     void setMesPagado(int mesPagado);
     void setAnioPagado(int anioPagado);
@@ -29,7 +29,7 @@ public:
     void setEstado(bool estado);
 
     int getCodSocio();
-    int getCodPago();
+    char* getCodPago();
     Fecha getFechaDePago();
     int getMesPagado();
     int getAnioPagado();

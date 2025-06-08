@@ -10,8 +10,8 @@ void Pagos::setCodSocio(int codSocio){
      _codSocio = codSocio;
 }
 
-void Pagos::setCodPago(int codPago){
-    _codPago = codPago;
+void Pagos::setCodPago(char codPago[20]){
+   strcpy(this->_codPago, codPago);
 }
 
 void Pagos::setFechaDePago(Fecha fechaDePago){
@@ -33,6 +33,33 @@ void Pagos::setImporte(float importe){
 void Pagos::setEstado(bool estado){
     _estado = estado;
 }
+
+int Pagos::getCodSocio(){
+    return _codSocio;
+
+}
+    char* Pagos::getCodPago(){
+        return _codPago;
+    }
+   // Fecha Pagos::getFechaDePago(){
+     //   return _fechaDePago;
+    //}
+
+    int Pagos::getMesPagado(){
+        return _mesPagado;
+    }
+
+    int Pagos::getAnioPagado(){
+        return _anioPagado;
+
+    }
+    float Pagos::getImporte(){
+        return _importe;
+    }
+
+    bool Pagos::getEstado(){
+        return _estado;
+    }
 
 void Pagos::cargarPago(){
 

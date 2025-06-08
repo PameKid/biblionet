@@ -4,57 +4,69 @@
 
 using namespace std;
 
-Fecha::Fecha(){
+Fecha::Fecha()
+{
     _dia = 0;
     _mes = 0;
     _anio = 0;
 }
 
-Fecha::Fecha(int dia, int mes, int anio){
+Fecha::Fecha(int dia, int mes, int anio)
+{
     _dia = dia;
     _mes = mes;
     _anio = anio;
 }
 
-int Fecha::getDia(){
+int Fecha::getDia()
+{
     return _dia;
 }
 
-int Fecha::getMes(){
+int Fecha::getMes()
+{
     return _mes;
 }
 
-int Fecha::getAnio(){
+int Fecha::getAnio()
+{
     return _anio;
 }
 
-void Fecha::setDia(int dia){
+void Fecha::setDia(int dia)
+{
     _dia = dia;
 }
 
-void Fecha::setMes(int mes){
+void Fecha::setMes(int mes)
+{
     _mes = mes;
 }
 
-void Fecha::setAnio(int anio){
+void Fecha::setAnio(int anio)
+{
     _anio = anio;
 }
 
-std::string Fecha::toString(){
+std::string Fecha::toString()
+{
     return std::to_string(_dia) + "/" + std::to_string(_mes) + "/" + std::to_string(_anio);
 }
 
 
-void Fecha :: cargarFecha(){
-  cout << "Ingrese anio de nacimiento: ";
-  cin>> _anio;
-  cout << "Ingrese mes de nacimiento: ";
-  cin>>_mes;
-  cout << "Ingrese dia de nacimiento: ";
-  cin >> _dia;
+void Fecha :: cargarFecha()
+{
+    //cin.ignore();
+    cout << "Ingrese anio de nacimiento: ";
+    cin>> _anio;
+    cout << "Ingrese mes de nacimiento: ";
+    cin>>_mes;
+    cout << "Ingrese dia de nacimiento: ";
+    cin >> _dia;
 }
 
-Fecha Fecha::cargarFechaPrestamo(){
+Fecha Fecha::cargarFechaPrestamo()
+{
     cout << "Ingrese el anio de pago: " << endl;
     cin >> _anio;
 
@@ -65,7 +77,8 @@ Fecha Fecha::cargarFechaPrestamo(){
     cin >> _dia;
 }
 
-Fecha Fecha::cargarFechaActual(){
+Fecha Fecha::cargarFechaActual()
+{
     time_t rawtime;
     struct tm* timeinfo;
 
@@ -77,8 +90,7 @@ Fecha Fecha::cargarFechaActual(){
     _dia = timeinfo->tm_mday;
 }
 
-void Fecha::mostrarFecha(){
-
+void Fecha::mostrarFecha()
+{
     cout << "Fecha: " << _dia << "/" << _mes << "/"<< _anio << endl;
-
 }

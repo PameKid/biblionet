@@ -20,8 +20,8 @@ private:
 
 public:
     Socio();
-    Socio(const char* nombre, const char* apellido, Fecha fechaDeNacimiento, bool estado, const char* telefono, const char* DNI,const char* direccion,
-          const char* mail,int codSocio) ;
+    Socio(const char* nombre, const char* apellido, Fecha fechaDeNacimiento, const char* telefono, const char* DNI,const char* direccion,
+          const char* mail) ;
 
 
     // Getters

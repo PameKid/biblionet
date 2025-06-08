@@ -18,7 +18,7 @@ class Persona
 
     public:
     Persona();
-    Persona ( const char* nombre, const char*  apellido, Fecha fechaDeNacimiento, bool estado =false);
+    Persona ( const char* nombre, const char*  apellido, Fecha fechaDeNacimiento);
 
     const char* getNombre();
      const char* getApellido();
