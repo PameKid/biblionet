@@ -576,3 +576,172 @@
 	"ArchivoAutor.h"
 	<cstring>
 
+1749408601 source:c:\users\camiloide\desktop\tp nuevo\biblionet\archivoautor.cpp
+	"Autor.h"
+	"ArchivoAutor.h"
+	<cstring>
+
+1749408601 c:\users\camiloide\desktop\tp nuevo\biblionet\autor.h
+	"Persona.h"
+	<string>
+	<iostream>
+	<cstring>
+
+1749408601 c:\users\camiloide\desktop\tp nuevo\biblionet\persona.h
+	<string>
+	<iostream>
+	"fecha.h"
+
+1749408601 c:\users\camiloide\desktop\tp nuevo\biblionet\fecha.h
+	<string>
+
+1749408601 c:\users\camiloide\desktop\tp nuevo\biblionet\archivoautor.h
+	"Autor.h"
+
+1749408601 source:c:\users\camiloide\desktop\tp nuevo\biblionet\archivolibro.cpp
+	"ArchivoLibro.h"
+	<iostream>
+
+1749408601 c:\users\camiloide\desktop\tp nuevo\biblionet\archivolibro.h
+	"Libro.h"
+
+1749408601 c:\users\camiloide\desktop\tp nuevo\biblionet\libro.h
+
+1749079329 source:c:\users\camiloide\desktop\tp nuevo\biblionet\archivopago.cpp
+	<iostream>
+	"ArchivoPagos.h"
+
+1749092752 c:\users\camiloide\desktop\tp nuevo\biblionet\archivopagos.h
+	"Pagos.h"
+
+1749414774 c:\users\camiloide\desktop\tp nuevo\biblionet\pagos.h
+	<iostream>
+	"fecha.h"
+	"socio.h"
+
+1749408602 c:\users\camiloide\desktop\tp nuevo\biblionet\socio.h
+	"Persona.h"
+	<string>
+	<iostream>
+
+1749408601 source:c:\users\camiloide\desktop\tp nuevo\biblionet\archivoprestamos.cpp
+	"ArchivoPrestamos.h"
+
+1749408601 c:\users\camiloide\desktop\tp nuevo\biblionet\archivoprestamos.h
+	"Prestamo.h"
+
+1749408601 c:\users\camiloide\desktop\tp nuevo\biblionet\prestamo.h
+	<iostream>
+	<string.h>
+	"Fecha.h"
+
+1749408601 source:c:\users\camiloide\desktop\tp nuevo\biblionet\archivosocio.cpp
+	"ArchivoSocio.h"
+	<iostream>
+	<cstring>
+
+1749408601 c:\users\camiloide\desktop\tp nuevo\biblionet\archivosocio.h
+	"socio.h"
+
+1749408601 source:c:\users\camiloide\desktop\tp nuevo\biblionet\autor.cpp
+	"Autor.h"
+
+1749408601 source:c:\users\camiloide\desktop\tp nuevo\biblionet\fecha.cpp
+	"Fecha.h"
+	<iostream>
+	<ctime>
+
+1749408601 source:c:\users\camiloide\desktop\tp nuevo\biblionet\libro.cpp
+	<iostream>
+	<string.h>
+	"Libro.h"
+	"ArchivoAutor.h"
+
+1749408601 source:c:\users\camiloide\desktop\tp nuevo\biblionet\libro.h
+
+1749408601 source:c:\users\camiloide\desktop\tp nuevo\biblionet\main.cpp
+	<iostream>
+	"MenuLibros.h"
+	"MenuSocios.h"
+	"MenuPrestamos.hh"
+	"MenuPagos.h"
+	"MenuReportes.h"
+	"MenuAutor.h"
+
+1749408601 c:\users\camiloide\desktop\tp nuevo\biblionet\menulibros.h
+	"ManagerLibro.h"
+
+1749408601 c:\users\camiloide\desktop\tp nuevo\biblionet\managerlibro.h
+	"ArchivoLibro.h"
+
+1749408601 c:\users\camiloide\desktop\tp nuevo\biblionet\menusocios.h
+	"ManagerSocio.h"
+	"persona.h"
+
+1749408601 c:\users\camiloide\desktop\tp nuevo\biblionet\managersocio.h
+	"ArchivoSocio.h"
+	"socio.h"
+
+1749408601 c:\users\camiloide\desktop\tp nuevo\biblionet\menuprestamos.hh
+	"ManagerPrestamo.h"
+
+1749408601 c:\users\camiloide\desktop\tp nuevo\biblionet\managerprestamo.h
+	"ArchivoPrestamos.h"
+
+1749408601 c:\users\camiloide\desktop\tp nuevo\biblionet\menupagos.h
+
+1749408601 c:\users\camiloide\desktop\tp nuevo\biblionet\menureportes.h
+
+1749408601 c:\users\camiloide\desktop\tp nuevo\biblionet\menuautor.h
+	"ManagerAutor.h"
+
+1749408601 c:\users\camiloide\desktop\tp nuevo\biblionet\managerautor.h
+	"Autor.h"
+	"ArchivoAutor.h"
+
+1749408601 source:c:\users\camiloide\desktop\tp nuevo\biblionet\managerautor.cpp
+	"ManagerAutor.h"
+
+1749408601 source:c:\users\camiloide\desktop\tp nuevo\biblionet\managerlibro.cpp
+	"ManagerLibro.h"
+	<iostream>
+
+1749415768 source:c:\users\camiloide\desktop\tp nuevo\biblionet\managerpago.cpp
+	"ManagerPago.h"
+	<iostream>
+	"ArchivoSocio.h"
+
+1749415198 c:\users\camiloide\desktop\tp nuevo\biblionet\managerpago.h
+	"ArchivoPagos.h"
+
+1749408601 source:c:\users\camiloide\desktop\tp nuevo\biblionet\managerprestamo.cpp
+	"ManagerPrestamo.h"
+	"ArchivoLibro.h"
+	"ArchivoSocio.h"
+
+1749408601 source:c:\users\camiloide\desktop\tp nuevo\biblionet\managersocio.cpp
+	"ManagerSocio.h"
+	<iostream>
+	"ArchivoSocio.h"
+
+1749415048 source:c:\users\camiloide\desktop\tp nuevo\biblionet\pagos.cpp
+	<iostream>
+	<string.h>
+	"fecha.h"
+	"socio.h"
+	"Pagos.h"
+
+1749408601 source:c:\users\camiloide\desktop\tp nuevo\biblionet\persona.cpp
+	"Persona.h"
+	<string>
+	<iostream>
+	<cstring>
+
+1749408601 source:c:\users\camiloide\desktop\tp nuevo\biblionet\prestamo.cpp
+	"Prestamo.h"
+
+1749408601 source:c:\users\camiloide\desktop\tp nuevo\biblionet\socio.cpp
+	<iostream>
+	"Socio.h"
+	<cstring>
+

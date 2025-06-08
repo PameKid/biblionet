@@ -40,6 +40,8 @@
 		<Unit filename="ArchivoLibro.h">
 			<Option target="Debug" />
 		</Unit>
+		<Unit filename="ArchivoPago.cpp" />
+		<Unit filename="ArchivoPagos.h" />
 		<Unit filename="ArchivoPrestamos.cpp">
 			<Option target="Debug" />
 		</Unit>
@@ -61,6 +63,8 @@
 		<Unit filename="ManagerAutor.h" />
 		<Unit filename="ManagerLibro.cpp" />
 		<Unit filename="ManagerLibro.h" />
+		<Unit filename="ManagerPago.cpp" />
+		<Unit filename="ManagerPago.h" />
 		<Unit filename="ManagerPrestamo.cpp">
 			<Option target="Debug" />
 		</Unit>

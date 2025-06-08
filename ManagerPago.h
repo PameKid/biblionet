@@ -5,7 +5,8 @@
 class ManagerPago{
 
 public:
-    void agregarPago();
+    void agregarPago(Pagos p1);
+    void altaPago();
     void leerArchivo();
     void buscarPagoPorCodigo();
     void listarPagosDelMes();
