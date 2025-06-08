@@ -106,3 +106,24 @@ Autor ArchivoAutor::obtenerAutorArchivo(int pos)
     return autor;
 }
 
+bool ArchivoAutor::existeCodigoAutor(int codAutor){
+    FILE * pArchivoAutor;
+    Autor a1;
+
+    pArchivoAutor = fopen("Autor.dat","rb");
+
+    if(pArchivoAutor == nullptr){
+        return false;
+    }
+
+    while((fread(&a1,sizeof(Autor),1,pArchivoAutor))== 1){
+        if(a1.getCodAutor() == codAutor){
+           fclose(pArchivoAutor);
+           return true;
+           }
+    }
+
+    fclose(pArchivoAutor);
+    return false;
+}
+
