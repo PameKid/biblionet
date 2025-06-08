@@ -32,6 +32,8 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="ArchivoAutor.cpp" />
+		<Unit filename="ArchivoAutor.h" />
 		<Unit filename="ArchivoLibro.cpp">
 			<Option target="Debug" />
 		</Unit>
@@ -46,6 +48,8 @@
 		</Unit>
 		<Unit filename="ArchivoSocio.cpp" />
 		<Unit filename="ArchivoSocio.h" />
+		<Unit filename="Autor.cpp" />
+		<Unit filename="Autor.h" />
 		<Unit filename="Libro.cpp">
 			<Option target="Debug" />
 		</Unit>
@@ -53,6 +57,8 @@
 			<Option compile="1" />
 			<Option target="Debug" />
 		</Unit>
+		<Unit filename="ManagerAutor.cpp" />
+		<Unit filename="ManagerAutor.h" />
 		<Unit filename="ManagerLibro.cpp" />
 		<Unit filename="ManagerLibro.h" />
 		<Unit filename="ManagerPrestamo.cpp">
@@ -63,6 +69,7 @@
 		</Unit>
 		<Unit filename="ManagerSocio.cpp" />
 		<Unit filename="ManagerSocio.h" />
+		<Unit filename="MenuAutor.h" />
 		<Unit filename="MenuLibros.h" />
 		<Unit filename="MenuPagos.h" />
 		<Unit filename="MenuPrestamos.hh" />
