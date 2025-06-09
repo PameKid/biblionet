@@ -40,8 +40,8 @@ public:
     void setDNI(const char* DNI);
     void setPosicion(int posicion);
 
-    void mostrarInfo();
-    void cargarSocio();
+
+
     void mostrarInfoParaModificar();
     void cargarSocioModificado(int opcion);
 

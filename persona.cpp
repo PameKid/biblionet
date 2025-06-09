@@ -73,11 +73,4 @@ void Persona::cargarPersona()
     _fechaDeNacimiento.cargarFecha();
 }
 
-void Persona::mostrartInfoPersona()
-{
-    cout<<endl;
-    cout << "Nombre: " <<getNombre()<< endl;
-    cout << "Apellido: " << getApellido() << endl;
-    cout << "Fecha de nacimiento:" << getFecaDeNacimiento().toString()<< endl;
-}
 

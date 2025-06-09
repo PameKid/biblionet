@@ -46,7 +46,7 @@ void Autor :: cargarAutor(){
 
 void Autor::mostrarInfo()
 {
-    mostrartInfoPersona();
+//    mostrartInfoPersona();
     cout << "Direccion: " << _nacionalidad << endl;
     cout << "Codigo de Autor: "  << _codAutor << endl;
 }
