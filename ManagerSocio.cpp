@@ -1,6 +1,7 @@
 #include "ManagerSocio.h"
 #include <iostream>
 #include "ArchivoSocio.h"
+#include <cstring>
 
 void ManagerSocio::cargarSocio()
 {
@@ -17,15 +18,20 @@ void ManagerSocio::cargarSocio()
 
     int cantReg;
     cout << "Ingrese el dni: ";
-    cin >> dni;
-    validar = archivoSocio.existeSocioPorDni(dni);
-    if (validar == true)
-    {
-        cout <<"ESTE SOCIO YA EXISTE!"<<endl;
-        system ("pause");
-        return;
-    }
     cin.ignore();
+    cin.getline (dni,9);
+    validar = archivoSocio.existeSocioPorDni(dni);
+    while(validar == true)
+    {
+        cout << "El dni ingresado ya existe, intente con otro o ingrese 0 para volver al menu: ";
+        cin.getline (dni,9);
+        if (strcmp(dni, "0") == 0)
+        {
+            return;
+        }
+        validar=archivoSocio.existeSocioPorDni(dni);
+    }
+
     cout << "Ingrese nombre: ";
     cin.getline(nombre,20);
 
@@ -52,7 +58,6 @@ void ManagerSocio::cargarSocio()
 
 }
 
-
 void ManagerSocio::listarSocios()  //mostrar la lista de archivos
 {
     ArchivoSocio arhivoSocio;
@@ -65,11 +70,28 @@ void ManagerSocio::listarSocios()  //mostrar la lista de archivos
     arhivoSocio.obtenerVectorSocios(cantReg, vecSocios);
     for(int x=0; x<cantReg; x++)
     {
-        cout<<"cantidad registros: " << cantReg << endl;
-        vecSocios[x].mostrarInfo();
+        if (vecSocios[x].getEstado()== true )
+        {
+            mostrarInfo(vecSocios[x]);
+        }
     }
 
     delete[]vecSocios;
+}
+
+
+void ManagerSocio::mostrarInfo(Socio socio)
+{
+    cout<<endl;
+    cout << "Nombre: " <<socio.getNombre()<< endl;
+    cout << "Apellido: " << socio.getApellido() << endl;
+    cout << "Fecha de nacimiento:" << socio.getFecaDeNacimiento().toString()<< endl;
+    cout << "Telefono: " << socio.getTelefono()<< endl;
+    cout << "DNI: " << socio.getDNI() << endl;
+    cout << "Mail: " <<  socio.getMail() << endl;
+    cout << "Direccion: " << socio.getDireccion() << endl;
+    cout << "Codigo de Socio: "  << socio.getCodSocio() << endl;
+    cout << "Estado del Socio: " <<socio.getEstado() << endl;
 }
 
 void ManagerSocio::bajaSocio()
@@ -107,7 +129,7 @@ void ManagerSocio::buscarSocioPorDni()
     else
     {
         socio= archivoSocio.obtenerSocioArchivo(posicion);
-        socio.mostrarInfo();
+        mostrarInfo(socio);
     }
 }
 

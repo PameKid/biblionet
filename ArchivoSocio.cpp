@@ -136,7 +136,7 @@ Socio ArchivoSocio::obtenerSocioArchivo(int pos)
 bool ArchivoSocio::bajaArchivoSocio(int codigo)
 {
     Socio socio;
-    socio=obtenerSocioArchivo(codigo);
+    socio=obtenerSocioPorCodigo(codigo);
     if(socio.getCodSocio()==-1)
     {
         return false;
@@ -201,7 +201,7 @@ Socio ArchivoSocio::obtenerSocioPorCodigo(int codSocio)
     arhivoSocio.obtenerVectorSocios(cantReg, vecSocios);
     for(int x=0; x<cantReg; x++)
     {
-        if(vecSocios[x].getCodSocio()==codSocio && vecSocios[x].getEstado() == true)  //valido que el estado del libro sea activo.
+        if(vecSocios[x].getCodSocio()==codSocio && vecSocios[x].getEstado() == true)
         {
             socioObtenido = vecSocios[x];
             socioObtenido.setPosicion(x);
@@ -252,6 +252,7 @@ bool ArchivoSocio :: existeSocioPorDni(char dni[])
 
     while((fread(&socio,sizeof(Socio),1,pArchivoSocio))== 1)
     {
+
         if(strcmp(socio.getDNI(), dni)==0)
         {
             fclose(pArchivoSocio);

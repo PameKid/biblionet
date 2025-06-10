@@ -86,17 +86,7 @@ void Socio::setPosicion(int posicion)
 
 
 
-void Socio::mostrarInfo()
-{
-    //cout << "Los datos ingresados son los siguientes: " << endl;
-    mostrartInfoPersona();
-    cout << "Telefono: " << _telefono<< endl;
-    cout << "DNI: " << _DNI << endl;
-    cout << "Mail: " <<  _mail << endl;
-    cout << "Direccion: " << _direccion << endl;
-    cout << "Codigo de Socio: "  << _codSocio << endl;
-    cout << "Estado del Socio: " << getEstado() << endl;
-};
+
 
 
 void Socio::mostrarInfoParaModificar()
