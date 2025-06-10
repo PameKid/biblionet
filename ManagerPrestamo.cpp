@@ -118,6 +118,6 @@ void ManagerPrestamo::listarPrestamosActivos(){
 void ManagerPrestamo::contarPrestamosActivos(){}
 void ManagerPrestamo::buscarPrestamosCodigo(){}
 void ManagerPrestamo::devolucionPrestamo(){} //guardo la fecha de devolucion
-void ManagerPrestamo::modificarDatosDelPrestamo(){}; //preguntar si es necesario
+//void ManagerPrestamo::modificarDatosDelPrestamo(){}; //preguntar si es necesario
 Prestamo ManagerPrestamo:: obtenerPrestamoPorCodigo(int codPrestamo){}
 

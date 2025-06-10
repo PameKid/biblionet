@@ -397,23 +397,23 @@
 1748619628 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\menulibros.h
 	"ManagerLibro.h"
 
-1749227385 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\menusocios.h
+1749417950 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\menusocios.h
 	"ManagerSocio.h"
 	"persona.h"
 
-1749227385 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\managersocio.h
+1749417950 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\managersocio.h
 	"ArchivoSocio.h"
 	"socio.h"
 
-1749404272 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\archivosocio.h
+1749417950 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\archivosocio.h
 	"socio.h"
 
-1749404272 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\socio.h
+1749417950 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\socio.h
 	"Persona.h"
 	<string>
 	<iostream>
 
-1749404272 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\persona.h
+1749417950 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\persona.h
 	<string>
 	<iostream>
 	"fecha.h"
@@ -424,32 +424,32 @@
 1749219576 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\menuprestamos.hh
 	"ManagerPrestamo.h"
 
-1748485426 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\menupagos.h
+1749428826 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\menupagos.h
 
 1748485426 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\menureportes.h
 
-1749404272 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\archivosocio.cpp
+1749417950 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\archivosocio.cpp
 	"ArchivoSocio.h"
 	<iostream>
 	<cstring>
 
-1749226756 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\fecha.cpp
+1749417950 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\fecha.cpp
 	"Fecha.h"
 	<iostream>
 	<ctime>
 
-1749404272 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\managersocio.cpp
+1749417950 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\managersocio.cpp
 	"ManagerSocio.h"
 	<iostream>
 	"ArchivoSocio.h"
 
-1749404272 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\persona.cpp
+1749417950 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\persona.cpp
 	"Persona.h"
 	<string>
 	<iostream>
 	<cstring>
 
-1749404272 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\socio.cpp
+1749417950 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\socio.cpp
 	<iostream>
 	"Socio.h"
 	<cstring>
@@ -468,10 +468,15 @@
 	"ArchivoSocio.h"
 	<cstdio>
 
-1749217709 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\managerprestamo.h
+1749428826 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\managerprestamo.h
 	"ArchivoPrestamos.h"
 
-1748911772 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\pagos.cpp
+1749417950 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\pagos.cpp
+	<iostream>
+	<string.h>
+	"fecha.h"
+	"socio.h"
+	"Pagos.h"
 
 1748729716 c:\users\bgh\desktop\programacion 2 tpint\biblionet\menulibros.h
 	"ManagerLibro.h"
@@ -502,7 +507,10 @@
 
 1748979126 source:c:\users\bgh\desktop\programacion 2 tpint\biblionet\pagos.cpp
 
-1748911772 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\pagos.h
+1749417950 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\pagos.h
+	<iostream>
+	"fecha.h"
+	"socio.h"
 
 1748979126 c:\users\bgh\desktop\programacion 2 tpint\biblionet\pagos.h
 
@@ -550,7 +558,7 @@
 1749396655 c:\users\bgh\desktop\programacion 2 tpint\biblionet\menuautor.h
 	"ManagerAutor.h"
 
-1749404272 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\autor.cpp
+1749417950 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\autor.cpp
 	"Autor.h"
 
 1749405206 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\autor.h
@@ -745,4 +753,19 @@
 	<iostream>
 	"Socio.h"
 	<cstring>
+
+1749417950 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\archivopago.cpp
+	<iostream>
+	"ArchivoPagos.h"
+
+1749417950 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\archivopagos.h
+	"Pagos.h"
+
+1749428826 source:c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\managerpago.cpp
+	"ManagerPago.h"
+	<iostream>
+	"ArchivoSocio.h"
+
+1749417950 c:\users\user\desktop\trabajo integrador progra ii\tpi progra 2\managerpago.h
+	"ArchivoPagos.h"
 

@@ -12,7 +12,7 @@ void menuPagos(){
         cout << "*******PAGOS!*******" << endl;
         cout << "1. INGRESAR UN PAGO" << endl;
         cout << "2. BUSCAR UN PAGO POR CODIGO DE SOCIO" << endl;
-        cout << "3. LISTAR PAGOS DEL MES" << endl;
+        cout << "3. LISTAR PAGOS" << endl;
         cout << "0. VOLVER AL MENU ANTERIOR" << endl;
         cout << "----------------------------------------" << endl;
         cout << "SELECCIONAR OPCION" << endl;
