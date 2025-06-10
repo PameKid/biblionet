@@ -13,6 +13,9 @@ public:
     void modificarSocio();
     void buscarSocioPorDni();
     void mostrarInfo(Socio socio);
+    void cargarSocioModificado(int opcion, Socio &socioAModificar);
+    void mostrarInfoParaModificar(Socio socioAmodificar);
+
 };
 
 #endif // MANAGERSOCIO_H_INCLUDED

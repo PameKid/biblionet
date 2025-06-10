@@ -146,17 +146,17 @@ void ManagerSocio::modificarSocio()
     socioModificado = archivoSocio.obtenerSocioPorCodigo(codSocio);
     cout << "Socio a modificar: " << socioModificado.getNombre()<< " " << socioModificado.getApellido()<<endl;
     cout << "Elija el dato que quiere modificar: " << endl;
-    socioModificado.mostrarInfoParaModificar();
+    mostrarInfoParaModificar(socioModificado);
 
     cin >> opcion;
 
     while (opcion != 0)
     {
-        socioModificado.cargarSocioModificado(opcion);
+        cargarSocioModificado(opcion, socioModificado);
 
         system("cls");
 
-        socioModificado.mostrarInfoParaModificar();
+        mostrarInfoParaModificar(socioModificado);
         cin >>opcion;
     }
 
@@ -164,4 +164,43 @@ void ManagerSocio::modificarSocio()
 
     cout << "Modificado correctamente " << endl;
     system("pause");
+}
+
+void ManagerSocio::cargarSocioModificado(int opcion, Socio &socioAModificar)
+{
+    char direccion [50];
+    char telefono[30];
+    char mail[30];
+
+    switch(opcion)
+    {
+    case 1:
+        cout << "Ingrese el nuevo mail del Socio: " << endl;
+        cin.ignore();
+        cin.getline(mail,30);
+        socioAModificar.setMail(mail);
+        break;
+    case 2:
+        cout << "Ingrese la nueva direccion del socio: " << endl;
+        cin.ignore();
+        cin.getline(direccion, 30);
+        socioAModificar.setDireccion(direccion);
+        break;
+    case 3:
+        cout << "Ingrese el nuevo telefono del socio: " << endl;
+        cin.ignore();
+        cin.getline(telefono,30);
+        socioAModificar.setTelefono(telefono);
+        break;
+    }
+}
+
+void ManagerSocio::mostrarInfoParaModificar(Socio socioAmodificar)
+{
+    cout << "Datos del Socio: " << endl;
+
+    cout << "1. mail del Socio:  " << socioAmodificar.getMail() << endl;
+    cout << "2. Direccion del Socio" << socioAmodificar.getDireccion() << endl;
+    cout << "3. Telefono del Socio: " << socioAmodificar.getTelefono() << endl;
+    cout << "0. Para guardar los cambios.  " << endl;
 }

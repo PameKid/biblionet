@@ -17,7 +17,6 @@ private:
     int _codSocio;
     int _posicion;
 
-
 public:
     Socio();
     Socio(const char* nombre, const char* apellido, Fecha fechaDeNacimiento, const char* telefono, const char* DNI,const char* direccion,
@@ -39,13 +38,6 @@ public:
     void setTelefono(const char* telefono);
     void setDNI(const char* DNI);
     void setPosicion(int posicion);
-
-
-
-    void mostrarInfoParaModificar();
-    void cargarSocioModificado(int opcion);
-
-
 
 };
 #endif // SOCIO_H_INCLUDED
