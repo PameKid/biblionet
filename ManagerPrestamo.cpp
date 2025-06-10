@@ -3,7 +3,7 @@
 #include "ArchivoSocio.h"
 #include <cstdio>
 
-void ManagerPrestamo::cargarPrestamo(Prestamo objetoPrestamo){
+void ManagerPrestamo::cargarPrestamo(Prestamo &objetoPrestamo){
     //variables auxiliares
     int codigoLibro;
     char codigoPrestamo[20];

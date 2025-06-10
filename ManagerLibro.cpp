@@ -1,13 +1,85 @@
 #include "ManagerLibro.h"
+#include "ArchivoAutor.h"
 #include <iostream>
 
 using namespace std;
+//cargar libro
+
+void ManagerLibro::cargarLibroManager(Libro &l1){
+    //variables auxiliares
+
+    char isbn[20];
+    char nombreDeLibro[50];
+    //char nombreDelAutor[50];
+    char genero[50];
+    int codLibro;
+    int codAutor;
+    int cantidadEjemplares;
+    int anioDePublicacion;
+
+    bool existeCodAutor; //se guarda el dato de la validacion
+    ArchivoAutor archivoAutor;
+
+
+    cout << "Ingrese el nombre del Libro: " << endl;
+    cin.ignore();
+    cin.getline(nombreDeLibro, 50);
+    l1.setNombreDeLibro(nombreDeLibro);
+
+    cout << "Ingrese el código del libro:" << endl;
+    cin >> codLibro;
+    l1.setCodLibro(codLibro);
+
+    cout << "Ingrese el código del autor: " << endl;
+    cin >>codAutor;
+    l1.setCodAutor(codAutor);
+
+    existeCodAutor = archivoAutor.existeCodigoAutor(codAutor);
+
+    while (existeCodAutor == false){
+        cout << "El código ingresado no existe, intente con otro: " << endl;
+        cin >> codAutor;
+        l1.getCodAutor();
+        existeCodAutor = archivoAutor.existeCodigoAutor(codAutor);
+    }
+
+    cout << "Ingrese el ISBN del libro " << endl;
+    cin.ignore();
+    cin.getline(isbn, 20);
+    l1.setISBN(isbn);
+
+    cout << "Ingrese el género del libro: " << endl;
+    //cin.ignore();
+    cin.getline(genero,50);
+    l1.setGenero(genero);
+
+    cout << "Ingrese la cantidad de ejemplares del libro: " << endl;
+    cin >> cantidadEjemplares;
+    l1.setCantidadEjemplares(cantidadEjemplares);
+
+    cout << "Ingrese el año de publicación del libro: " << endl;
+    cin >> anioDePublicacion;
+    l1.setAnioDePublicacion(anioDePublicacion);
+
+}
+
+void ManagerLibro::mostrarInfoManager(Libro l1){
+    cout << "Datos del libro: " << endl;
+    cout << "Nombre del Libro: " << l1.getNombreDeLibro() << endl;
+    cout << "Código del libro:" <<  l1.getCodLibro() << endl;
+    cout << "Código del autor: " << l1.getCodAutor() << endl;
+    cout << "ISBN del libro " << l1.getISBN() << endl;
+    cout << "Género del libro: " << l1.getGenero() << endl;
+    cout << "Cantidad de ejemplares del libro: " << l1.getCantidadEjemplares() << endl;
+    cout << "Año de publicación: " << l1.getAnioDePublicacion() << endl;
+    //cout << "Estado: " << _estado;
+}
 
 void ManagerLibro::agregarLibro(){
     ArchivoLibro archilibro;
     Libro l1;
 
-    l1.cargarLibro();
+    cargarLibroManager(l1);
     archilibro.agregarArchivoLibro(l1);
 }
 
@@ -26,7 +98,7 @@ void ManagerLibro::listarLibros(){ //mostrar la lista de archivos
     for(int x=0; x<cantReg; x++){
         if(vecLibros[x].getEstado()== true){
         cout << "***************************" << endl;
-        vecLibros[x].mostrarInfo();
+        mostrarInfoManager(vecLibros[x]);
         }
     }
 
@@ -82,7 +154,6 @@ void ManagerLibro::bajaLogicaLibro(){
    else{
     cout << "Se ha cancelado la baja. " << endl;
    }
-
 
 }
 void ManagerLibro::modificarLibro(){
