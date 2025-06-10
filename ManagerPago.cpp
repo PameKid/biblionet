@@ -5,6 +5,7 @@ using namespace std;
 
 void ManagerPago::agregarPago(Pagos p1){
 
+    //variables auxiliares
     int codSocio;
     int codPago;
     Fecha fechaDePago;
@@ -15,7 +16,7 @@ void ManagerPago::agregarPago(Pagos p1){
     bool existeSocio;
     ArchivoSocio archiSocio;
 
-    cout << "NUEVO PRÉSTAMO " << endl;
+    cout << "NUEVO PAGO " << endl;
     cout << "***************" << endl;
 
     //carga de fecha actual
@@ -33,7 +34,7 @@ void ManagerPago::agregarPago(Pagos p1){
         cin >> codSocio;
         existeSocio = archiSocio.existeSocio(codSocio);
     }
-
+    //FALTA DARLE LA OPCION DE QUE INTENTE DE NUEVO O VUELVA AL MENU ANTERIOR
     //todo ok settea el objeto Prestamo
     p1.setCodSocio(codSocio);
 

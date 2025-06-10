@@ -7,7 +7,7 @@ private:
 
     char _isbn[20];
     char _nombreDeLibro[50];
-    char _nombreDelAutor[50];
+    //char _nombreDelAutor[50];
     char _genero[50];
     int _codLibro;
     int _codAutor;
@@ -21,7 +21,7 @@ public:
     //setters
     void setISBN(char isbn[20]);
     void setNombreDeLibro(char nombreDelLibro[50]);
-    void setnombreDelAutor(char nnombreDelAutor[50]);
+    //void setnombreDelAutor(char nnombreDelAutor[50]);
     void setGenero(char genero[30]);
     void setCodLibro(int codLibro);
     void setCodAutor(int codAutor);
@@ -33,7 +33,7 @@ public:
     //getters
     char* getISBN();
     char* getNombreDeLibro();
-    char* getNombreDelAutor();
+    //char* getNombreDelAutor();
     char* getGenero();
     int getCodLibro();
     int getCodAutor();

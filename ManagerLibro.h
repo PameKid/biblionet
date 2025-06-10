@@ -6,6 +6,8 @@
 class ManagerLibro{
 
 public:
+    void cargarLibroManager(Libro &l1);
+    void mostrarInfoManager(Libro l1);
     void agregarLibro();
     void listarLibros();
     void contarRegistros();
