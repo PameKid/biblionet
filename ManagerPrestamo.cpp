@@ -9,6 +9,7 @@ void ManagerPrestamo::cargarPrestamo(Prestamo &objetoPrestamo){
     char codigoPrestamo[20];
     int codigoSocio;
     Fecha fechaPrestamo;
+    Fecha fechaDevolucion;
 
     char cadenaAuxiliar[20];
 
@@ -81,8 +82,15 @@ void ManagerPrestamo::cargarPrestamo(Prestamo &objetoPrestamo){
     sprintf(cadenaAuxiliar, "%d", codigoSocio);
     strcat(codigoPrestamo,cadenaAuxiliar);
 
+    fechaDevolucion = fechaDevolucion.calcularVencimiento(fechaPrestamo);
+
+    cout << "La fecha de devolucion es: " << endl;
+    fechaDevolucion.mostrarFecha();
+
     cout << "codigo de prestamo generado: " << codigoPrestamo << endl << endl;
     system("pause");
+
+
 
     //TERMINA ARMADO DE CODIGO DE PRESTAMO
 

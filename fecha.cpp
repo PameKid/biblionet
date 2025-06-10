@@ -94,3 +94,28 @@ void Fecha::mostrarFecha()
 {
     cout << "Fecha: " << _dia << "/" << _mes << "/"<< _anio << endl;
 }
+
+Fecha Fecha::calcularVencimiento(Fecha fechaInicial) {
+    int diasDeVencimiento = 10;
+    // Preparamos una estructura tm con la fecha inicial
+    std::tm t = {};
+    t.tm_mday = fechaInicial.getDia();
+    t.tm_mon  = fechaInicial.getMes() - 1; // tm_mon va de 0 a 11
+    t.tm_year = fechaInicial.getAnio() - 1900; // tm_year cuenta desde 1900
+
+    // Convertimos a time_t y sumamos los días en segundos
+    std::time_t tiempo = std::mktime(&t);
+    tiempo += diasDeVencimiento * 24 * 60 * 60; // sumamos los días como segundos
+
+    // Convertimos de vuelta a tm
+    std::tm* nuevaFecha = std::localtime(&tiempo);
+
+    // Creamos la nueva Fecha
+    Fecha vencimiento;
+    vencimiento.setDia(nuevaFecha->tm_mday);
+    vencimiento.setMes(nuevaFecha->tm_mon + 1);
+    vencimiento.setAnio(nuevaFecha->tm_year + 1900);
+
+    return vencimiento;
+}
+

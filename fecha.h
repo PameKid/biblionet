@@ -26,6 +26,8 @@ public:
     Fecha cargarFechaPrestamo();
     Fecha cargarFechaActual();
     void mostrarFecha();
+    Fecha calcularVencimiento(Fecha fechaInicial);
+
 };
 
 
