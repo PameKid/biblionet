@@ -60,17 +60,16 @@ void Persona :: setFechaDeNacimiento(Fecha fechaDeNacimiento)
     _fechaDeNacimiento= fechaDeNacimiento;
 }
 
-void Persona::cargarPersona()
+int Persona::getPosicion()
 {
-    cin.ignore();
-
-    cout << "Ingrese Nombre: ";
-    cin.getline(_nombre, 20);
-
-    cout << "Ingrese Apellido: ";
-    cin.getline(_apellido, 20);
-
-    _fechaDeNacimiento.cargarFecha();
+    return _posicion;
 }
+
+void Persona::setPosicion(int posicion)
+{
+    _posicion = posicion;
+}
+
+
 
 

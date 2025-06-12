@@ -190,15 +190,16 @@ int ArchivoSocio::buscarSocioDni(char dni[])
 
 Socio ArchivoSocio::obtenerSocioPorCodigo(int codSocio)
 {
-    ArchivoSocio arhivoSocio;
+
     int cantReg;
     Socio *vecSocios = nullptr;
     Socio socioObtenido;
+    socioObtenido.setCodSocio(-1);
 
-    cantReg = arhivoSocio.contarRegistrosArchivoSocio();
+    cantReg =contarRegistrosArchivoSocio();
     vecSocios = new Socio[cantReg];
 
-    arhivoSocio.obtenerVectorSocios(cantReg, vecSocios);
+    obtenerVectorSocios(cantReg, vecSocios);
     for(int x=0; x<cantReg; x++)
     {
         if(vecSocios[x].getCodSocio()==codSocio && vecSocios[x].getEstado() == true)

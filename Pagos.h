@@ -36,7 +36,7 @@ public:
     float getImporte();
     bool getEstado();
 
-    void cargarPago();
+   // void cargarPago();
     void mostrarDatos();
     bool estaAlDia();
 };

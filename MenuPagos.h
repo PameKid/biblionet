@@ -1,7 +1,7 @@
 #ifndef MENUPAGOS_H_INCLUDED
 #define MENUPAGOS_H_INCLUDED
 #endif // MENUPAGOS_H_INCLUDED
-
+#include "ManagerPago.h"
 
 using namespace std;
 
@@ -18,17 +18,19 @@ void menuPagos(){
         cout << "SELECCIONAR OPCION" << endl;
         cin >>opc;
         system("cls");
+
+        ManagerPago mp;
          switch(opc)
         {
-        //case 1:
-          //  menuLibros();
-          //  break;
+        case 1:
+            mp.altaPago();
+            break;
         //case 2:
-          //  menuSocios();
-          //  break;
-        //case 3:
-          //  menuPrestamos();
-          //  break;
+
+           // break;
+        case 3:
+            mp.listarpagos();
+            break;
         //case 4:
           //  menuPagos();
           //  break;

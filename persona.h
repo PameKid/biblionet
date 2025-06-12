@@ -15,22 +15,23 @@ class Persona
     char _apellido[20];
     Fecha _fechaDeNacimiento;
     bool _estado;
+    int _posicion;
 
     public:
     Persona();
     Persona ( const char* nombre, const char*  apellido, Fecha fechaDeNacimiento);
 
     const char* getNombre();
-     const char* getApellido();
+    const char* getApellido();
     Fecha getFecaDeNacimiento();
     bool getEstado();
+    int getPosicion();
 
     void setNombre (char nombre[]);
     void setApellido ( char apellido[]);
     void setEstado (bool estado);
     void setFechaDeNacimiento (Fecha fechaDeNacimiento);
-    void cargarPersona();
-    void mostrartInfoPersona();
+    void setPosicion(int posicion);
 };
 
 #endif // PERSONA_H_INCLUDED

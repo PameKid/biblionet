@@ -33,13 +33,13 @@ void menuAutor()
             system("pause");
             break;
         case 3:
-            mA.agregarAutor();
+            mA.cargarAutor();
             system("pause");
             break;
         case 4:
-        //ms.bajaSocio();
-        //system("pause");
-        //break;
+            mA.bajaAutor();
+            system("pause");
+            break;
         case 5:
         //ms.modificarSocio();
         //system("pause");
