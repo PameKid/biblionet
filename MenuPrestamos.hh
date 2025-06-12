@@ -14,8 +14,8 @@ void menuPrestamos(){
         cout << "*******PRESTAMOS!*******" << endl;
         cout << "1. NUEVO PRESTAMO" << endl;
         cout << "2. LISTA DE PRESTAMOS ACTIVOS" << endl;
-        cout << "3. DEVOLUCION LIBRO" << endl;
-        cout << "4. BUSCAR PRESTAMO" << endl;
+        cout << "3. BUSCAR PRESTAMO POR CÓDIGO" << endl;
+        cout << "4. DEVOLUCION LIBRO" << endl;
         cout << "0. VOLVER AL MENU ANTERIOR" << endl;
         cout << "---------------------------------" << endl;
         cout << "SELECCIONAR OPCION" << endl;
@@ -31,8 +31,8 @@ void menuPrestamos(){
         case 2:
             mp.listarPrestamosActivos();
             break;
-        //case 3:
-          //  menuPrestamos();
+        case 3:
+            mp.buscarPrestamoCodigo();
           //  break;
         //case 4:
           //  menuPagos();

@@ -9,7 +9,7 @@ void ManagerPrestamo::cargarPrestamo(Prestamo &objetoPrestamo){
     char codigoPrestamo[20];
     int codigoSocio;
     Fecha fechaPrestamo;
-    Fecha fechaDevolucion;
+    Fecha fechaVencimiento;
 
     char cadenaAuxiliar[20];
 
@@ -26,7 +26,7 @@ void ManagerPrestamo::cargarPrestamo(Prestamo &objetoPrestamo){
 
     //carga de fecha actual
     fechaPrestamo.cargarFechaActual();
-    objetoPrestamo.setFechaEntrega(fechaPrestamo);
+    objetoPrestamo.setFechaPrestamo(fechaPrestamo);
     fechaPrestamo.mostrarFecha();
 
     //carga y creacion del codigo prestamo: concatenar cod libro, codsocio y fecha
@@ -82,23 +82,22 @@ void ManagerPrestamo::cargarPrestamo(Prestamo &objetoPrestamo){
     sprintf(cadenaAuxiliar, "%d", codigoSocio);
     strcat(codigoPrestamo,cadenaAuxiliar);
 
-    fechaDevolucion = fechaDevolucion.calcularVencimiento(fechaPrestamo);
+    objetoPrestamo.setCodPrestamo(codigoPrestamo);
+
+    fechaVencimiento = fechaVencimiento.calcularVencimiento(fechaPrestamo);
 
     cout << "La fecha de devolucion es: " << endl;
-    fechaDevolucion.mostrarFecha();
+    fechaVencimiento.mostrarFecha();
+
+    objetoPrestamo.setFechaDevolucion(fechaVencimiento);
 
     cout << "codigo de prestamo generado: " << codigoPrestamo << endl << endl;
     system("pause");
-
-
 
     //TERMINA ARMADO DE CODIGO DE PRESTAMO
 
     cout << "Los datos fueron guardados correctamente: " << endl;
 
-
-//aca se debería llamar a una funcion para que calcule y muestre la fecha de devolucion.
-// _fechaDevolucion;
 }
 
 void ManagerPrestamo::altaPrestamo(){
@@ -122,10 +121,24 @@ void ManagerPrestamo::listarPrestamosActivos(){
     system("pause");
 }
 
+void ManagerPrestamo::buscarPrestamoCodigo(){
 
-void ManagerPrestamo::contarPrestamosActivos(){}
-void ManagerPrestamo::buscarPrestamosCodigo(){}
-void ManagerPrestamo::devolucionPrestamo(){} //guardo la fecha de devolucion
-//void ManagerPrestamo::modificarDatosDelPrestamo(){}; //preguntar si es necesario
+    char codPrestamoSolicitado[20];
+    Prestamo prestamoConsultado;
+
+    cout << "Ingrese el código del prestamo buscar" << endl;
+    cin >> codPrestamoSolicitado;
+
+
+    cout << "Corrobore que los datos sean correctos: " << endl;
+    prestamoConsultado.mostrarInfo();
+}
+
+void ManagerPrestamo::devolucionPrestamo(char *codPrestamoSolicitado){
+
+
+
+} //guardo la fecha de devolucion
 Prestamo ManagerPrestamo:: obtenerPrestamoPorCodigo(int codPrestamo){}
-
+void ManagerPrestamo::contarPrestamosActivos(){}
+//void ManagerPrestamo::modificarDatosDelPrestamo(){}; //preguntar si es necesario
