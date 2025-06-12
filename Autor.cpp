@@ -5,10 +5,10 @@ Autor:: Autor(): Persona()
 {
 }
 
-Autor :: Autor (const char* nombre, const char* apellido, Fecha fechaDeNacimiento, bool estado, const char* nacionalidad,int codAutor) : Persona( nombre,apellido, fechaDeNacimiento)
+Autor :: Autor (const char* nombre, const char* apellido, Fecha fechaDeNacimiento, const char* nacionalidad) : Persona( nombre,apellido, fechaDeNacimiento)
 {
     strcpy (_nacionalidad,nacionalidad);
-    _codAutor=codAutor;
+
 }
 //getters
 
@@ -36,20 +36,8 @@ void Autor::setCodAutor(int codAutor)
     _codAutor = codAutor;
 }
 
-/*void Autor :: cargarAutor(){
-    cargarPersona();
-    cin.ignore();
 
-    cout << "Ingrese la nacionalidad del autor: ";
-    cin.getline(_nacionalidad, 20);
-} */
 
-void Autor::mostrarInfo()
-{
-//    mostrartInfoPersona();
-    cout << "Direccion: " << _nacionalidad << endl;
-    cout << "Codigo de Autor: "  << _codAutor << endl;
-}
 
 
 

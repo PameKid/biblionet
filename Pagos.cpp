@@ -61,28 +61,28 @@ int Pagos::getCodSocio(){
         return _estado;
     }
 
-void Pagos::cargarPago(){
+//void Pagos::cargarPago(){
 
-   cout << "Ingrese el codigo de socio:" << endl;
-   cin >> _codSocio;
-   cout << "Ingrese el codigo de pago:" << endl;
-   cin >> _codPago;
+  // cout << "Ingrese el codigo de socio:" << endl;
+  // cin >> _codSocio;
+  // cout << "Ingrese el codigo de pago:" << endl;
+  // cin >> _codPago;
    //cout << "Ingrese la fecha de pago:" << endl;
    //cin >> _fechaDePago;
-   cout << "Ingrese numero del mes de pago:" << endl;
-   cin >> _mesPagado;
-   cout << "Ingrese numero del anio de pago:" << endl;
-   cin >> _anioPagado;
-   cout << "Ingrese el importe de pago:" << endl;
-   cin >> _importe;
-}
+  // cout << "Ingrese numero del mes de pago:" << endl;
+  // cin >> _mesPagado;
+  // cout << "Ingrese numero del anio de pago:" << endl;
+  // cin >> _anioPagado;
+  // cout << "Ingrese el importe de pago:" << endl;
+  // cin >> _importe;
+//}
 
 void Pagos::mostrarDatos(){
 
    cout << "Los datos ingresados son los siguientes: " << endl;
-    cout << "Nombre del Socio: " << _codSocio << endl;
+    cout << "Codigo de Socio: " << _codSocio << endl;
     cout << "El codigo de pago es: " << _codPago << endl;
-   // cout << "La fecha de pago es:" <<  _fechaDePago << endl;
+    _fechaDePago.mostrarFecha();
     cout << "El mes pagado es: " << _mesPagado << endl;
     cout << " El anio de pago es : " << _anioPagado << endl;
     cout << "El importe pagado es: " <<  _importe << endl;

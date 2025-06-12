@@ -1,37 +1,35 @@
 #include "ManagerAutor.h"
 
 
-void ManagerAutor :: cargarAutor(){
-    //cargarPersona();
-
+void ManagerAutor :: cargarAutor()
+{
+    ArchivoAutor  archivoAutor;
     char nombre[20];
     char apellido [20];
-    char direccion [50];
     char nacionalidad [30];
-    bool estado;
     int codAutor;
     Fecha fechaDeNacimiento;
-
-    cin.ignore();
-
-    cout << "Ingrese la nacionalidad del autor: ";
-    cin.getline(_nacionalidad, 20);
-}
-
-void ManagerAutor::agregarAutor()
-{
-    ArchivoAutor archivoAutor;
     int cantReg;
+
+    cout << "Ingrese nombre: ";
+    cin.ignore();
+    cin.getline(nombre,20);
+
+    cout << "Ingrese apellido: ";
+    cin.getline(apellido,20);
+
+    fechaDeNacimiento.cargarFecha();
+
+    cout << "Ingrese nacionalidad: ";
+    cin.ignore();
+    cin.getline(nacionalidad, 20);
+
+    Autor autornuevo(nombre,apellido,fechaDeNacimiento,nacionalidad);
     cantReg = archivoAutor.contarRegistrosAutor();
-
-    Autor nuevoAutor;
-
-    nuevoAutor.cargarAutor();
-
-    nuevoAutor.setCodAutor(cantReg+1);
-
-    archivoAutor.agregarAutor(nuevoAutor);
+    autornuevo.setCodAutor(cantReg+1);
+    archivoAutor.agregarAutor(autornuevo);
 }
+
 void ManagerAutor::listarAutores()  //mostrar la lista de archivos
 {
     ArchivoAutor arhivoAutor;
@@ -44,8 +42,11 @@ void ManagerAutor::listarAutores()  //mostrar la lista de archivos
     arhivoAutor.obtenerVectorAutores(cantReg, vecAutor);
     for(int x=0; x<cantReg; x++)
     {
-        cout<<"cantidad registros: " << cantReg << endl;
-        vecAutor[x].mostrarInfo();
+        if (vecAutor[x].getEstado()==true)
+        {
+            //cout<<"cantidad registros: " << cantReg << endl;
+            mostrarInfo(vecAutor[x]);
+        }
     }
 
     delete[]vecAutor;
@@ -70,6 +71,34 @@ void ManagerAutor::buscarAutorPorNombre()
     else
     {
         autor= ArchivoAutor.obtenerAutorArchivo(posicion);
-        autor.mostrarInfo();
+        mostrarInfo(autor);
+    }
+}
+
+void ManagerAutor::mostrarInfo(Autor autor)
+{
+
+    cout<<endl;
+    cout << "Nombre: " <<autor.getNombre()<< endl;
+    cout << "Apellido: " << autor.getApellido() << endl;
+    cout << "Fecha de nacimiento:" << autor.getFecaDeNacimiento().toString()<< endl;
+    cout << "Nacionalidad: " << autor.getNacionalidad() << endl;
+    cout << "Codigo de Autor: "  << autor.getCodAutor() << endl;
+    cout << "Estado del Autor: " <<autor.getEstado() << endl;
+}
+
+void ManagerAutor::bajaAutor()
+{
+    int codigo;
+    ArchivoAutor archivoAutor;
+    cout<<"Ingrese codigo de Autor: ";
+    cin>>codigo;
+    if(archivoAutor.bajaArchivoAutor(codigo)==true)
+    {
+        cout<<"REGISTRO BORRADO"<<endl;
+    }
+    else
+    {
+        cout<<"NO SE PUDO BORRAR EL REGISTRO"<<endl;
     }
 }

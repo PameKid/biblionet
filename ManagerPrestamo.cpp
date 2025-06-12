@@ -96,9 +96,6 @@ void ManagerPrestamo::cargarPrestamo(Prestamo &objetoPrestamo){
 
     cout << "Los datos fueron guardados correctamente: " << endl;
 
-
-//aca se debería llamar a una funcion para que calcule y muestre la fecha de devolucion.
-// _fechaDevolucion;
 }
 
 void ManagerPrestamo::altaPrestamo(){

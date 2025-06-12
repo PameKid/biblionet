@@ -127,3 +127,54 @@ bool ArchivoAutor::existeCodigoAutor(int codAutor){
     return false;
 }
 
+Autor ArchivoAutor::obtenerAutorPorCodigo(int codAutor)
+{
+    int cantReg;
+    Autor *vecAutor = nullptr;
+    Autor autorObtenido;
+    autorObtenido.setCodAutor(-1);
+
+    cantReg = contarRegistrosAutor();
+    vecAutor = new Autor[cantReg];
+
+    obtenerVectorAutores(cantReg, vecAutor);
+    for(int x=0; x<cantReg; x++)
+    {
+        if(vecAutor[x].getCodAutor()==codAutor && vecAutor[x].getEstado() == true)
+        {
+            autorObtenido = vecAutor[x];
+            autorObtenido.setPosicion(x);
+            break;
+        }
+    }
+
+    delete[]vecAutor;
+    return autorObtenido;
+}
+
+int ArchivoAutor::modificarArchivoAutor(Autor autor)
+{
+    FILE *pAutor;
+    pAutor=fopen("Autor.dat","rb+");
+    if(pAutor==nullptr)
+    {
+        return -1;
+    }
+
+    fseek(pAutor, autor.getPosicion()*sizeof(autor),0);
+    int escribio=fwrite(&autor, sizeof(autor),1,pAutor);
+
+    fclose(pAutor);
+    return escribio;
+}
+ bool ArchivoAutor::bajaArchivoAutor(int codigo)
+{
+    Autor autor;
+    autor =obtenerAutorPorCodigo(codigo);
+    if(autor.getCodAutor()==-1)
+    {
+        return false;
+    }
+    autor.setEstado(false);
+    return modificarArchivoAutor(autor);
+}

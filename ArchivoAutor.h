@@ -2,7 +2,7 @@
 #define ARCHIVOAUTOR_H_INCLUDED
 #include "Autor.h"
 
-     class ArchivoAutor
+class ArchivoAutor
 {
 
 public:
@@ -10,12 +10,12 @@ public:
     //int leerArchivoSocio();
     int contarRegistrosAutor();
     void obtenerVectorAutores(int cantRegistros, Autor* autor);
-    //bool bajaArchivoSocio(int codigo);
-    //int modificarArchivoSocio(Socio socio);
-   // int buscarArchivoSocio(int codigo);
+    bool bajaArchivoAutor(int codigo);
+    int modificarArchivoAutor(Autor autor);
+    // int buscarArchivoSocio(int codigo);
     Autor obtenerAutorArchivo(int pos) ;
     int buscarAutorPorNombre(char nombre[]);
-    //Socio obtenerSocioPorCodigo(int codSocio);
+    Autor obtenerAutorPorCodigo(int codAutor) ;
     //bool existeSocio(int codSocio); //interactua con prestamo para validarlo
 
     bool existeCodigoAutor(int codAutor);

@@ -9,9 +9,11 @@ class ManagerAutor
 public:
     void buscarAutorPorNombre();
     void listarAutores();
-    void agregarAutor();
+   // void agregarAutor();
     void bajaAutor();
     void modificarAutor();
+    void cargarAutor();
+    void mostrarInfo(Autor autor) ;
 };
 
 
