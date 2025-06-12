@@ -1,6 +1,22 @@
 #include "ManagerAutor.h"
 
 
+void ManagerAutor :: cargarAutor(){
+    //cargarPersona();
+
+    char nombre[20];
+    char apellido [20];
+    char direccion [50];
+    char nacionalidad [30];
+    bool estado;
+    int codAutor;
+    Fecha fechaDeNacimiento;
+
+    cin.ignore();
+
+    cout << "Ingrese la nacionalidad del autor: ";
+    cin.getline(_nacionalidad, 20);
+}
 
 void ManagerAutor::agregarAutor()
 {

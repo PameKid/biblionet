@@ -36,13 +36,13 @@ void Autor::setCodAutor(int codAutor)
     _codAutor = codAutor;
 }
 
-void Autor :: cargarAutor(){
+/*void Autor :: cargarAutor(){
     cargarPersona();
     cin.ignore();
 
     cout << "Ingrese la nacionalidad del autor: ";
     cin.getline(_nacionalidad, 20);
-}
+} */
 
 void Autor::mostrarInfo()
 {
