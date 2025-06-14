@@ -2,24 +2,17 @@
 #include<cstring>
 #include "ArchivoSocio.h"
 #include <cstdio>
+#include <iostream>
+#include "Validaciones.h"
 
 using namespace std;
 
 void ManagerPago::agregarPago(Pagos &p1)
 {
-
     //variables auxiliares
-    int codSocio;
-    char codPago[20];
+    int codSocio, mesPagado,  anioPagado, importe;
+    char codPago[20],  cadenaAuxiliar[20];;
     Fecha fechaDePago;
-    int mesPagado;
-    int anioPagado;
-    int importe;
-
-    char cadenaAuxiliar[20];
-
-    bool existeSocio;
-    ArchivoSocio archiSocio;
 
     cout << "NUEVO PAGO " << endl;
     cout << "***************" << endl;
@@ -29,43 +22,39 @@ void ManagerPago::agregarPago(Pagos &p1)
     p1.setFechaDePago(fechaDePago);
     fechaDePago.mostrarFecha();
 
-    cout << "Ingrese el codigo del socio:  " << endl;
-    cin >> codSocio;
+    // valida y setea socio
 
-    existeSocio = archiSocio.existeSocio(codSocio);
-    while(existeSocio == false)
-    {
-        int opc;
-        cout << "El codigo ingresado no existe, presione 1 para ingresar otro o 0 volver al menu " << endl;
-        cin >>  opc;
-        if(opc == 1)
-        {
-            cout << "Ingrese el codigo de socio: " << endl;
-            cin >> codSocio;
-            existeSocio = archiSocio.existeSocio(codSocio);
-        }
-        else
-        {
-            return;
-        }
-
-    }
-    //todo ok settea el objeto Pago
+    codSocio = ingresarCodSocio();
+    if(codSocio == -1) return;
     p1.setCodSocio(codSocio);
 
-    // falta validar estos datos
-    cout << "Ingrese numero del mes de pago:" << endl;
-    cin >> mesPagado;
+    // valida y setea mes
+
+    mesPagado = ingresarMes();
+    if(mesPagado == -1) return;
     p1.setMesPagado(mesPagado);
 
-    cout << "Ingrese  el anio de pago:" << endl;
-    cin >> anioPagado;
+    //valida y setea anio
+
+    int anioActual = fechaDePago.getAnio();
+    anioPagado = ingresarAnio(anioActual);
+    if(anioPagado == -1) return;
     p1.setAnioPagado(anioPagado);
 
-    cout << "Ingrese el importe de pago:" << endl;
-    cin >> importe;
-    p1.setImporte(importe);
+    //valida si existe un pago
 
+    if(existePago(codSocio,mesPagado,anioPagado)){
+
+        cout << "El socio ya regrista un pago con esa fecha" << endl;
+        system("pause");
+        return;
+    }
+
+    // valida y setea importe
+
+    importe = ingresarImporte();
+    if(importe == -1) return;
+    p1.setImporte(importe);
 
 
     //ARMADO DE CODIGO DE PAGO
@@ -88,22 +77,6 @@ void ManagerPago::agregarPago(Pagos &p1)
     cout << "codigo de pago generado: " << codPago << endl << endl;
     cout << "Los datos fueron guardados correctamente: " << endl;
     system("pause");
-
-
-
-    //TERMINA ARMADO DE CODIGO DE PRESTAMO
-
-
-
-
-
-
-
-
-
-
-
-
 
 }
 

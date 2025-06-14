@@ -87,6 +87,8 @@
 		<Unit filename="Prestamo.h">
 			<Option target="Debug" />
 		</Unit>
+		<Unit filename="Validaciones.cpp" />
+		<Unit filename="Validaciones.h" />
 		<Unit filename="fecha.cpp" />
 		<Unit filename="fecha.h" />
 		<Unit filename="main.cpp" />
