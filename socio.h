@@ -15,7 +15,7 @@ private:
     char _direccion[50];
     char _mail[30];
     int _codSocio;
-    int _posicion;
+
 
 public:
     Socio();
@@ -29,7 +29,7 @@ public:
     int getCodSocio();
     const char* getTelefono();
     const char* getDNI();
-    int getPosicion();
+
 
     // Setters
     void setDireccion(const char*direccion);
@@ -37,7 +37,7 @@ public:
     void setCodSocio(int codSocio);
     void setTelefono(const char* telefono);
     void setDNI(const char* DNI);
-    void setPosicion(int posicion);
+
 
 };
 #endif // SOCIO_H_INCLUDED

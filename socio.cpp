@@ -44,10 +44,7 @@ const char* Socio::getDNI()
     return _DNI;
 }
 
-int Socio::getPosicion()
-{
-    return _posicion;
-}
+
 
 
 // Setters
@@ -78,10 +75,6 @@ void Socio::setDNI(const char* DNI)
 {
     strncpy(_DNI, DNI, sizeof(_DNI));
     _DNI[sizeof(_DNI)-1] = '\0';
-}
-void Socio::setPosicion(int posicion)
-{
-    _posicion = posicion;
 }
 
 

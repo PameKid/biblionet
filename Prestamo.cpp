@@ -17,12 +17,16 @@ void Prestamo::setEstado(bool estado){
         _estado = estado;
     }
 
-void Prestamo::setFechaEntrega(Fecha fechaPrestamo){
+void Prestamo::setFechaPrestamo(Fecha fechaPrestamo){
     _fechaPrestamo = fechaPrestamo;
 }
 
 void Prestamo::setFechaDevolucion (Fecha fechaDevolucion){
     _fechaDevolucion = fechaDevolucion;
+}
+
+void Prestamo::setFechaVencimiento (Fecha fechaVencimiento){
+    _fechaVencimiento = fechaVencimiento;
 }
 
 char* Prestamo::getCodPrestamo(){
@@ -41,7 +45,7 @@ bool Prestamo::getEstado(){
     return _estado;
 }
 
-Fecha Prestamo::getFechaEntrega(){
+Fecha Prestamo::getFechaPrestamo(){
     return _fechaPrestamo;
 }
 
@@ -49,6 +53,9 @@ Fecha Prestamo::getFechaDevolucion(){
     return _fechaDevolucion;
 }
 
+Fecha Prestamo::getFechaVencimiento(){
+    return _fechaVencimiento;
+}
     //metodos
 
 void Prestamo::cargarPrestamo(){
@@ -78,10 +85,11 @@ void Prestamo::cargarPrestamo(){
     cout << "Codigo del libro: " << _codLibro << endl;
     cout << "Código del socio:" <<  _codSocio << endl;
      _fechaPrestamo.mostrarFecha();
+     _fechaDevolucion.mostrarFecha();
 
     //calcular y mostrar la fecha de devolucion a partir de fecha actual
     //cout << "Estado: " << _estado;
     cout << "----------------------------------------------" << endl;
 }
 
-    void Prestamo::cargarDevolucion(){}
+void Prestamo::cargarDevolucion(){}

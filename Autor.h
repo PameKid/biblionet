@@ -17,7 +17,7 @@ private:
 
 public:
     Autor();
-    Autor(const char* nombre, const char* apellido, Fecha fechaDeNacimiento, bool estado, const char* nacionalidad, int codAutor);
+    Autor(const char* nombre, const char* apellido, Fecha fechaDeNacimiento, const char* nacionalidad);
 
     // Getters
     const char*getNacionalidad();
@@ -26,9 +26,6 @@ public:
     //Setter
     void setNacionalidad(const char*nacionalidad);
     void setCodAutor(int codAutor);
-
-    void mostrarInfo();
-    void cargarAutor();
 
 };
 #endif // AUTOR_H_INCLUDED

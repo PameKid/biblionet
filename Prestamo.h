@@ -12,7 +12,8 @@ private:
     int _codSocio;
     bool _estado = true;
     Fecha _fechaPrestamo;
-    Fecha _fechaDevolucion;
+    Fecha _fechaDevolucion; //fecha en la que efectivamente devuelve el libro permite calcular morosos
+    Fecha _fechaVencimiento; //fecha que guarda el plazo limite de vencimiento
 
 public:
 
@@ -21,16 +22,18 @@ public:
     void setCodLibro(int codLibro);
     void setCodSocio (int codSocio);
     void setEstado(bool estado);
-    void setFechaEntrega(Fecha fechaEntrega);
+    void setFechaPrestamo(Fecha fechaPrestamo);
     void setFechaDevolucion (Fecha fechaDevolucion);
+    void setFechaVencimiento(Fecha fechaVencimiento);
 
 
     char* getCodPrestamo();
     int getCodLibro();
     int getCodSocio();
     bool getEstado();
-    Fecha getFechaEntrega();
+    Fecha getFechaPrestamo();
     Fecha getFechaDevolucion();
+    Fecha getFechaVencimiento();
 
     //metodos
 
