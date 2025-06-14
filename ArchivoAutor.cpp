@@ -60,7 +60,26 @@ void ArchivoAutor::obtenerVectorAutores(int cantRegistros, Autor *vecAutor)   //
     fclose(pAutor);
 }
 
-int ArchivoAutor:: buscarAutorPorNombre(char nombre []){
+bool ArchivoAutor :: compararNombres(const char* nombre1, const char* nombre2)
+{
+    while (*nombre1 && *nombre2 )
+    {
+        if (tolower(*nombre1) != tolower(*nombre2))
+        {
+            return false;
+        }
+        nombre1++;
+        nombre2++;
+    }
+    if(*nombre1 == *nombre2)
+    {
+        return true;
+    }
+    return false;
+}
+
+int ArchivoAutor:: buscarAutorPorNombre(char nombre [], int vecPosiciones[])
+{
 
     Autor autor;
     FILE *pAutor;
@@ -68,23 +87,23 @@ int ArchivoAutor:: buscarAutorPorNombre(char nombre []){
 
     if(pAutor==nullptr)
     {
-        ///cout<<"ERROR DE ARCHIVO"<<endl;
         return -2;
     }
 
     int pos=0;
+    int cantidadAutores = 0;
     while(fread(&autor,sizeof(Autor),1,pAutor)==1)
     {
-        cout<<"NOMBRE: "<<autor.getNombre()<<endl;
-        if(strcmp(autor.getNombre(), nombre) == 0 )
+        if(compararNombres(autor.getNombre(), nombre))
         {
-            return pos;
+            vecPosiciones[cantidadAutores]= pos;
+            cantidadAutores++;
         }
         pos++;
     }
 
     fclose(pAutor);
-    return -1;
+    return cantidadAutores;
 }
 
 
@@ -106,21 +125,25 @@ Autor ArchivoAutor::obtenerAutorArchivo(int pos)
     return autor;
 }
 
-bool ArchivoAutor::existeCodigoAutor(int codAutor){
+bool ArchivoAutor::existeCodigoAutor(int codAutor)
+{
     FILE * pArchivoAutor;
     Autor a1;
 
     pArchivoAutor = fopen("Autor.dat","rb");
 
-    if(pArchivoAutor == nullptr){
+    if(pArchivoAutor == nullptr)
+    {
         return false;
     }
 
-    while((fread(&a1,sizeof(Autor),1,pArchivoAutor))== 1){
-        if(a1.getCodAutor() == codAutor){
-           fclose(pArchivoAutor);
-           return true;
-           }
+    while((fread(&a1,sizeof(Autor),1,pArchivoAutor))== 1)
+    {
+        if(a1.getCodAutor() == codAutor)
+        {
+            fclose(pArchivoAutor);
+            return true;
+        }
     }
 
     fclose(pArchivoAutor);
@@ -167,7 +190,7 @@ int ArchivoAutor::modificarArchivoAutor(Autor autor)
     fclose(pAutor);
     return escribio;
 }
- bool ArchivoAutor::bajaArchivoAutor(int codigo)
+bool ArchivoAutor::bajaArchivoAutor(int codigo)
 {
     Autor autor;
     autor =obtenerAutorPorCodigo(codigo);

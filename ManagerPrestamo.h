@@ -13,4 +13,5 @@ public:
     //void modificarDatosDelPrestamo(); //preguntar si es necesario
     Prestamo obtenerPrestamoPorCodigo(int codPrestamo);
 
+
 };

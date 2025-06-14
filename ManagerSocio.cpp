@@ -96,17 +96,25 @@ void ManagerSocio::mostrarInfo(Socio socio)
 
 void ManagerSocio::bajaSocio()
 {
+    ArchivoPrestamo archivoPrestamo;
     int codigo;
     ArchivoSocio archivoSocio;
     cout<<"Ingrese codigo de Socio: ";
     cin>>codigo;
-    if(archivoSocio.bajaArchivoSocio(codigo)==true)
+    if (archivoPrestamo.prestamoInconclusoPorSocio(codigo) ==true )
     {
-        cout<<"REGISTRO BORRADO"<<endl;
+        cout << "NO SE PUEDE DAR DE BAJA A ESE SOCIO, ADEUDA LIBROS!" << endl;
     }
     else
     {
-        cout<<"NO SE PUDO BORRAR EL REGISTRO"<<endl;
+        if(archivoSocio.bajaArchivoSocio(codigo)==true)
+        {
+            cout<<"REGISTRO BORRADO"<<endl;
+        }
+        else
+        {
+            cout<<"NO SE PUDO BORRAR EL REGISTRO"<<endl;
+        }
     }
 }
 

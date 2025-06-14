@@ -17,7 +17,6 @@ Socio :: Socio(const char* nombre, const char* apellido, Fecha fechaDeNacimiento
     strcpy(_mail,mail);
 }
 
-
 // Getters
 const char* Socio::getDireccion()
 {

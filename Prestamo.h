@@ -1,3 +1,6 @@
+#ifndef PRESTAMO_H
+#define PRESTAMO_H
+
 #include <iostream>
 #include<string.h>
 #include "Fecha.h"
@@ -41,3 +44,5 @@ public:
     void cargarDevolucion();
     void mostrarInfo();
 };
+
+#endif // PRESTAMO_H

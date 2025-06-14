@@ -2,6 +2,7 @@
 #define MANAGERSOCIO_H_INCLUDED
 #include "ArchivoSocio.h"
 #include "socio.h"
+#include "ArchivoPrestamos.h"
 
 class ManagerSocio{
 

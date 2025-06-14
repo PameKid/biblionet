@@ -89,7 +89,7 @@ void ManagerPrestamo::cargarPrestamo(Prestamo &objetoPrestamo){
     cout << "La fecha de devolucion es: " << endl;
     fechaVencimiento.mostrarFecha();
 
-    objetoPrestamo.setFechaDevolucion(fechaVencimiento);
+    objetoPrestamo.setFechaVencimiento(fechaVencimiento);
 
     cout << "codigo de prestamo generado: " << codigoPrestamo << endl << endl;
     system("pause");
