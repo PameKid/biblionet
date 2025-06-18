@@ -70,6 +70,8 @@ void ArchivoPrestamo::buscarArchivoPrestamoPorCodigo() {}
 //int ArchivoPrestamo:: modificarArchivoPrestamo(Prestamo prestamoModificar); preguntar al profe
 
 
+
+
 //Metodo para la validacion de la baja de socio (socio moroso))
 
 
