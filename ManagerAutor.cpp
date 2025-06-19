@@ -54,24 +54,30 @@ void ManagerAutor::listarAutores()  //mostrar la lista de archivos
 
 void ManagerAutor::buscarAutorPorNombre()
 {
-    ArchivoAutor ArchivoAutor;
+    ArchivoAutor archivoAutor;
     Autor autor;
+    int vecPosiciones [5];
     char nombre [20];
+    int posicion;
     cout <<"Ingrese Nombre: ";
 
     cin.ignore();
     cin.getline(nombre,20);
 
-    int posicion= ArchivoAutor.buscarAutorPorNombre(nombre);
+    int cantidad = archivoAutor.buscarAutorPorNombre(nombre, vecPosiciones);    // De archivoAutor
 
-    if (posicion < 0 )
+    if (cantidad <= 0 )
     {
-        cout << "No existe el Autor";
+        cout << "No existe el Autor"<< endl;
     }
     else
     {
-        autor= ArchivoAutor.obtenerAutorArchivo(posicion);
-        mostrarInfo(autor);
+        for (int i=0; i<cantidad; i++)
+        {
+            posicion =vecPosiciones [i];
+            autor = archivoAutor.obtenerAutorArchivo(posicion);
+            mostrarInfo(autor);
+        }
     }
 }
 

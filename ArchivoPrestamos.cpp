@@ -1,11 +1,13 @@
 #include "ArchivoPrestamos.h"
 
-int ArchivoPrestamo:: agregarArchivoPrestamo(Prestamo prestamonuevo){
+int ArchivoPrestamo:: agregarArchivoPrestamo(Prestamo prestamonuevo)
+{
     FILE *pPrestamo;
 
     pPrestamo = fopen("prestamos.dat","ab");
 
-    if(pPrestamo == nullptr){
+    if(pPrestamo == nullptr)
+    {
         cout << "No se pudo abrir el archivo" << endl;
         return -1; //regresa -1 si no se pudo abrir
     }
@@ -16,31 +18,44 @@ int ArchivoPrestamo:: agregarArchivoPrestamo(Prestamo prestamonuevo){
     return 2; //regresa 2 si se guardó correctamente
 
 }
-int ArchivoPrestamo::leerArchivoPrestamos(){
+
+int ArchivoPrestamo::leerArchivoPrestamos()
+{
     Prestamo p1;
     FILE* pPrestamo;
 
     pPrestamo = fopen("prestamos.dat", "rb");
 
-    if(pPrestamo == nullptr){
+    if(pPrestamo == nullptr)
+    {
         cout << "No se pudo leer el archivo." << endl;
         return -1;
     }
 
+<<<<<<< HEAD
     while((fread(&p1,sizeof(Prestamo),1,pPrestamo))== 1){
         if(p1.getEstado() == true){
+=======
+    while((fread(&p1,sizeof(Prestamo),1,pPrestamo))== 1)
+    {
+        if(p1.getEstado() == true)
+        {
+
+>>>>>>> 42c5a8ff62f60324cd1eece3b04dd4de2af4eee3
             p1.mostrarInfo();
         }
     }
     fclose(pPrestamo);
 }
 
-int ArchivoPrestamo::contarRegistrosdePrestamos(){
+int ArchivoPrestamo::contarRegistrosdePrestamos()
+{
     FILE* pPrestamo;
 
     pPrestamo = fopen("Prestamos.dat", "rb");
 
-    if(pPrestamo == nullptr){
+    if(pPrestamo == nullptr)
+    {
         cout << "No se pudo leer el archivo." << endl;
         return -1;
     }
@@ -53,8 +68,10 @@ int ArchivoPrestamo::contarRegistrosdePrestamos(){
 
     cantRegistosPrestamos = tamanio/sizeof(Prestamo);
 
+    return cantRegistosPrestamos;
 }
 
+<<<<<<< HEAD
 Prestamo ArchivoPrestamo::devolverArchivoPrestamoPorCodigo(char* codigoPrestamo){
     Prestamo p1;
     Prestamo prestamoVacio;
@@ -79,3 +96,37 @@ Prestamo ArchivoPrestamo::devolverArchivoPrestamoPorCodigo(char* codigoPrestamo)
 }
 
 int ArchivoPrestamo:: modificarArchivoPrestamo(Prestamo prestamoModificar){}
+=======
+void ArchivoPrestamo::buscarArchivoPrestamoPorCodigo() {}
+//int ArchivoPrestamo:: modificarArchivoPrestamo(Prestamo prestamoModificar); preguntar al profe
+
+
+
+
+//Metodo para la validacion de la baja de socio (socio moroso))
+
+
+bool ArchivoPrestamo :: prestamoInconclusoPorSocio(int codSocio)
+{
+    Prestamo prestamo;
+    FILE *pPrestamo;
+    pPrestamo=fopen("Prestamos.dat","rb");
+    Fecha fechaVacia;
+
+    if(pPrestamo==nullptr)
+    {
+        return false;
+    }
+    while(fread(&prestamo,sizeof(prestamo),1,pPrestamo)==1)
+    {
+        if(prestamo.getCodSocio() == codSocio && prestamo.getEstado())
+        {
+            return true;
+        }
+
+    }
+
+    fclose(pPrestamo);
+    return false;
+}
+>>>>>>> 42c5a8ff62f60324cd1eece3b04dd4de2af4eee3

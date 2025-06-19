@@ -1,3 +1,6 @@
+#ifndef ARCHIVOPRESTAMO_H
+#define ARCHIVOPRESTAMO_H
+
 #include "Prestamo.h"
 
 class ArchivoPrestamo{
@@ -10,4 +13,10 @@ public:
     Prestamo devolverArchivoPrestamoPorCodigo(char* codigoPrestamo);
     int modificarArchivoPrestamo(Prestamo prestamoModificar); //necesario para cambiar el estado del prestamo
 
+    // validacion para la baja de socio ( socio moroso)
+
+    bool prestamoInconclusoPorSocio(int codSocio);
+
 };
+
+#endif // ARCHIVOPRESTAMO_H

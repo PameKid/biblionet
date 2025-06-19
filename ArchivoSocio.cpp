@@ -170,7 +170,7 @@ int ArchivoSocio::buscarSocioDni(char dni[])
 
     if(pSocio==nullptr)
     {
-        ///cout<<"ERROR DE ARCHIVO"<<endl;
+
         return -2;
     }
 

@@ -10,7 +10,7 @@ void menuAutor()
     while(true)
     {
         system("cls");
-        cout << "*******SOCIOS!*******" << endl;
+        cout << "*******¡AUTOR!*******" << endl;
         cout << "1. BUSCAR AUTOR POR NOMBRE" << endl;
         cout << "2. LISTAR AUTORES" << endl;
         cout << "3. ALTA DE AUTOR" << endl;

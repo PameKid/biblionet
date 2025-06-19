@@ -63,6 +63,7 @@ void ManagerSocio::listarSocios()  //mostrar la lista de archivos
     ArchivoSocio arhivoSocio;
     int cantReg;
     Socio*vecSocios = nullptr;
+    bool haySociosActivos= false;
 
     cantReg = arhivoSocio.contarRegistrosArchivoSocio();
     vecSocios = new Socio[cantReg];
@@ -72,8 +73,13 @@ void ManagerSocio::listarSocios()  //mostrar la lista de archivos
     {
         if (vecSocios[x].getEstado()== true )
         {
+            haySociosActivos = true;
             mostrarInfo(vecSocios[x]);
         }
+    }
+    if (haySociosActivos == false)
+    {
+        cout <<" NO HAY SOCIOS PARA LISTAR" <<endl;
     }
 
     delete[]vecSocios;
@@ -96,18 +102,50 @@ void ManagerSocio::mostrarInfo(Socio socio)
 
 void ManagerSocio::bajaSocio()
 {
+    ArchivoPrestamo archivoPrestamo;
     int codigo;
+    Socio socio;
     ArchivoSocio archivoSocio;
     cout<<"Ingrese codigo de Socio: ";
     cin>>codigo;
-    if(archivoSocio.bajaArchivoSocio(codigo)==true)
+
+    socio = archivoSocio.obtenerSocioPorCodigo(codigo) ;
+    if (socio.getCodSocio() != -1)
     {
-        cout<<"REGISTRO BORRADO"<<endl;
+        cout<< " Socio encontrado "<< endl;
+
+
+
+        if (archivoPrestamo.prestamoInconclusoPorSocio(codigo) ==true )
+        {
+            cout << "NO SE PUEDE DAR DE BAJA A ESE SOCIO, ADEUDA LIBROS!" << endl;
+        }
+        else
+        {   cout << "-------------------------------------------------------"<< endl;
+            cout << "Desea darle de baja al socio: "<< socio.getNombre() << " " << socio.getApellido()<< " S O N:  "<< endl;
+            char opcion;
+            cin >> opcion;
+             cout << "-------------------------------------------------------";
+            if (toupper(opcion) == 'S')
+            {
+                if(archivoSocio.bajaArchivoSocio(codigo)==true)
+                {
+                    cout<<"REGISTRO BORRADO"<<endl;
+                }
+                else
+                {
+                    cout<<"NO SE PUDO BORRAR EL REGISTRO"<<endl;
+                }
+            }
+        }
     }
     else
     {
-        cout<<"NO SE PUDO BORRAR EL REGISTRO"<<endl;
+        cout << "NO EXISTE EL SOCIO."  ;
+
     }
+
+
 }
 
 void ManagerSocio::buscarSocioPorDni()

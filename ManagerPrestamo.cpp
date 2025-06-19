@@ -99,8 +99,12 @@ void ManagerPrestamo::cargarPrestamo(Prestamo &objetoPrestamo){
     fechaVencimiento.mostrarFecha();
     objetoPrestamo.setFechaDevolucion(fechaDevolucion);
 
+<<<<<<< HEAD
 
     //objetoPrestamo.setFechaDevolucion(fechaVencimiento);
+=======
+    objetoPrestamo.setFechaVencimiento(fechaVencimiento);
+>>>>>>> 42c5a8ff62f60324cd1eece3b04dd4de2af4eee3
 
     cout << "codigo de prestamo generado: " << codigoPrestamo << endl << endl;
 

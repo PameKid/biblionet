@@ -10,7 +10,7 @@ void menuReportes(){
     int opc;
     while(true){
         system("cls");
-        cout << "*******REPORTES!*******" << endl;
+        cout << "*******¡REPORTES!*******" << endl;
         cout << "1. PRESTAMOS ECHOS AL MES" << endl;
         cout << "2. SOCIOS Y FECHAS DE DEVOLUCIONES" << endl;
         cout << "0. VOLVER AL MENU ANTERIOR" << endl;
