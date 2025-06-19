@@ -20,7 +20,7 @@ void ManagerPrestamo::cargarPrestamo(Prestamo &objetoPrestamo){
     bool existeLibro; //se guarda el resultado de la validacion
     ArchivoLibro archiLibro; //para el metodo para validar el codigo
 
-    bool existeSocio;
+    bool existeSocio; //para validar socio
     ArchivoSocio archiSocio;
 
 
@@ -51,6 +51,7 @@ void ManagerPrestamo::cargarPrestamo(Prestamo &objetoPrestamo){
     //todo ok settea el codigo en el objeto
     objetoPrestamo.setCodLibro(codigoLibro);
 
+    //validacion de cantidad de ejemplares disponibles
     libroparaValidarEjemplares = managerLibro.obtenerLibroPorCodigo(codigoLibro);
     if(libroparaValidarEjemplares.getCantidadEjemplares() == 0){
         cout << "No hay ejemplares disponibles" << endl;
@@ -72,7 +73,6 @@ void ManagerPrestamo::cargarPrestamo(Prestamo &objetoPrestamo){
     //todo ok settea el objeto Prestamo
     objetoPrestamo.setCodSocio(codigoSocio);
 
-    //valido que haya ejemplares disponibles para el prestamo
 
     //ARMADO DE CODIGO DE PRESTAMO
     strcat(codigoPrestamo,"PR");
@@ -99,17 +99,14 @@ void ManagerPrestamo::cargarPrestamo(Prestamo &objetoPrestamo){
     fechaVencimiento.mostrarFecha();
     objetoPrestamo.setFechaDevolucion(fechaDevolucion);
 
-<<<<<<< HEAD
-
-    //objetoPrestamo.setFechaDevolucion(fechaVencimiento);
-=======
     objetoPrestamo.setFechaVencimiento(fechaVencimiento);
->>>>>>> 42c5a8ff62f60324cd1eece3b04dd4de2af4eee3
+    objetoPrestamo.setDevolucion(true);
 
-    cout << "codigo de prestamo generado: " << codigoPrestamo << endl << endl;
+    cout << "Codigo de prestamo generado: " << codigoPrestamo << endl << endl;
 
     cout << "Los datos fueron guardados correctamente: " << endl;
     system("pause");
+
 }
 
 void ManagerPrestamo::altaPrestamo(){
@@ -120,7 +117,7 @@ void ManagerPrestamo::altaPrestamo(){
     cargarPrestamo(p1);
     archivoPrestamo.agregarArchivoPrestamo(p1);
     ml.descontarEjemplares(p1.getCodLibro());
-//acá se debería interactuar con libro y restar un ejemplar hasta la fecha de devolucion.
+//acá se  interactua con libro y resta un ejemplar hasta la fecha de devolucion.
 
 }
 
@@ -140,30 +137,41 @@ void ManagerPrestamo::buscarPrestamoCodigo(){
 
     char codPrestamoSolicitado[20];
     Prestamo prestamoConsultado;
+    ArchivoPrestamo archiPrestamo;
 
     cout << "Ingrese el código del prestamo buscar" << endl;
     cin >> codPrestamoSolicitado;
 
-
+    prestamoConsultado = archiPrestamo.devolverArchivoPrestamoPorCodigo(codPrestamoSolicitado);
     cout << "Corrobore que los datos sean correctos: " << endl;
     prestamoConsultado.mostrarInfo();
+
+    system("pause");
 }
 
 void ManagerPrestamo::devolverPrestamo(){
     ArchivoPrestamo archiPrestamo;
     Prestamo prestamoDevuelto;
     char codigoPrestamo[20];
+    Fecha fechaDeDevolucion;
 
     cout << "Ingrese el codigo del prestamo para la devolucion: " << endl;
+    cin.ignore();
     cin.getline(codigoPrestamo, 20);
 
+
     prestamoDevuelto = archiPrestamo.devolverArchivoPrestamoPorCodigo(codigoPrestamo);
-    //para corroborar si esta vacio pregunto por la cantidad de caracteres
+    if (prestamoDevuelto.getCodSocio()== 0){
+        cout << "No se encontraron datos con ese codigo. " << endl; //pregunta
+        system("pause");
+        return;
+     }
+     fechaDeDevolucion.cargarFechaActual();
+     prestamoDevuelto.setFechaDevolucion(fechaDeDevolucion);
+     archiPrestamo.modificarArchivoPrestamo(prestamoDevuelto);
 
-    //si no recibe nada debe devolver mensaje
-} //guardo la fecha de devolucion y setteo la fecha de devolucion del prestamo
-//llamar a modificar archivo libro para pasarle el nuevo prestamoc con la fecha setteada
+     cout << "Devolucion procesada. " << endl;
+     system("pause");
 
-Prestamo ManagerPrestamo:: obtenerPrestamoPorCodigo(int codPrestamo){}
-void ManagerPrestamo::contarPrestamosActivos(){}
-void ManagerPrestamo::modificarDatosDelPrestamo(){};
+}
+

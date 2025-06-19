@@ -108,3 +108,5 @@ void ManagerAutor::bajaAutor()
         cout<<"NO SE PUDO BORRAR EL REGISTRO"<<endl;
     }
 }
+
+

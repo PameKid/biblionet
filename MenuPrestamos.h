@@ -34,9 +34,9 @@ void menuPrestamos(){
         case 3:
             mp.buscarPrestamoCodigo();
             break;
-        //case 4:
-          //  menuPagos();
-          //  break;
+        case 4:
+           mp.devolverPrestamo();
+           break;
         //case 5:
           //  menuReportes();
           //  break;

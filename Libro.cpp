@@ -77,50 +77,6 @@ int Libro::getPosicion(){
     return _posicion;
     }
 
-//void Libro::cargarLibro(){
-//    bool existeCodAutor; //se guarda el dato de la validacion
-//    ArchivoAutor archivoAutor;
-//
-//
-//    cout << "Ingrese el nombre del Libro: " << endl;
-//    cin.ignore();
-//    cin.getline(_nombreDeLibro, 50);
-//
-//    cout << "Ingrese el nombre del autor del libro: " << endl;
-//    //cin.ignore();
-//    cin.getline(_nombreDelAutor,50);
-//
-//    cout << "Ingrese el código del libro:" << endl;
-//    cin >> _codLibro;
-//
-//    cout << "Ingrese el código del autor: " << endl;
-//    cin >>_codAutor;
-//
-//    existeCodAutor = archivoAutor.existeCodigoAutor(_codAutor);
-//
-//    while (existeCodAutor == false){
-//        cout << "El código ingresado no existe, intente con otro: " << endl;
-//        cin >> _codAutor;
-//        existeCodAutor = archivoAutor.existeCodigoAutor(_codAutor);
-//    }
-//
-//
-//    cout << "Ingrese el ISBN del libro " << endl;
-//    cin.ignore();
-//    cin.getline(_isbn, 20);
-//
-//    cout << "Ingrese el género del libro: " << endl;
-//    //cin.ignore();
-//    cin.getline(_genero,50);
-//
-//    cout << "Ingrese la cantidad de ejemplares del libro: " << endl;
-//    cin >> _cantidadEjemplares;
-//
-//    cout << "Ingrese el año de publicación del libro: " << endl;
-//    cin >> _anioDePublicacion;
-//
-//}
-
 void Libro::mostrarInfo(){
     cout << "Datos del libro: " << endl;
     cout << "Nombre del Libro: " << _nombreDeLibro << endl;
@@ -130,7 +86,7 @@ void Libro::mostrarInfo(){
     cout << "ISBN del libro " << _isbn << endl;
     cout << "Género del libro: " <<  _genero << endl;
     cout << "Cantidad de ejemplares del libro: " << _cantidadEjemplares << endl;
-    cout << "Ingrese el año de publicación: " << _anioDePublicacion << endl;
+    cout << "Año de publicación: " << _anioDePublicacion << endl;
     //cout << "Estado: " << _estado;
 }
 

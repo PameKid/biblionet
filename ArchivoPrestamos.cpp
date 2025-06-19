@@ -4,7 +4,7 @@ int ArchivoPrestamo:: agregarArchivoPrestamo(Prestamo prestamonuevo)
 {
     FILE *pPrestamo;
 
-    pPrestamo = fopen("prestamos.dat","ab");
+    pPrestamo = fopen("Prestamos.dat","ab");
 
     if(pPrestamo == nullptr)
     {
@@ -24,7 +24,7 @@ int ArchivoPrestamo::leerArchivoPrestamos()
     Prestamo p1;
     FILE* pPrestamo;
 
-    pPrestamo = fopen("prestamos.dat", "rb");
+    pPrestamo = fopen("Prestamos.dat", "rb");
 
     if(pPrestamo == nullptr)
     {
@@ -32,16 +32,10 @@ int ArchivoPrestamo::leerArchivoPrestamos()
         return -1;
     }
 
-<<<<<<< HEAD
-    while((fread(&p1,sizeof(Prestamo),1,pPrestamo))== 1){
-        if(p1.getEstado() == true){
-=======
     while((fread(&p1,sizeof(Prestamo),1,pPrestamo))== 1)
     {
         if(p1.getEstado() == true)
         {
-
->>>>>>> 42c5a8ff62f60324cd1eece3b04dd4de2af4eee3
             p1.mostrarInfo();
         }
     }
@@ -71,13 +65,13 @@ int ArchivoPrestamo::contarRegistrosdePrestamos()
     return cantRegistosPrestamos;
 }
 
-<<<<<<< HEAD
 Prestamo ArchivoPrestamo::devolverArchivoPrestamoPorCodigo(char* codigoPrestamo){
     Prestamo p1;
     Prestamo prestamoVacio;
     FILE* pPrestamo;
 
-    pPrestamo = fopen("prestamos.dat", "rb");
+
+    pPrestamo = fopen("Prestamos.dat", "rb");
 
     if(pPrestamo == nullptr){
         cout << "No se pudo leer el archivo." << endl;
@@ -85,7 +79,7 @@ Prestamo ArchivoPrestamo::devolverArchivoPrestamoPorCodigo(char* codigoPrestamo)
     }
 
     while((fread(&p1,sizeof(Prestamo),1,pPrestamo))== 1){
-        if(strcmp(codigoPrestamo,p1.getCodPrestamo()) == 0){
+        if(strcmp(codigoPrestamo,p1.getCodPrestamo()) == 0){ //devuelve 0 si son iguales
             fclose(pPrestamo);
             return p1;
         }
@@ -95,22 +89,18 @@ Prestamo ArchivoPrestamo::devolverArchivoPrestamoPorCodigo(char* codigoPrestamo)
     }
 }
 
-int ArchivoPrestamo:: modificarArchivoPrestamo(Prestamo prestamoModificar){}
-=======
-void ArchivoPrestamo::buscarArchivoPrestamoPorCodigo() {}
+
+//void ArchivoPrestamo::buscarArchivoPrestamoPorCodigo() {}
+
 //int ArchivoPrestamo:: modificarArchivoPrestamo(Prestamo prestamoModificar); preguntar al profe
 
-
-
-
 //Metodo para la validacion de la baja de socio (socio moroso))
-
 
 bool ArchivoPrestamo :: prestamoInconclusoPorSocio(int codSocio)
 {
     Prestamo prestamo;
     FILE *pPrestamo;
-    pPrestamo=fopen("Prestamos.dat","rb");
+    pPrestamo = fopen("Prestamos.dat","rb");
     Fecha fechaVacia;
 
     if(pPrestamo==nullptr)
@@ -129,4 +119,48 @@ bool ArchivoPrestamo :: prestamoInconclusoPorSocio(int codSocio)
     fclose(pPrestamo);
     return false;
 }
->>>>>>> 42c5a8ff62f60324cd1eece3b04dd4de2af4eee3
+
+int ArchivoPrestamo::buscarPosicionPrestamo(Prestamo prestamo){
+
+    int cantidadRegistros;
+    int posicion;
+    FILE* pPrestamo;
+    Prestamo p1;
+
+    cantidadRegistros = contarRegistrosdePrestamos();
+
+    pPrestamo = fopen("Prestamos.dat","rb");
+
+    if(pPrestamo == nullptr){
+        cout << "No se pudo leer el archivo." << endl;
+        return -1;
+    }
+
+    for(int x = 0; x < cantidadRegistros; x++){
+        fread(&p1,sizeof(Prestamo),1,pPrestamo);
+        if(strcmp(p1.getCodPrestamo(), prestamo.getCodPrestamo())== 0){
+            return x;
+        }
+    }
+    return -1;
+}
+
+int ArchivoPrestamo:: modificarArchivoPrestamo(Prestamo prestamoModificar){
+    FILE* pArchivoPrestamo;
+    int posicion;
+
+    pArchivoPrestamo = fopen("Prestamos.dat", "rb+");
+
+    if(pArchivoPrestamo == nullptr){
+        return -1;
+    }
+
+    posicion = buscarPosicionPrestamo(prestamoModificar);
+    fseek(pArchivoPrestamo,sizeof(Prestamo)*posicion,0);
+
+    int prestamoDesactivado = fwrite(&prestamoModificar,sizeof(Prestamo),1,pArchivoPrestamo);
+    fclose(pArchivoPrestamo);
+
+    return prestamoDesactivado;
+}
+

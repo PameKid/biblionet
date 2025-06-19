@@ -15,7 +15,7 @@ public:
     void modificarLibro();
     Libro obtenerLibroPorCodigo(int codLibro);
     void descontarEjemplares(int codLibro);
-
+    void listarLibrosPorAutor();
 };
 
 

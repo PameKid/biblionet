@@ -16,6 +16,7 @@ public:
     // validacion para la baja de socio ( socio moroso)
 
     bool prestamoInconclusoPorSocio(int codSocio);
+    int buscarPosicionPrestamo(Prestamo prestamo);
 
 };
 

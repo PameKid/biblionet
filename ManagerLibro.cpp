@@ -1,5 +1,6 @@
 #include "ManagerLibro.h"
-#include "ArchivoAutor.h"
+#include "ManagerAutor.h"
+//#include "ArchivoAutor.h"
 #include <iostream>
 
 using namespace std;
@@ -256,5 +257,60 @@ void ManagerLibro::descontarEjemplares(int codLibro){
     libroPrestado.setCantidadEjemplares(cantidadEjemplares);
 
     archiLibro.modificarArchivoLibro(libroPrestado);
+}
+
+void ManagerLibro::listarLibrosPorAutor(){
+    Autor autorbuscado;
+    ManagerAutor managerAutor;
+    ArchivoAutor archivoAutor;
+    char nombreAutor[20];
+    int vecPosiciones[5];
+    int posicion;
+    int codAutor;
+     ArchivoLibro arhivoLibro;
+    int cantReg;
+    Libro *vecLibros = nullptr;
+    Libro libroobtenido;
+
+
+    cout << "Ingrese el nombre del autor que desea buscar: " << endl;
+    cin.ignore();
+    cin.getline(nombreAutor, 20);
+
+
+    int cantidad = archivoAutor.buscarAutorPorNombre(nombreAutor, vecPosiciones);    // De archivoAutor
+
+    if (cantidad <= 0 )
+    {
+        cout << "No existe el Autor"<< endl;
+        system("pause");
+        return;
+    }
+
+    //por ahora solo muestra el primero falta pedirle a Pri que modifique el buscar por apellido.
+    posicion = vecPosiciones [0];
+    autorbuscado = archivoAutor.obtenerAutorArchivo(posicion);
+    managerAutor.mostrarInfo(autorbuscado);
+
+    cout << endl << "Listado de Libros del Autor: " << endl << endl;
+
+
+    cantReg = arhivoLibro.contarRegistros();
+    vecLibros = new Libro[cantReg];
+
+    arhivoLibro.obtenerVectorLibros(cantReg, vecLibros);
+
+    for(int x=0; x<cantReg; x++){
+        if(vecLibros[x].getCodAutor()==autorbuscado.getCodAutor() && vecLibros[x].getEstado() == true){
+            vecLibros[x].mostrarInfo();
+            cout << "*******************" << endl;
+        }
+    }
+
+    delete[]vecLibros;
+    system("pause");
+
+    //llamar a un metodo de archivo libro que reciba autor buscado.get codigo autor.
 
 }
+

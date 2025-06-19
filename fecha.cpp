@@ -92,7 +92,7 @@ Fecha Fecha::cargarFechaActual()
 
 void Fecha::mostrarFecha()
 {
-    cout << "Fecha: " << _dia << "/" << _mes << "/"<< _anio << endl;
+    cout  << _dia << "/" << _mes << "/"<< _anio << endl;
 }
 
 Fecha Fecha::calcularVencimiento(Fecha fechaInicial) {

@@ -29,7 +29,8 @@ void menuLibros(){
              system("pause");
             break;
         case 2:
-            ml.contarRegistros();
+            ml.listarLibrosPorAutor();
+            //ml.contarRegistros();
              system("pause");
             break;
         case 3:
