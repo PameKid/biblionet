@@ -28,6 +28,11 @@ void ManagerLibro::cargarLibroManager(Libro &l1){
 
     cout << "Ingrese el código del libro:" << endl;
     cin >> codLibro;
+    while (codLibro < 0){
+        cout << "Ingrese un valor mayor a 0:" << endl;
+        cin >> codLibro;
+    }
+
     l1.setCodLibro(codLibro);
 
     cout << "Ingrese el código del autor: " << endl;
@@ -37,9 +42,17 @@ void ManagerLibro::cargarLibroManager(Libro &l1){
     existeCodAutor = archivoAutor.existeCodigoAutor(codAutor);
 
     while (existeCodAutor == false){
-        cout << "El código ingresado no existe, intente con otro: " << endl;
-        cin >> codAutor;
-        l1.getCodAutor();
+        int opc;
+        cout << "El codigo ingresado no existe, presione 1 para ingresar otro o 0 volver al menu " << endl;
+        cin >>  opc;
+        if(opc == 1){
+            cout << "Ingrese el codigo de autor: " << endl;
+            cin >> codAutor;
+            existeCodAutor = archivoAutor.existeCodigoAutor(codAutor);
+        }
+        else{return;}
+
+        l1.setCodAutor(codAutor);
         existeCodAutor = archivoAutor.existeCodigoAutor(codAutor);
     }
 
@@ -55,10 +68,20 @@ void ManagerLibro::cargarLibroManager(Libro &l1){
 
     cout << "Ingrese la cantidad de ejemplares del libro: " << endl;
     cin >> cantidadEjemplares;
+    while (cantidadEjemplares < 0){
+        cout << "Ingrese un valor mayor a 0:" << endl;
+        cin >> cantidadEjemplares;
+    }
     l1.setCantidadEjemplares(cantidadEjemplares);
 
     cout << "Ingrese el año de publicación del libro: " << endl;
     cin >> anioDePublicacion;
+
+    while (anioDePublicacion < 0){
+        cout << "Ingrese un valor correcto:" << endl;
+        cin >> anioDePublicacion;
+    }
+
     l1.setAnioDePublicacion(anioDePublicacion);
 
 }
@@ -209,7 +232,7 @@ Libro ManagerLibro::obtenerLibroPorCodigo(int codLibro){
     arhivoLibro.obtenerVectorLibros(cantReg, vecLibros);
     for(int x=0; x<cantReg; x++){
         if(vecLibros[x].getCodLibro()==codLibro && vecLibros[x].getEstado() == true){ //valido que el estado del libro sea activo.
-                //modificar solo debe devolcer un libro
+                //modificar solo debe devolver un libro
 
             libroobtenido = vecLibros[x];
             libroobtenido.setPosicion(x);
@@ -222,3 +245,16 @@ Libro ManagerLibro::obtenerLibroPorCodigo(int codLibro){
     return libroobtenido;
 }
 
+void ManagerLibro::descontarEjemplares(int codLibro){
+    ArchivoLibro archiLibro;
+    Libro libroPrestado;
+    int cantidadEjemplares;
+
+    libroPrestado = obtenerLibroPorCodigo(codLibro);
+    cantidadEjemplares = libroPrestado.getCantidadEjemplares() - 1;
+
+    libroPrestado.setCantidadEjemplares(cantidadEjemplares);
+
+    archiLibro.modificarArchivoLibro(libroPrestado);
+
+}

@@ -124,5 +124,3 @@ bool ArchivoLibro::existeLibro(int codLibro){
 }
 
 
-
-

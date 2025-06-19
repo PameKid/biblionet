@@ -117,7 +117,7 @@ bool ArchivoAutor::existeCodigoAutor(int codAutor){
     }
 
     while((fread(&a1,sizeof(Autor),1,pArchivoAutor))== 1){
-        if(a1.getCodAutor() == codAutor){
+        if(a1.getCodAutor() == codAutor && a1.getEstado() == true){
            fclose(pArchivoAutor);
            return true;
            }

@@ -45,7 +45,7 @@ void ManagerPago::agregarPago(Pagos &p1)
 
     if(existePago(codSocio,mesPagado,anioPagado)){
 
-        cout << "El socio ya regrista un pago con esa fecha" << endl;
+        cout << "El socio ya registra un pago con esa fecha" << endl;
         system("pause");
         return;
     }

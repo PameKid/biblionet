@@ -1,5 +1,4 @@
-#ifndef MANAGERLIBRO_H_INCLUDED
-#define MANAGERLIBRO_H_INCLUDED
+#pragma once
 #include "ArchivoLibro.h"
 
 
@@ -15,8 +14,9 @@ public:
     void bajaLogicaLibro();
     void modificarLibro();
     Libro obtenerLibroPorCodigo(int codLibro);
+    void descontarEjemplares(int codLibro);
 
 };
 
 
-#endif // MANAGERLIBRO_H_INCLUDED
+

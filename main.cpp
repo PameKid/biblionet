@@ -1,7 +1,7 @@
 #include <iostream>
 #include "MenuLibros.h"
 #include "MenuSocios.h"
-#include "MenuPrestamos.hh"
+#include "MenuPrestamos.h"
 #include "MenuPagos.h"
 #include "MenuReportes.h"
 #include "MenuAutor.h"

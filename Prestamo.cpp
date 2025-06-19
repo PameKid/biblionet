@@ -59,21 +59,20 @@ Fecha Prestamo::getFechaVencimiento(){
     //metodos
 
 void Prestamo::cargarPrestamo(){
-    cout << "Ingrese el codigo del prestamos: " << endl;
-    cin >> _codPrestamo;
 
-    cout << "Ingrese el código del libro: " << endl;
-    cin >> _codLibro;
+    //VIEJO. El nuevo pasó al manager
+//    cout << "Ingrese el codigo del prestamos: " << endl;
+//    cin >> _codPrestamo;
+//
+//    cout << "Ingrese el código del libro: " << endl;
+//    cin >> _codLibro;
+//
+//    cout << "Ingrese el codigo del socio:  " << endl;
+//    cin >> _codSocio;
+//
+//    cout << "Ingrese la fecha de prestamo: " << endl;
+//    _fechaPrestamo.cargarFechaPrestamo();
 
-    cout << "Ingrese el codigo del socio:  " << endl;
-    cin >> _codSocio;
-
-    cout << "Ingrese la fecha de prestamo: " << endl;
-    _fechaPrestamo.cargarFechaPrestamo();
-
-
-//aca se debería llamar a una funcion para que calcule y muestre la fecha de devolucion.
-// _fechaDevolucion;
 
     }
 
@@ -85,7 +84,7 @@ void Prestamo::cargarPrestamo(){
     cout << "Codigo del libro: " << _codLibro << endl;
     cout << "Código del socio:" <<  _codSocio << endl;
      _fechaPrestamo.mostrarFecha();
-     _fechaDevolucion.mostrarFecha();
+     //_fechaDevolucion.mostrarFecha();
 
     //calcular y mostrar la fecha de devolucion a partir de fecha actual
     //cout << "Estado: " << _estado;

@@ -76,7 +76,7 @@
 		<Unit filename="MenuAutor.h" />
 		<Unit filename="MenuLibros.h" />
 		<Unit filename="MenuPagos.h" />
-		<Unit filename="MenuPrestamos.hh" />
+		<Unit filename="MenuPrestamos.h" />
 		<Unit filename="MenuReportes.h" />
 		<Unit filename="MenuSocios.h" />
 		<Unit filename="Pagos.cpp" />
