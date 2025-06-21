@@ -2,13 +2,14 @@
 #include "ManagerAutor.h"
 //#include "ArchivoAutor.h"
 #include <iostream>
+#include <iomanip> //libreria para usar setw y hacer la ubicacion de la tabla
 
 using namespace std;
 //cargar libro
 
 void ManagerLibro::cargarLibroManager(Libro &l1){
     //variables auxiliares
-
+    ArchivoLibro archivoLibro;
     char isbn[20];
     char nombreDeLibro[50];
     //char nombreDelAutor[50];
@@ -27,14 +28,23 @@ void ManagerLibro::cargarLibroManager(Libro &l1){
     cin.getline(nombreDeLibro, 50);
     l1.setNombreDeLibro(nombreDeLibro);
 
-    cout << "Ingrese el código del libro:" << endl;
-    cin >> codLibro;
-    while (codLibro < 0){
-        cout << "Ingrese un valor mayor a 0:" << endl;
-        cin >> codLibro;
-    }
+//    cout << "Ingrese el código del libro:" << endl;
+//    cin >> codLibro;
+//    while (codLibro < 0){
+//        cout << "Ingrese un valor mayor a 0:" << endl;
+//        cin >> codLibro;
+//    }
 
-    l1.setCodLibro(codLibro);
+
+    //utiliza la cantidad de registros para asignarle un codigo
+    codLibro = archivoLibro.contarRegistros();
+    cout << codLibro << endl;
+    system("pause");
+
+    l1.setCodLibro(codLibro+100);
+    cout << "codigo seteado" << endl;
+    cout << l1.getCodLibro();
+    system("pause");
 
     cout << "Ingrese el código del autor: " << endl;
     cin >>codAutor;
@@ -99,6 +109,28 @@ void ManagerLibro::mostrarInfoManager(Libro l1){
     //cout << "Estado: " << _estado;
 }
 
+void ManagerLibro::mostrarTablaLibros(Libro* l, int cantidadDeRegistros){
+
+    //Libro l;
+    cout << "+------+---------------------+--------+----------+-------------+----------+------+" << endl;
+    cout << "| Cod  | Título              | Autor  | ISBN     | Género      | Cant.      Año  |" << endl;
+    cout << "+------+---------------------+--------+----------+-------------+----------+------+" << endl;
+
+    for(int x = 0; x < cantidadDeRegistros; x++){
+        cout << "| " << setw(4) << l[x].getCodLibro()
+            << " | " << setw(20) << left << string(l[x].getNombreDeLibro()).substr(0,25)
+            << " | " << setw(4) << l[x].getCodAutor()
+            << " | " << setw(8) << l[x].getISBN()
+            << " | " << setw(10) << string(l[x].getGenero()).substr(0,10)
+            << " | " << setw(6) << l[x].getCantidadEjemplares()
+            << " | " << setw(10) << l[x].getAnioDePublicacion()
+            << " |" << endl;
+    }
+
+    cout << "+------+---------------------+--------+----------+-------------+------------+------+" << endl;
+
+    }
+
 void ManagerLibro::agregarLibro(){
     ArchivoLibro archilibro;
     Libro l1;
@@ -117,15 +149,15 @@ void ManagerLibro::listarLibros(){ //mostrar la lista de archivos
     vecLibros = new Libro[cantReg];
 
     arhivoLibro.obtenerVectorLibros(cantReg, vecLibros);
-    cout<<"cantidad registros: " << cantReg << endl;
-
-    for(int x=0; x<cantReg; x++){
-        if(vecLibros[x].getEstado()== true){
-        cout << "***************************" << endl;
-        mostrarInfoManager(vecLibros[x]);
-        }
-    }
-
+//    cout<<"cantidad registros: " << cantReg << endl;
+//
+//    for(int x=0; x<cantReg; x++){
+//        if(vecLibros[x].getEstado()== true){
+//        cout << "***************************" << endl;
+//        mostrarInfoManager(vecLibros[x]);
+//        }
+//    }
+    mostrarTablaLibros(vecLibros,cantReg);
     delete[]vecLibros;
 }
 

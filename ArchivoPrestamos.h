@@ -17,6 +17,7 @@ public:
 
     bool prestamoInconclusoPorSocio(int codSocio);
     int buscarPosicionPrestamo(Prestamo prestamo);
+    int cantidadLibrosPorSocio(int codSocio);
 
 };
 

@@ -80,7 +80,6 @@ int Libro::getPosicion(){
 void Libro::mostrarInfo(){
     cout << "Datos del libro: " << endl;
     cout << "Nombre del Libro: " << _nombreDeLibro << endl;
-    //cout << "Nombre del autor del libro: " << _nombreDelAutor << endl;
     cout << "Código del libro:" <<  _codLibro << endl;
     cout << "Código del autor: " << _codAutor << endl;
     cout << "ISBN del libro " << _isbn << endl;
@@ -93,13 +92,12 @@ void Libro::mostrarInfo(){
 void Libro::mostrarInfoParaModificar(){
     cout << "Datos del libro: " << endl;
     cout << "1. nombre del Libro: " << _nombreDeLibro << endl;
-//    cout << "2. nombre del autor del libro: 2 " << _nombreDelAutor << endl;
     cout << "2. código del libro: " <<  _codLibro << endl;
     cout << "3. código del autor:  " << _codAutor << endl;
     cout << "4. ISBN del libro " << _isbn << endl;
     cout << "5. género del libro: " <<  _genero << endl;
     cout << "6. cantidad de ejemplares del libro:  " << _cantidadEjemplares << endl;
-    cout << "7. año de publicación " << endl << endl;
+    cout << "7. año de publicación " << _anioDePublicacion << endl << endl;
     //cout << "Estado: " << _estado;
 
     cout << "0. para guardar los cambios.  " << endl;

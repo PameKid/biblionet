@@ -46,8 +46,8 @@ int ArchivoLibro::contarRegistros(){
     plibro = fopen("libro.dat", "rb");
 
     if(plibro == nullptr){
-        cout << "No se pudo leer el archivo." << endl;
-        return -1;
+        //cout << "No se pudo leer el archivo." << endl;
+        return 0;
     }
 
     fseek(plibro,0,SEEK_END);

@@ -63,6 +63,7 @@ void ManagerPrestamo::cargarPrestamo(Prestamo &objetoPrestamo){
     cin >> codigoSocio;
 
     existeSocio = archiSocio.existeSocio(codigoSocio);
+    //if(cantidadLibrosPorSocio(codigoSocio))
 
     while(existeSocio == false){
         cout << "El codigo ingresado no existe, intente con otro: " << endl;
@@ -128,6 +129,7 @@ void ManagerPrestamo::listarPrestamosActivos(){
     cout << "Listado de préstamos activos: " << endl;
 
     cout << "****************************************" << endl;
+    //SI ESTA EN TRUE DEVUELTO ESTA EN TRUE. SINO NO ESTA ACTIVO.
     archiPrestamo.leerArchivoPrestamos();
 
     system("pause");
@@ -139,6 +141,7 @@ void ManagerPrestamo::buscarPrestamoCodigo(){
     Prestamo prestamoConsultado;
     ArchivoPrestamo archiPrestamo;
 
+    //falta validar el codigo ingresado
     cout << "Ingrese el código del prestamo buscar" << endl;
     cin >> codPrestamoSolicitado;
 
@@ -159,7 +162,7 @@ void ManagerPrestamo::devolverPrestamo(){
     cin.ignore();
     cin.getline(codigoPrestamo, 20);
 
-
+    //falta validar este pedido de codigo
     prestamoDevuelto = archiPrestamo.devolverArchivoPrestamoPorCodigo(codigoPrestamo);
     if (prestamoDevuelto.getCodSocio()== 0){
         cout << "No se encontraron datos con ese codigo. " << endl; //pregunta
@@ -168,10 +171,12 @@ void ManagerPrestamo::devolverPrestamo(){
      }
      fechaDeDevolucion.cargarFechaActual();
      prestamoDevuelto.setFechaDevolucion(fechaDeDevolucion);
+     //FALTA CAMBIAR EL ESTADO DE DEVUELTO A fALSO
      archiPrestamo.modificarArchivoPrestamo(prestamoDevuelto);
 
      cout << "Devolucion procesada. " << endl;
      system("pause");
 
 }
+
 

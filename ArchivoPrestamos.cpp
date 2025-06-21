@@ -164,3 +164,24 @@ int ArchivoPrestamo:: modificarArchivoPrestamo(Prestamo prestamoModificar){
     return prestamoDesactivado;
 }
 
+int ArchivoPrestamo::cantidadLibrosPorSocio(int codSocio){
+    FILE* pPrestamo;
+    Prestamo p1;
+    int contadorDePrestamos;
+
+    pPrestamo = fopen("Prestamos.dat", "rb");
+
+    if(pPrestamo == nullptr){
+        cout << "No se pudo leer el archivo." << endl;
+        return -1;
+    }
+
+    while((fread(&p1,sizeof(Prestamo),1,pPrestamo))== 1){
+        if(p1.getCodSocio() == codSocio){
+            contadorDePrestamos++;
+        }
+    }
+    fclose(pPrestamo);
+    return contadorDePrestamos;
+}
+
