@@ -12,7 +12,7 @@ void menuSocios()
     while(true)
     {
         system("cls");
-        cout << "*******SOCIOS!*******" << endl;
+        cout << "**********¡SOCIOS!**********" << endl<< endl;
         cout << "1. BUSCAR SOCIO POR DNI" << endl;
         cout << "2. LISTAR SOCIOS" << endl;
         cout << "3. ALTA DE SOCIO" << endl;
@@ -20,15 +20,15 @@ void menuSocios()
         cout << "5. MODIFICAR SOCIO" << endl;
         cout << "0. VOLVER AL MENU ANTERIOR" << endl;
         cout << "----------------------------" << endl;
-        cout << "SELECCIONAR OPCION" << endl;
+        cout << "SELECCIONAR OPCION: ";
         cin >>opc;
         system("cls");
         ManagerSocio ms;
         switch(opc)
         {
-             case 1:
-           ms.buscarSocioPorDni();
-                system("pause");
+        case 1:
+            ms.buscarSocioPorDni();
+            system("pause");
             break;
         case 2:
             ms.listarSocios();
@@ -40,12 +40,12 @@ void menuSocios()
             break;
         case 4:
             ms.bajaSocio();
-             system("pause");
-            break;
-         case 5:
-             ms.modificarSocio();
             system("pause");
-             break;
+            break;
+        case 5:
+            ms.modificarSocio();
+            system("pause");
+            break;
         case 0:
             return;
             break;

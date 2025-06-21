@@ -10,6 +10,7 @@ public:
     int leerArchivo();
     void buscarPagoPorCodigo(int codPago);
     void listarPagosDelMes();
+    bool socioAlDia(int codSocio) ;
 
 
 };

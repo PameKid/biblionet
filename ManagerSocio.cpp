@@ -17,7 +17,10 @@ void ManagerSocio::cargarSocio()
 
 
     int cantReg;
-    cout << "Ingrese el dni: ";
+    cout << "**********¡SOCIOS!**********" << endl;
+    cout << "       CARGA DE SOCIOS   "<< endl;
+    cout << "****************************" << endl<< endl;
+    cout << " Ingrese el DNI: ";
     cin.ignore();
     cin.getline (dni,9);
     validar = archivoSocio.existeSocioPorDni(dni);
@@ -32,23 +35,23 @@ void ManagerSocio::cargarSocio()
         validar=archivoSocio.existeSocioPorDni(dni);
     }
 
-    cout << "Ingrese nombre: ";
+    cout <<  " Ingrese nombre: ";
     cin.getline(nombre,20);
 
-    cout << "Ingrese apellido: ";
+    cout << " Ingrese apellido: ";
     cin.getline(apellido,20);
 
     //cout << "Ingres Fecha: ";
     fechaDeNacimiento.cargarFecha();
 
     cin.ignore();
-    cout << "Ingrese un numero de telefono: ";
+    cout << " Ingrese un numero de telefono: ";
     cin.getline(telefono,30);
 
-    cout << "Ingrese un mail: ";
+    cout << " Ingrese un mail: ";
     cin.getline(mail, 30);
 
-    cout << "Ingrese una direccion: ";
+    cout << " Ingrese una direccion: ";
     cin.getline(direccion, 50);
 
     Socio nuevoSocio(nombre,apellido,fechaDeNacimiento,telefono,dni,direccion,mail);
@@ -60,6 +63,9 @@ void ManagerSocio::cargarSocio()
 
 void ManagerSocio::listarSocios()  //mostrar la lista de archivos
 {
+    cout << "**********¡SOCIOS!**********" << endl;
+    cout << "      LISTADO DE SOCIOS   "<< endl;
+    cout << "****************************" << endl;
     ArchivoSocio arhivoSocio;
     int cantReg;
     Socio*vecSocios = nullptr;
@@ -88,64 +94,63 @@ void ManagerSocio::listarSocios()  //mostrar la lista de archivos
 
 void ManagerSocio::mostrarInfo(Socio socio)
 {
-    cout<<endl;
-    cout << "Nombre: " <<socio.getNombre()<< endl;
-    cout << "Apellido: " << socio.getApellido() << endl;
-    cout << "Fecha de nacimiento:" << socio.getFecaDeNacimiento().toString()<< endl;
-    cout << "Telefono: " << socio.getTelefono()<< endl;
-    cout << "DNI: " << socio.getDNI() << endl;
-    cout << "Mail: " <<  socio.getMail() << endl;
-    cout << "Direccion: " << socio.getDireccion() << endl;
-    cout << "Codigo de Socio: "  << socio.getCodSocio() << endl;
-    cout << "Estado del Socio: " <<socio.getEstado() << endl;
+    cout<<"------------------------------"<<endl;
+    cout << "Nombre             : " <<socio.getNombre()<< endl;
+    cout << "Apellido           : " << socio.getApellido() << endl;
+    cout << "Fecha de nacimiento: " << socio.getFecaDeNacimiento().toString()<< endl;
+    cout << "Telefono           : " << socio.getTelefono()<< endl;
+    cout << "DNI                : " << socio.getDNI() << endl;
+    cout << "Mail               : " <<  socio.getMail() << endl;
+    cout << "Direccion          : " << socio.getDireccion() << endl;
+    cout << "Codigo de Socio    : "  << socio.getCodSocio() << endl;
+    // cout << "Estado del Socio: " <<socio.getEstado() << endl;
 }
 
 void ManagerSocio::bajaSocio()
 {
+    cout << "**********¡SOCIOS!**********" << endl;
+    cout << "       BAJA DE SOCIOS   "<< endl;
+    cout << "****************************" << endl<< endl;
     ArchivoPrestamo archivoPrestamo;
     int codigo;
     Socio socio;
     ArchivoSocio archivoSocio;
-    cout<<"Ingrese codigo de Socio: ";
+    cout<<" Ingrese codigo de Socio: ";
     cin>>codigo;
 
     socio = archivoSocio.obtenerSocioPorCodigo(codigo) ;
     if (socio.getCodSocio() != -1)
     {
-        cout<< " Socio encontrado "<< endl;
-
-
-
         if (archivoPrestamo.prestamoInconclusoPorSocio(codigo) ==true )
         {
-            cout << "NO SE PUEDE DAR DE BAJA A ESE SOCIO, ADEUDA LIBROS!" << endl;
+            cout << "-------------------------------------------------------"<< endl;
+            cout << " ¡NO SE PUEDE DAR DE BAJA A ESE SOCIO, ADEUDA LIBROS!" << endl;
+            cout << "-------------------------------------------------------"<< endl;
         }
         else
-        {   cout << "-------------------------------------------------------"<< endl;
-            cout << "Desea darle de baja al socio: "<< socio.getNombre() << " " << socio.getApellido()<< " S O N:  "<< endl;
+        {
+            cout << "-------------------------------------------------------"<< endl;
+            cout << "Desea darle de baja al socio: "<< socio.getNombre() << " " << socio.getApellido()<< " (S o N):  ";
             char opcion;
             cin >> opcion;
-             cout << "-------------------------------------------------------";
             if (toupper(opcion) == 'S')
             {
                 if(archivoSocio.bajaArchivoSocio(codigo)==true)
                 {
-                    cout<<"REGISTRO BORRADO"<<endl;
+                    cout<<endl<<"           REGISTRO BORRADO"<<endl;
                 }
                 else
                 {
-                    cout<<"NO SE PUDO BORRAR EL REGISTRO"<<endl;
+                    cout<<"  NO SE PUDO BORRAR EL REGISTRO"<<endl;
                 }
             }
+            cout << "-------------------------------------------------------"<<endl;
         }
     }
     else
     {
         cout << "NO EXISTE EL SOCIO."  ;
-
     }
-
-
 }
 
 void ManagerSocio::buscarSocioPorDni()
@@ -153,6 +158,9 @@ void ManagerSocio::buscarSocioPorDni()
     ArchivoSocio archivoSocio;
     Socio socio;
     char dni [9];
+    cout << "**********¡SOCIOS!**********" << endl;
+    cout << "    BUSCAR SOCIOS POR DNI   "<< endl;
+    cout << "****************************" << endl<< endl;
     cout <<"Ingrese DNI: ";
 
     cin.ignore();
@@ -162,7 +170,7 @@ void ManagerSocio::buscarSocioPorDni()
 
     if (posicion < 0 )
     {
-        cout << "No existe el Socio";
+        cout << endl << " EL DNI INGRESADO NO PERTENECE A NINGÚN SOCIO ACTIVO"<< endl<< endl;
     }
     else
     {
@@ -177,31 +185,40 @@ void ManagerSocio::modificarSocio()
     ArchivoSocio archivoSocio;
     int codSocio;
     int opcion;
+    cout << "**********¡SOCIOS!**********" << endl;
+    cout << "      MOODFICAR SOCIOS   "<< endl;
+    cout << "****************************" << endl<< endl;
 
-    cout << "Ingrese el código del Socio que desea modificar: " << endl;
+    cout << " Ingrese el código del Socio que desea modificar: ";
     cin >> codSocio;
+    cout << endl;
 
     socioModificado = archivoSocio.obtenerSocioPorCodigo(codSocio);
-    cout << "Socio a modificar: " << socioModificado.getNombre()<< " " << socioModificado.getApellido()<<endl;
-    cout << "Elija el dato que quiere modificar: " << endl;
+    cout << " Socio a modificar: " << socioModificado.getNombre()<< " " << socioModificado.getApellido()<<endl<<endl;
+    cout << " Elija el dato que quiere modificar: " << endl;
+    cout << "-----------------------------------------------------"<< endl;
+
     mostrarInfoParaModificar(socioModificado);
-
+    cout<<endl<<"          Opción: ";
     cin >> opcion;
-
+    cout << "-----------------------------------------------------"<< endl;
     while (opcion != 0)
     {
         cargarSocioModificado(opcion, socioModificado);
-
         system("cls");
-
+        cout << "**********¡SOCIOS!**********" << endl;
+        cout << "      MOODFICAR SOCIOS   "<< endl;
+        cout << "****************************" << endl<< endl;
+        cout << " Elija el dato que quiere modificar: " << endl;
+        cout << "-----------------------------------------------------"<< endl;
         mostrarInfoParaModificar(socioModificado);
+        cout<<endl<<"          Opción: ";
         cin >>opcion;
     }
 
     archivoSocio.modificarArchivoSocio(socioModificado);
 
-    cout << "Modificado correctamente " << endl;
-    system("pause");
+    cout <<endl<< " Modificado correctamente " << endl;
 }
 
 void ManagerSocio::cargarSocioModificado(int opcion, Socio &socioAModificar)
@@ -213,19 +230,19 @@ void ManagerSocio::cargarSocioModificado(int opcion, Socio &socioAModificar)
     switch(opcion)
     {
     case 1:
-        cout << "Ingrese el nuevo mail del Socio: " << endl;
+        cout << "Ingrese el nuevo mail del Socio: ";
         cin.ignore();
         cin.getline(mail,30);
         socioAModificar.setMail(mail);
         break;
     case 2:
-        cout << "Ingrese la nueva direccion del socio: " << endl;
+        cout << "Ingrese la nueva direccion del socio: ";
         cin.ignore();
         cin.getline(direccion, 30);
         socioAModificar.setDireccion(direccion);
         break;
     case 3:
-        cout << "Ingrese el nuevo telefono del socio: " << endl;
+        cout << "Ingrese el nuevo telefono del socio: ";
         cin.ignore();
         cin.getline(telefono,30);
         socioAModificar.setTelefono(telefono);
@@ -235,10 +252,41 @@ void ManagerSocio::cargarSocioModificado(int opcion, Socio &socioAModificar)
 
 void ManagerSocio::mostrarInfoParaModificar(Socio socioAmodificar)
 {
-    cout << "Datos del Socio: " << endl;
+    cout << " Datos del Socio: " << endl<<endl;
 
-    cout << "1. mail del Socio:  " << socioAmodificar.getMail() << endl;
-    cout << "2. Direccion del Socio" << socioAmodificar.getDireccion() << endl;
-    cout << "3. Telefono del Socio: " << socioAmodificar.getTelefono() << endl;
-    cout << "0. Para guardar los cambios.  " << endl;
+    cout << "   1. Mail del Socio     : " << socioAmodificar.getMail() << endl;
+    cout << "   2. Direccion del Socio: " << socioAmodificar.getDireccion() << endl;
+    cout << "   3. Telefono del Socio : " << socioAmodificar.getTelefono() << endl;
+    cout << "   0. Para guardar los cambios.  " << endl;
 }
+
+void ManagerSocio::listarSociosNoAlDia()
+{
+    ArchivoSocio arhivoSocio;
+    int cantReg;
+    Socio*vecSocios = nullptr;
+    bool haySociosNoAlDia= false;
+    ArchivoPagos archivoPago;
+
+    cantReg = arhivoSocio.contarRegistrosArchivoSocio();
+    vecSocios = new Socio[cantReg];
+
+    arhivoSocio.obtenerVectorSocios(cantReg, vecSocios);
+    for(int x=0; x<cantReg; x++)
+    {
+        if (vecSocios[x].getEstado()== true )
+        {
+            if (archivoPago.socioAlDia(vecSocios[x].getCodSocio())==false)
+            {
+                haySociosNoAlDia = true;
+                mostrarInfo(vecSocios[x]);
+            }
+        }
+    }
+    if (haySociosNoAlDia == false)
+    {
+        cout <<" NO HAY SOCIOS PARA LISTAR" <<endl;
+    }
+
+    delete[]vecSocios;
+};
