@@ -8,16 +8,17 @@ void menuLibros(){
     int opc;
     while(true){
         system("cls");
-        cout << "*******LIBROS!*******" << endl;
-        cout << "1. BUSCAR LIBRO POR CODIGO" << endl;
-        cout << "2. BUSCAR LIBRO POR AUTOR" << endl;
-        cout << "3. LISTAR LIBROS" << endl;
-        cout << "4. ALTA LIBRO" << endl;
-        cout << "5. BAJA LIBRO" << endl;
-        cout << "6. MODIFICAR LIBRO" << endl;
-        cout << "0. VOLVER AL MENU ANTERIOR" << endl;
+        cout << "**********¡LIBROS!**********" << endl<< endl;
+        cout << "      ~ MENU LIBROS ~     " << endl<<endl;
+        cout << " 1. BUSCAR LIBRO POR CODIGO" << endl;
+        cout << " 2. BUSCAR LIBRO POR AUTOR" << endl;
+        cout << " 3. LISTAR LIBROS" << endl;
+        cout << " 4. ALTA LIBRO" << endl;
+        cout << " 5. BAJA LIBRO" << endl;
+        cout << " 6. MODIFICAR LIBRO" << endl;
+        cout << " 0. VOLVER AL MENU ANTERIOR" << endl;
         cout << "---------------------------------" << endl;
-        cout << "SELECCIONAR OPCION" << endl;
+        cout << "SELECCIONAR OPCION: ";
         cin >>opc;
         system("cls");
 

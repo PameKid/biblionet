@@ -10,15 +10,16 @@ void menuAutor()
     while(true)
     {
         system("cls");
-        cout << "*******¡AUTOR!*******" << endl;
-        cout << "1. BUSCAR AUTOR POR NOMBRE" << endl;
-        cout << "2. LISTAR AUTORES" << endl;
-        cout << "3. ALTA DE AUTOR" << endl;
-        cout << "4. BAJA DE AUTOR" << endl;
-        cout << "5. MODIFICAR AUTOR" << endl;
-        cout << "0. VOLVER AL MENU ANTERIOR" << endl;
-        cout << "----------------------------" << endl;
-        cout << "SELECCIONAR OPCION" << endl;
+        cout << "**********¡AUTOR!**********" << endl<< endl;
+        cout << "      ~ MENU AUTORES ~     " << endl<<endl;
+        cout << " 1. BUSCAR AUTOR POR NOMBRE" << endl;
+        cout << " 2. LISTAR AUTORES" << endl;
+        cout << " 3. ALTA DE AUTOR" << endl;
+        cout << " 4. BAJA DE AUTOR" << endl;
+        cout << " 5. MODIFICAR AUTOR" << endl;
+        cout << " 0. VOLVER AL MENU ANTERIOR" << endl;
+        cout << "-----------------------------" << endl;
+        cout << "SELECCIONAR OPCION: ";
         cin >>opc;
         system("cls");
         ManagerAutor mA;

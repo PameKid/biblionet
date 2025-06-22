@@ -16,17 +16,17 @@ int main()
     while(true)
     {
         system("cls");
-        cout << "*******BIBLIONET!*******" << endl;
-        cout << "        MENU PRINCIPAL      " << endl;
-        cout << "1. LIBROS" << endl;
-        cout << "2. SOCIOS" << endl;
-        cout << "3. PRESTAMOS" << endl;
-        cout << "4. PAGOS SOCIOS" << endl;
-        cout << "5. VER REPORTES" << endl;
-        cout << "6. AUTORES " << endl;
-        cout << "0. SALIR" << endl;
+        cout << "*********¡BIBLIONET!********" << endl<< endl;
+        cout << "      ~ MENU PRINCIPAL ~     " << endl<<endl;
+        cout << " 1. LIBROS" << endl;
+        cout << " 2. SOCIOS" << endl;
+        cout << " 3. PRESTAMOS" << endl;
+        cout << " 4. PAGOS SOCIOS" << endl;
+        cout << " 5. VER REPORTES" << endl;
+        cout << " 6. AUTORES " << endl;
+        cout << " 0. SALIR" << endl;
         cout << "-----------------------------" << endl;
-        cout << "SELECCIONAR OPCION" << endl;
+        cout << "SELECCIONAR OPCION: ";
         cin >>opc;
         system("cls");
         switch(opc)
@@ -54,10 +54,8 @@ int main()
             break;
         default:
             cout<< "LA SELECCION ES INCORRECTA"<<endl;
-
         }
-        system("pause");
-
+        //system("pause");
     }
 
     return 0;

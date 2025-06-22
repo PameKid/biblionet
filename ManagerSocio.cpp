@@ -14,9 +14,8 @@ void ManagerSocio::cargarSocio()
     char dni[9];
     char mail[30];
     Fecha fechaDeNacimiento;
-
-
     int cantReg;
+
     cout << "**********¡SOCIOS!**********" << endl;
     cout << "       CARGA DE SOCIOS   "<< endl;
     cout << "****************************" << endl<< endl;
@@ -63,9 +62,6 @@ void ManagerSocio::cargarSocio()
 
 void ManagerSocio::listarSocios()  //mostrar la lista de archivos
 {
-    cout << "**********¡SOCIOS!**********" << endl;
-    cout << "      LISTADO DE SOCIOS   "<< endl;
-    cout << "****************************" << endl;
     ArchivoSocio arhivoSocio;
     int cantReg;
     Socio*vecSocios = nullptr;
@@ -75,6 +71,11 @@ void ManagerSocio::listarSocios()  //mostrar la lista de archivos
     vecSocios = new Socio[cantReg];
 
     arhivoSocio.obtenerVectorSocios(cantReg, vecSocios);
+
+    cout << "**********¡SOCIOS!**********" << endl;
+    cout << "      LISTADO DE SOCIOS   "<< endl;
+    cout << "****************************" << endl;
+
     for(int x=0; x<cantReg; x++)
     {
         if (vecSocios[x].getEstado()== true )
@@ -87,7 +88,7 @@ void ManagerSocio::listarSocios()  //mostrar la lista de archivos
     {
         cout <<" NO HAY SOCIOS PARA LISTAR" <<endl;
     }
-
+    cout<<"------------------------------"<<endl;
     delete[]vecSocios;
 }
 
@@ -108,13 +109,14 @@ void ManagerSocio::mostrarInfo(Socio socio)
 
 void ManagerSocio::bajaSocio()
 {
-    cout << "**********¡SOCIOS!**********" << endl;
-    cout << "       BAJA DE SOCIOS   "<< endl;
-    cout << "****************************" << endl<< endl;
     ArchivoPrestamo archivoPrestamo;
     int codigo;
     Socio socio;
     ArchivoSocio archivoSocio;
+
+    cout << "**********¡SOCIOS!**********" << endl;
+    cout << "       BAJA DE SOCIOS   "<< endl;
+    cout << "****************************" << endl<< endl;
     cout<<" Ingrese codigo de Socio: ";
     cin>>codigo;
 
