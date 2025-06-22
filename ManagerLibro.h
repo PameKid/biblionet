@@ -17,6 +17,10 @@ public:
     Libro obtenerLibroPorCodigo(int codLibro);
     void descontarEjemplares(int codLibro);
     void listarLibrosPorAutor();
+    void listarRankingLibro();
+    int buscarIndiceLibro(Libro* libro, int cantidadRegistro, int codLibro);
+    void ordenarRanking(Libro* vecLibros,int cantidadRegistros, int* vecTorCantidadPrestamos);
+    void mostrarTablaDeVectores(Libro* listaDeLibros, int* vecCantidadesPrestamos);
 };
 
 

@@ -1,6 +1,6 @@
 #include "ManagerPrestamo.h"
 #include "ArchivoSocio.h"
-#include <cstdio>
+#include <cstdio> //libreria para armar la concatencacion del codigo de prestamo
 #include "ManagerLibro.h"
 
 void ManagerPrestamo::cargarPrestamo(Prestamo &objetoPrestamo){
@@ -13,6 +13,7 @@ void ManagerPrestamo::cargarPrestamo(Prestamo &objetoPrestamo){
     Fecha fechaVencimiento;
     ManagerLibro managerLibro;
     Libro libroparaValidarEjemplares;
+    ArchivoPrestamo archivoPrestamo;
 
     char cadenaAuxiliar[20];
 
@@ -63,13 +64,18 @@ void ManagerPrestamo::cargarPrestamo(Prestamo &objetoPrestamo){
     cin >> codigoSocio;
 
     existeSocio = archiSocio.existeSocio(codigoSocio);
-    //if(cantidadLibrosPorSocio(codigoSocio))
 
     while(existeSocio == false){
         cout << "El codigo ingresado no existe, intente con otro: " << endl;
         cin >> codigoSocio;
         existeSocio = archiSocio.existeSocio(codigoSocio);
     }
+
+    //Valida la cantidad de prestamos por socio
+    if(archivoPrestamo.cantidadLibrosPorSocio(codigoSocio) > 3){
+        cout << "Excede la cantidad de prestamos" << endl;
+    }
+
 
     //todo ok settea el objeto Prestamo
     objetoPrestamo.setCodSocio(codigoSocio);
@@ -101,7 +107,7 @@ void ManagerPrestamo::cargarPrestamo(Prestamo &objetoPrestamo){
     objetoPrestamo.setFechaDevolucion(fechaDevolucion);
 
     objetoPrestamo.setFechaVencimiento(fechaVencimiento);
-    objetoPrestamo.setDevolucion(true);
+    //objetoPrestamo.setDevolucion(true);
 
     cout << "Codigo de prestamo generado: " << codigoPrestamo << endl << endl;
 
@@ -162,7 +168,6 @@ void ManagerPrestamo::devolverPrestamo(){
     cin.ignore();
     cin.getline(codigoPrestamo, 20);
 
-    //falta validar este pedido de codigo
     prestamoDevuelto = archiPrestamo.devolverArchivoPrestamoPorCodigo(codigoPrestamo);
     if (prestamoDevuelto.getCodSocio()== 0){
         cout << "No se encontraron datos con ese codigo. " << endl; //pregunta
@@ -171,7 +176,8 @@ void ManagerPrestamo::devolverPrestamo(){
      }
      fechaDeDevolucion.cargarFechaActual();
      prestamoDevuelto.setFechaDevolucion(fechaDeDevolucion);
-     //FALTA CAMBIAR EL ESTADO DE DEVUELTO A fALSO
+     prestamoDevuelto.setDevolucion(true); //porque cambia el atributo devuelto a true si esta devuelto
+
      archiPrestamo.modificarArchivoPrestamo(prestamoDevuelto);
 
      cout << "Devolucion procesada. " << endl;

@@ -1,5 +1,6 @@
 #include "ManagerLibro.h"
 #include "ManagerAutor.h"
+#include "ArchivoPrestamos.h"
 //#include "ArchivoAutor.h"
 #include <iostream>
 #include <iomanip> //libreria para usar setw y hacer la ubicacion de la tabla
@@ -343,6 +344,93 @@ void ManagerLibro::listarLibrosPorAutor(){
     system("pause");
 
     //llamar a un metodo de archivo libro que reciba autor buscado.get codigo autor.
-
 }
 
+void ManagerLibro::listarRankingLibro(){
+    //dos vectores dinamicos para ordenar los libros prestados
+    Libro *vecLibrosRankeados = nullptr;
+    int *vecCantidadesPrestadas = nullptr;
+
+    ArchivoLibro arhivoLibro;
+    int cantRegLibros; //cantidad para asignar a los vectores.
+    int codLibro;
+    int indiceLibro;
+
+    ArchivoPrestamo archivoPrestamo;
+    int cantRegPrestamos;
+    Prestamo p1;
+
+    cantRegLibros= arhivoLibro.contarRegistros();
+    //asigno a ambos vectores la cantidad de registros iguales
+    vecLibrosRankeados = new Libro[cantRegLibros];
+    vecCantidadesPrestadas = new int [cantRegLibros]();
+
+    //necesito la cantidad de registros de prestamo para poder recorrerlo con un for
+    arhivoLibro.obtenerVectorLibros(cantRegLibros, vecLibrosRankeados);
+
+    cantRegPrestamos = archivoPrestamo.contarRegistrosdePrestamos();
+
+    for(int x = 0; x < cantRegPrestamos; x++){
+        p1 = archivoPrestamo.obtenerPrestamoPorPosicion(x);
+        codLibro = p1.getCodLibro();
+        //me guardo la posicion para poder sumar en el vector vacio.
+        indiceLibro = buscarIndiceLibro(vecLibrosRankeados,cantRegLibros,codLibro);
+        vecCantidadesPrestadas[indiceLibro]++;
+
+    }
+
+    ordenarRanking(vecLibrosRankeados,cantRegLibros,vecCantidadesPrestadas);
+    mostrarTablaDeVectores(vecLibrosRankeados,vecCantidadesPrestadas);
+
+    delete[]vecLibrosRankeados;
+    delete[]vecCantidadesPrestadas;
+}
+//Recibe el vector de libros, la cantidad y el codigo de libro lo recorre y devuelve la posicion de ese codigo de libro
+//para guardarlo en el vector vacio.
+int ManagerLibro::buscarIndiceLibro(Libro* libro, int cantidadRegistro, int codLibro){
+
+    for (int x = 0; x < cantidadRegistro; x++){
+        if(libro[x].getCodLibro() == codLibro)
+            return x;
+    }
+}
+
+void ManagerLibro::ordenarRanking(Libro* vecLibros, int cantidadDeRegistros, int* vecTorCantidadPrestamos){
+    //metodo de burbujeo
+    //variables auxiliares
+    int cantidadPrestamosAuxiliar;
+    Libro libroAuxiliar;
+
+    for(int y = 0; y < cantidadDeRegistros; y++){
+        for(int x = 0; x < cantidadDeRegistros -1; x++){
+            if(vecTorCantidadPrestamos[x] < vecTorCantidadPrestamos[x+1]){
+                cantidadPrestamosAuxiliar = vecTorCantidadPrestamos[x+1];
+                vecTorCantidadPrestamos[x+1] =vecTorCantidadPrestamos[x];
+                vecTorCantidadPrestamos[x] = cantidadPrestamosAuxiliar;
+                libroAuxiliar = vecLibros[x+1];
+                vecLibros[x+1]= vecLibros[x];
+                vecLibros[x]= libroAuxiliar;
+            }
+        }
+
+    }
+}
+//funcion de prueba
+
+void ManagerLibro::mostrarTablaDeVectores(Libro* listaDeLibros, int* vecCantidadesPrestamos){
+
+
+    cout << "+------+---------------------+--------+----------+" << endl;
+    cout << "| Cod  | Título              | Cantidad Prestada  |" << endl;
+    cout << "+------+---------------------+--------+----------+" << endl;
+
+    for(int x = 0; x < 5 ; x++){
+        cout << "| " << setw(4) << listaDeLibros[x].getCodLibro()
+            << " | " << setw(20) << left << string(listaDeLibros[x].getNombreDeLibro()).substr(0,25)
+            << " | " << setw(4) << vecCantidadesPrestamos[x]
+            << " |" << endl;
+    }
+
+    cout << "+------+---------------------+--------+----------+" << endl;
+    system("pause");
+    }
