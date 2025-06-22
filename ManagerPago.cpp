@@ -14,11 +14,14 @@ void ManagerPago::agregarPago(Pagos &p1)
     char codPago[20],  cadenaAuxiliar[20];;
     Fecha fechaDePago;
 
-    cout << "NUEVO PAGO " << endl;
-    cout << "***************" << endl;
+    cout << "*************************" << endl;
+    cout << "*      NUEVO PAGO       *" << endl;
+    cout << "*************************" << endl;
+    cout << endl;
 
     //carga de fecha actual
     fechaDePago.cargarFechaActual();
+    cout << "Fecha actual:" << endl;
     p1.setFechaDePago(fechaDePago);
     fechaDePago.mostrarFecha();
 
@@ -75,7 +78,12 @@ void ManagerPago::agregarPago(Pagos &p1)
     p1.setCodPago(codPago);
 
     cout << "codigo de pago generado: " << codPago << endl << endl;
-    cout << "Los datos fueron guardados correctamente: " << endl;
+     cout << endl;
+    cout << "***************************************" << endl;
+    cout << "*                                     *" << endl;
+    cout << "*      PAGO REGISTRADO CON ÉXITO      *" << endl;
+    cout << "*                                     *" << endl;
+    cout << "***************************************" << endl;
     system("pause");
 
 }
