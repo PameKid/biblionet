@@ -274,6 +274,11 @@ void ManagerSocio::listarSociosNoAlDia()
     vecSocios = new Socio[cantReg];
 
     arhivoSocio.obtenerVectorSocios(cantReg, vecSocios);
+
+    cout << "**********¡REPORTES!**********" << endl;
+    cout << "  LISTADO DE SOCIOS MOROSOS    "<< endl;
+    cout << "****************************" << endl<< endl;
+
     for(int x=0; x<cantReg; x++)
     {
         if (vecSocios[x].getEstado()== true )

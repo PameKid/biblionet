@@ -1,4 +1,5 @@
 #include "ManagerAutor.h"
+#include "Autor.h"
 
 
 void ManagerAutor :: cargarAutor()
@@ -114,19 +115,41 @@ void ManagerAutor::bajaAutor()
 {
     int codigo;
     ArchivoAutor archivoAutor;
+    Autor autor;
+    char opcion;
 
     cout << "**********¡AUTORES!**********" << endl;
     cout << "        BAJA DE AUTOR   "<< endl;
     cout << "****************************" << endl<< endl;
     cout<<"Ingrese código de Autor: ";
     cin>>codigo;
-    if(archivoAutor.bajaArchivoAutor(codigo)==true)
+    autor= archivoAutor.obtenerAutorPorCodigo(codigo);
+
+    if (autor.getCodAutor() != -1)
     {
-        cout<<"REGISTRO BORRADO"<<endl;
+
+        cout << endl << "DESEA DARLE DE BAJA AL AUTOR: " << autor.getNombre() << " "<< autor.getApellido()<< " (S O N):  ";
+        cin >> opcion;
+
+        if (toupper(opcion) == 'S')
+        {
+            if(archivoAutor.bajaArchivoAutor(codigo)==true)
+            {
+                cout<<"REGISTRO BORRADO,PRESIONE UNA TECLA PARA VOLVER AL MENU ANTERIOR."<<endl;
+            }
+            else
+            {
+                cout<<"  NO SE PUDO BORRAR EL REGISTRO"<<endl;
+            }
+        }
+        else
+        {
+            return;
+        }
     }
     else
     {
-        cout<<"NO SE PUDO BORRAR EL REGISTRO"<<endl;
+        cout << endl<< "NO EXISTE UN AUTOR CON ESE CODIGO."<< endl;
     }
 }
 
