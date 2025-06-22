@@ -101,7 +101,6 @@ bool ArchivoPrestamo :: prestamoInconclusoPorSocio(int codSocio)
     Prestamo prestamo;
     FILE *pPrestamo;
     pPrestamo = fopen("Prestamos.dat","rb");
-    Fecha fechaVacia;
 
     if(pPrestamo==nullptr)
     {
@@ -109,7 +108,7 @@ bool ArchivoPrestamo :: prestamoInconclusoPorSocio(int codSocio)
     }
     while(fread(&prestamo,sizeof(prestamo),1,pPrestamo)==1)
     {
-        if(prestamo.getCodSocio() == codSocio && prestamo.getEstado())
+        if(prestamo.getCodSocio() == codSocio && prestamo.getDevuelto())
         {
             return true;
         }

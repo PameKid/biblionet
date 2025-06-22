@@ -1,9 +1,12 @@
-
+#ifndef MENUREPORTES_H_INCLUDED
+#define MENUREPORTES_H_INCLUDED
+#include "ManagerSocio.h"
 
 using namespace std;
 
 void menuReportes(){
     int opc;
+     ManagerSocio ms;
     while(true){
         system("cls");
         cout << "*******¡REPORTES!*******" << endl;
@@ -21,13 +24,19 @@ void menuReportes(){
         //case 1:
           //  menuLibros();
           //  break;
-        //case 2:
-          //  menuSocios();
-          //  break;
-        case 3:
-            ml.listarRankingLibro();
+        case 2:
+            ms.listarSociosNoAlDia();
+            system("pause");
             break;
-
+        //case 3:
+          //  menuPrestamos();
+          //  break;
+        //case 4:
+          //  menuPagos();
+          //  break;
+        //case 5:
+          //  menuReportes();
+          //  break;
         case 0:
             return;
             break;
@@ -37,3 +46,5 @@ void menuReportes(){
         }
     }
 }
+
+#endif // MENUREPORTES_H_INCLUDED
