@@ -10,15 +10,15 @@ void menuReportes(){
     while(true){
         system("cls");
         cout << "*******¡REPORTES!*******" << endl;
-        cout << "1. PRESTAMOS POR AL MES" << endl;
-        cout << "2. SOCIOS NO AL DIA " << endl;
-        cout << "3. RANKINGS" << endl;
+        cout << "1. PRESTAMOS AL MES" << endl;
+        cout << "2. SOCIOS Y FECHAS DE DEVOLUCIONES" << endl;
+        cout << "3. RANKINGS DE LIBROS MAS PRESTADOS" << endl;
         cout << "0. VOLVER AL MENU ANTERIOR" << endl;
         cout << "-----------------------------------" << endl;
         cout << "SELECCIONAR OPCION" << endl;
         cin >>opc;
         system("cls");
-
+         ManagerLibro ml;
          switch(opc)
         {
         //case 1:

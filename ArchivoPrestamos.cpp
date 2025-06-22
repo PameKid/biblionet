@@ -176,7 +176,7 @@ int ArchivoPrestamo::cantidadLibrosPorSocio(int codSocio){
     }
 
     while((fread(&p1,sizeof(Prestamo),1,pPrestamo))== 1){
-        if(p1.getCodSocio() == codSocio){
+        if(p1.getCodSocio() == codSocio && p1.getDevuelto()== false){
             contadorDePrestamos++;
         }
     }
@@ -184,3 +184,22 @@ int ArchivoPrestamo::cantidadLibrosPorSocio(int codSocio){
     return contadorDePrestamos;
 }
 
+Prestamo ArchivoPrestamo::obtenerPrestamoPorPosicion(int posicion){
+
+    FILE* pPrestamo;
+    Prestamo p1;
+
+
+    pPrestamo = fopen("Prestamos.dat","rb");
+
+    if(pPrestamo == nullptr){
+        cout << "No se pudo leer el archivo." << endl;
+        return p1 ; //devuelve p1 vacio
+    }
+
+    fseek(pPrestamo,sizeof(Prestamo)*posicion,0);
+
+    fread(&p1,sizeof(Prestamo),1,pPrestamo);
+
+    return p1;
+}
