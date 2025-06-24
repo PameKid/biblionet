@@ -9,13 +9,14 @@ void menuPagos(){
     int opc;
     while(true){
         system("cls");
-        cout << "*******PAGOS!*******" << endl;
-        cout << "1. INGRESAR UN PAGO" << endl;
-        cout << "2. BUSCAR UN PAGO POR CODIGO DE SOCIO" << endl;
-        cout << "3. LISTAR PAGOS" << endl;
-        cout << "0. VOLVER AL MENU ANTERIOR" << endl;
+        cout << "**********¡PAGOS!**********" << endl<< endl;
+        cout << "      ~ MENU PAGOS ~     " << endl<<endl;
+        cout << " 1. INGRESAR UN PAGO" << endl;
+        cout << " 2. BUSCAR UN PAGO POR CODIGO DE SOCIO" << endl;
+        cout << " 3. LISTAR PAGOS" << endl;
+        cout << " 0. VOLVER AL MENU ANTERIOR" << endl;
         cout << "----------------------------------------" << endl;
-        cout << "SELECCIONAR OPCION" << endl;
+        cout << "SELECCIONAR OPCION: ";
         cin >>opc;
         system("cls");
 

@@ -63,7 +63,7 @@ bool ArchivoPagos :: socioAlDia(int codSocio)
 
     while((fread(&pago,sizeof(Pagos),1,Ppago))== 1)
     {
-        if(pago.getEstado() == true&& pago.getCodSocio()== codSocio)
+        if(pago.getEstado()==true && pago.getCodSocio()==codSocio)
         {
             if(pago.getMesPagado()== fechaActual.getMes()&& pago.getAnioPagado()== fechaActual.getAnio())
             {

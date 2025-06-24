@@ -1,4 +1,5 @@
 #include "ManagerAutor.h"
+#include "Autor.h"
 
 
 void ManagerAutor :: cargarAutor()
@@ -11,16 +12,20 @@ void ManagerAutor :: cargarAutor()
     Fecha fechaDeNacimiento;
     int cantReg;
 
-    cout << "Ingrese nombre: ";
+    cout << "**********¡AUTOR!**********" << endl;
+    cout << "       CARGA DE AUTOR   "<< endl;
+    cout << "****************************" << endl<< endl;
+
+    cout << " Ingrese nombre: ";
     cin.ignore();
     cin.getline(nombre,20);
 
-    cout << "Ingrese apellido: ";
+    cout << " Ingrese apellido: ";
     cin.getline(apellido,20);
 
     fechaDeNacimiento.cargarFecha();
 
-    cout << "Ingrese nacionalidad: ";
+    cout << " Ingrese nacionalidad: ";
     cin.ignore();
     cin.getline(nacionalidad, 20);
 
@@ -35,19 +40,30 @@ void ManagerAutor::listarAutores()  //mostrar la lista de archivos
     ArchivoAutor arhivoAutor;
     int cantReg;
     Autor*vecAutor = nullptr;
+    bool hayAutoressActivos = false;
 
     cantReg = arhivoAutor.contarRegistrosAutor();
     vecAutor = new Autor[cantReg];
 
     arhivoAutor.obtenerVectorAutores(cantReg, vecAutor);
+
+    cout << "**********¡AUTORES!**********" << endl;
+    cout << "      LISTADO DE AUTORES   "<< endl;
+    cout << "****************************" << endl;
+
     for(int x=0; x<cantReg; x++)
     {
         if (vecAutor[x].getEstado()==true)
         {
-            //cout<<"cantidad registros: " << cantReg << endl;
+            hayAutoressActivos = true;
             mostrarInfo(vecAutor[x]);
         }
     }
+    if (hayAutoressActivos == false)
+    {
+        cout <<" NO HAY AUTORES PARA LISTAR" <<endl;
+    }
+    cout<<"------------------------------"<<endl;
 
     delete[]vecAutor;
 }
@@ -59,6 +75,9 @@ void ManagerAutor::buscarAutorPorNombre()
     int vecPosiciones [5];
     char nombre [20];
     int posicion;
+    cout << "**********¡AUTORES!**********" << endl;
+    cout << "  BUSCAR AUTORES POR NOMBRE   "<< endl;
+    cout << "****************************" << endl<< endl;
     cout <<"Ingrese Nombre: ";
 
     cin.ignore();
@@ -68,7 +87,7 @@ void ManagerAutor::buscarAutorPorNombre()
 
     if (cantidad <= 0 )
     {
-        cout << "No existe el Autor"<< endl;
+        cout << " NO SE ENCONTRO NINGÚN AUTOR CON ESE NOMBRE."<< endl;
     }
     else
     {
@@ -79,33 +98,58 @@ void ManagerAutor::buscarAutorPorNombre()
             mostrarInfo(autor);
         }
     }
+    cout<<"------------------------------"<<endl;
 }
 
 void ManagerAutor::mostrarInfo(Autor autor)
 {
-
-    cout<<endl;
-    cout << "Nombre: " <<autor.getNombre()<< endl;
-    cout << "Apellido: " << autor.getApellido() << endl;
-    cout << "Fecha de nacimiento:" << autor.getFecaDeNacimiento().toString()<< endl;
-    cout << "Nacionalidad: " << autor.getNacionalidad() << endl;
-    cout << "Codigo de Autor: "  << autor.getCodAutor() << endl;
-    cout << "Estado del Autor: " <<autor.getEstado() << endl;
+    cout<<"------------------------------"<<endl;
+    cout << "Nombre             : " <<autor.getNombre()<< endl;
+    cout << "Apellido           : " << autor.getApellido() << endl;
+    cout << "Fecha de nacimiento: " << autor.getFecaDeNacimiento().toString()<< endl;
+    cout << "Nacionalidad       : " << autor.getNacionalidad() << endl;
+    cout << "Codigo de Autor    : "  << autor.getCodAutor() << endl;
 }
 
 void ManagerAutor::bajaAutor()
 {
     int codigo;
     ArchivoAutor archivoAutor;
-    cout<<"Ingrese codigo de Autor: ";
+    Autor autor;
+    char opcion;
+
+    cout << "**********¡AUTORES!**********" << endl;
+    cout << "        BAJA DE AUTOR   "<< endl;
+    cout << "****************************" << endl<< endl;
+    cout<<"Ingrese código de Autor: ";
     cin>>codigo;
-    if(archivoAutor.bajaArchivoAutor(codigo)==true)
+    autor= archivoAutor.obtenerAutorPorCodigo(codigo);
+
+    if (autor.getCodAutor() != -1)
     {
-        cout<<"REGISTRO BORRADO"<<endl;
+
+        cout << endl << "DESEA DARLE DE BAJA AL AUTOR: " << autor.getNombre() << " "<< autor.getApellido()<< " (S O N):  ";
+        cin >> opcion;
+
+        if (toupper(opcion) == 'S')
+        {
+            if(archivoAutor.bajaArchivoAutor(codigo)==true)
+            {
+                cout<<"REGISTRO BORRADO,PRESIONE UNA TECLA PARA VOLVER AL MENU ANTERIOR."<<endl;
+            }
+            else
+            {
+                cout<<"  NO SE PUDO BORRAR EL REGISTRO"<<endl;
+            }
+        }
+        else
+        {
+            return;
+        }
     }
     else
     {
-        cout<<"NO SE PUDO BORRAR EL REGISTRO"<<endl;
+        cout << endl<< "NO EXISTE UN AUTOR CON ESE CODIGO."<< endl;
     }
 }
 

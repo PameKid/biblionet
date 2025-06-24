@@ -11,14 +11,15 @@ void menuPrestamos(){
     int opc;
     while(true){
         system("cls");
-        cout << "*******PRESTAMOS!*******" << endl;
-        cout << "1. NUEVO PRESTAMO" << endl;
-        cout << "2. LISTA DE PRESTAMOS ACTIVOS" << endl;
-        cout << "3. BUSCAR PRESTAMO POR CÓDIGO" << endl;
-        cout << "4. DEVOLUCION LIBRO" << endl;
-        cout << "0. VOLVER AL MENU ANTERIOR" << endl;
+        cout << "**********¡PRESTAMOS!**********" << endl<< endl;
+        cout << "      ~ MENU PRESTAMOS ~     " << endl<<endl;
+        cout << " 1. NUEVO PRESTAMO" << endl;
+        cout << " 2. LISTA DE PRESTAMOS ACTIVOS" << endl;
+        cout << " 3. BUSCAR PRESTAMO POR CÓDIGO" << endl;
+        cout << " 4. DEVOLUCION LIBRO" << endl;
+        cout << " 0. VOLVER AL MENU ANTERIOR" << endl;
         cout << "---------------------------------" << endl;
-        cout << "SELECCIONAR OPCION" << endl;
+        cout << "SELECCIONAR OPCION: ";
         cin >>opc;
         system("cls");
 
