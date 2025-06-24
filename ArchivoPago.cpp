@@ -7,7 +7,7 @@ int ArchivoPagos::AgregarArchivoPago(Pagos pagonuevo)
 {
     FILE* ppago;
 
-    ppago = fopen("pago.dat", "ab");
+    ppago = fopen("Pagos.dat", "ab");
 
     if(ppago == nullptr)
     {
@@ -26,7 +26,7 @@ int ArchivoPagos::leerArchivo()
     Pagos p1;
     FILE* ppago;
 
-    ppago = fopen("pago.dat","rb");
+    ppago = fopen("Pagos.dat","rb");
 
     if(ppago == nullptr)
     {
@@ -53,7 +53,7 @@ bool ArchivoPagos :: socioAlDia(int codSocio)
     Fecha fechaActual;
     fechaActual.cargarFechaActual();
 
-    Ppago = fopen("pago.dat","rb");
+    Ppago = fopen("Pagos.dat","rb");
 
     if(Ppago == nullptr)
     {

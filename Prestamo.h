@@ -46,6 +46,7 @@ public:
     void cargarPrestamo();
     void cargarDevolucion();
     void mostrarInfo();
+    bool devolucionVencida(Fecha fechaVencimiento,Fecha fechaDevolucion);
 };
 
 #endif // PRESTAMO_H

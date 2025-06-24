@@ -1,98 +1,104 @@
 #include "ManagerPago.h"
 #include<cstring>
-#include "ArchivoSocio.h"
+//#include "ArchivoSocio.h"
 #include <cstdio>
 #include <iostream>
 #include "Validaciones.h"
-
+#include "ArchivoPrestamos.h"
 using namespace std;
 
-void ManagerPago::agregarPago(Pagos &p1)
-{
-    //variables auxiliares
-    int codSocio, mesPagado,  anioPagado, importe;
-    char codPago[20],  cadenaAuxiliar[20];;
+void ManagerPago::agregarPago(Pagos &p1) {
+    int codSocio, mesPagado, anioPagado, importe;
+    char codPago[20], cadenaAuxiliar[20];
     Fecha fechaDePago;
 
     cout << "*************************" << endl;
     cout << "*      NUEVO PAGO       *" << endl;
-    cout << "*************************" << endl;
-    cout << endl;
+    cout << "*************************" << endl << endl;
 
-    //carga de fecha actual
+    // Fecha actual
     fechaDePago.cargarFechaActual();
     cout << "Fecha actual:" << endl;
     p1.setFechaDePago(fechaDePago);
     fechaDePago.mostrarFecha();
 
-    // valida y setea socio
-
+    // Código de socio
     codSocio = ingresarCodSocio();
-    if(codSocio == -1) return;
+    if (codSocio == -1) return;
     p1.setCodSocio(codSocio);
 
-    // valida y setea mes
-
+    // Mes
     mesPagado = ingresarMes();
-    if(mesPagado == -1) return;
+    if (mesPagado == -1) return;
     p1.setMesPagado(mesPagado);
 
-    //valida y setea anio
-
+    // Año
     int anioActual = fechaDePago.getAnio();
     anioPagado = ingresarAnio(anioActual);
-    if(anioPagado == -1) return;
+    if (anioPagado == -1) return;
     p1.setAnioPagado(anioPagado);
 
-    //valida si existe un pago
-
-    if(existePago(codSocio,mesPagado,anioPagado)){
-
-        cout << "El socio ya registra un pago con esa fecha" << endl;
+    // Validar si ya pagó
+    if (existePago(codSocio, mesPagado, anioPagado)) {
+        cout << "El socio ya registra un pago con esa fecha." << endl;
         system("pause");
         return;
     }
 
-    // valida y setea importe
-
+    // Importe
     importe = ingresarImporte();
-    if(importe == -1) return;
+    if (importe == -1) return;
+    cout << "Importe ingresado: " << importe << endl;
+
+    ArchivoPrestamo archiPrestamo;
+    Pagos pago1;
+
+    // Penalización
+    if (archiPrestamo.consultarPenalidades(codSocio, mesPagado)) {
+        cout << "Aplicando penalización del 5% sobre el importe base." << endl;
+        importe = pago1.calcularPenalidad(importe);
+        cout << " El importe final es: " << importe;
+        cout << endl;
+    } else {
+        cout << "No se detectó penalización. Importe normal aplicado." << endl;
+    }
+
     p1.setImporte(importe);
 
+    // Código de pago
+    codPago[0] = '\0'; // inicializa vacío para strcat
+    strcat(codPago, "PA");
 
-    //ARMADO DE CODIGO DE PAGO
-    strcat(codPago,"PA");
-
-    //sprintf transforma un entero a cadena. incluir cstdio
     sprintf(cadenaAuxiliar, "%d", fechaDePago.getDia());
-    strcat(codPago,cadenaAuxiliar);
+    strcat(codPago, cadenaAuxiliar);
 
     sprintf(cadenaAuxiliar, "%d", fechaDePago.getMes());
-    strcat(codPago,cadenaAuxiliar);
+    strcat(codPago, cadenaAuxiliar);
 
     sprintf(cadenaAuxiliar, "%d", fechaDePago.getAnio());
-    strcat(codPago,cadenaAuxiliar);
+    strcat(codPago, cadenaAuxiliar);
 
     sprintf(cadenaAuxiliar, "%d", codSocio);
-    strcat(codPago,cadenaAuxiliar);
-    p1.setCodPago(codPago);
+    strcat(codPago, cadenaAuxiliar);
 
-    cout << "codigo de pago generado: " << codPago << endl << endl;
-     cout << endl;
+    cout << "Código de pago final generado: " << codPago << endl;
+    p1.setCodPago(codPago);
+    p1.setEstado(true);
+
     cout << "***************************************" << endl;
     cout << "*                                     *" << endl;
     cout << "*      PAGO REGISTRADO CON ÉXITO      *" << endl;
     cout << "*                                     *" << endl;
     cout << "***************************************" << endl;
-    system("pause");
 
+    system("pause");
 }
 
 void ManagerPago::altaPago()
 {
-    ArchivoPagos archivoPago;
-    Pagos p1;
-    agregarPago(p1);
+    ArchivoPagos archivoPago; // se crea archivo pago
+    Pagos p1; // creamos objeto pago
+    agregarPago(p1); // llamamos funcion
     archivoPago.AgregarArchivoPago(p1);
 
 }

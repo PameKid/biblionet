@@ -117,5 +117,6 @@ Fecha Fecha::calcularVencimiento(Fecha fechaInicial) {
     vencimiento.setAnio(nuevaFecha->tm_year + 1900);
 
     return vencimiento;
+
 }
 
