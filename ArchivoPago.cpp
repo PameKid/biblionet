@@ -11,7 +11,7 @@ int ArchivoPagos::AgregarArchivoPago(Pagos pagonuevo)
 
     if(ppago == nullptr)
     {
-        cout << "no se pudo abrir el archivo." << endl;
+        cout << "No se pudo abrir el archivo." << endl;
         return -1;
     }
 
@@ -30,7 +30,7 @@ int ArchivoPagos::leerArchivo()
 
     if(ppago == nullptr)
     {
-        cout << "no se pudo leer el archivo." << endl;
+        cout << "No se pudo leer el archivo." << endl;
         return -1;
     }
 
@@ -57,7 +57,7 @@ bool ArchivoPagos :: socioAlDia(int codSocio)
 
     if(Ppago == nullptr)
     {
-        cout << "no se pudo leer el archivo." << endl;
+        cout << "No se pudo leer el archivo." << endl;
         return -1;
     }
 

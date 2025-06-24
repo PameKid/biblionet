@@ -10,7 +10,8 @@ using namespace std;
 void ManagerPago::agregarPago(Pagos &p1)
 {
     //variables auxiliares
-    int codSocio, mesPagado,  anioPagado, importe;
+    int codSocio, mesPagado,  anioPagado;
+    float importe;
     char codPago[20],  cadenaAuxiliar[20];;
     Fecha fechaDePago;
 
@@ -22,7 +23,7 @@ void ManagerPago::agregarPago(Pagos &p1)
     p1.setFechaDePago(fechaDePago);
     fechaDePago.mostrarFecha();
 
-    // valida y setea socio
+    // valida y settea socio
 
     codSocio = ingresarCodSocio();
     if(codSocio == -1) return;
@@ -34,7 +35,7 @@ void ManagerPago::agregarPago(Pagos &p1)
     if(mesPagado == -1) return;
     p1.setMesPagado(mesPagado);
 
-    //valida y setea anio
+    //valida y settea anio
 
     int anioActual = fechaDePago.getAnio();
     anioPagado = ingresarAnio(anioActual);
@@ -74,7 +75,7 @@ void ManagerPago::agregarPago(Pagos &p1)
     strcat(codPago,cadenaAuxiliar);
     p1.setCodPago(codPago);
 
-    cout << "codigo de pago generado: " << codPago << endl << endl;
+    cout << "Codigo de pago generado: " << codPago << endl << endl;
     cout << "Los datos fueron guardados correctamente: " << endl;
     system("pause");
 

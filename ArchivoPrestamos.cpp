@@ -203,3 +203,22 @@ Prestamo ArchivoPrestamo::obtenerPrestamoPorPosicion(int posicion){
 
     return p1;
 }
+
+bool ArchivoPrestamo::consultarPenalidades(int codSocio, int mesPagado){
+    FILE* pPrestamo;
+    Prestamo p1;
+
+    pPrestamo = fopen("Prestamos.dat", "rb");
+
+    if(pPrestamo == nullptr){
+        cout << "No se pudo abrir el archivo " << endl;
+        return false;
+    }
+//    while(fread(&p1,sizeof(Prestamo),1,pPrestamo) == 1){
+//        if(p1.getCodSocio()== codSocio && p1.getFechaPrestamo().getMes()== mesPagado -1){
+//            p1.
+//        }
+
+    }
+
+

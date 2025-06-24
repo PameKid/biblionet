@@ -19,6 +19,7 @@ public:
     int buscarPosicionPrestamo(Prestamo prestamo);
     int cantidadLibrosPorSocio(int codSocio);
     Prestamo obtenerPrestamoPorPosicion(int posicion);
+    bool consultarPenalidades(int codSocio, int mesPagado);
 
 };
 

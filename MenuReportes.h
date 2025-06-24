@@ -28,9 +28,9 @@ void menuReportes(){
             ms.listarSociosNoAlDia();
             system("pause");
             break;
-        //case 3:
-          //  menuPrestamos();
-          //  break;
+        case 3:
+           ml.listarRankingLibro();
+            break;
         //case 4:
           //  menuPagos();
           //  break;

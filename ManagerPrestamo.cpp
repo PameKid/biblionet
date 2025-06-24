@@ -148,7 +148,7 @@ void ManagerPrestamo::buscarPrestamoCodigo(){
     ArchivoPrestamo archiPrestamo;
 
     //falta validar el codigo ingresado
-    cout << "Ingrese el código del prestamo buscar" << endl;
+    cout << "Ingrese el código del prestamo para buscar" << endl;
     cin >> codPrestamoSolicitado;
 
     prestamoConsultado = archiPrestamo.devolverArchivoPrestamoPorCodigo(codPrestamoSolicitado);
@@ -184,5 +184,7 @@ void ManagerPrestamo::devolverPrestamo(){
      system("pause");
 
 }
+
+
 
 

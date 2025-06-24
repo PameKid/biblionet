@@ -92,12 +92,12 @@ int ArchivoAutor:: buscarAutorPorNombre(char nombre [], int vecPosiciones[])
 
     int pos=0;
     int cantidadAutores = 0;
-    while(fread(&autor,sizeof(Autor),1,pAutor)==1)
+    while(fread(&autor,sizeof(Autor),1,pAutor)==1) //segunda condicion cantidad de autores <  5 porque se puede romper si son mas de 5.
     {
         if(compararNombres(autor.getNombre(), nombre))
         {
             vecPosiciones[cantidadAutores]= pos;
-            cantidadAutores++;
+            cantidadAutores++; //segunda condicion cantidad de autores <  5 porque se puede romper si son mas de 5.
         }
         pos++;
     }

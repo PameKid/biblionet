@@ -86,5 +86,7 @@ void Pagos::mostrarDatos(){
     cout << "El mes pagado es: " << _mesPagado << endl;
     cout << " El anio de pago es : " << _anioPagado << endl;
     cout << "El importe pagado es: " <<  _importe << endl;
+    cout << "************************************************" << endl;
+    cout << endl;
 
 }

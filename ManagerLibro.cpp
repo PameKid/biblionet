@@ -40,12 +40,12 @@ void ManagerLibro::cargarLibroManager(Libro &l1){
     //utiliza la cantidad de registros para asignarle un codigo
     codLibro = archivoLibro.contarRegistros();
     cout << codLibro << endl;
-    system("pause");
+    //system("pause");
 
     l1.setCodLibro(codLibro+100);
-    cout << "codigo seteado" << endl;
-    cout << l1.getCodLibro();
-    system("pause");
+
+    //cout << l1.getCodLibro();
+    //system("pause");
 
     cout << "Ingrese el código del autor: " << endl;
     cin >>codAutor;
@@ -113,22 +113,23 @@ void ManagerLibro::mostrarInfoManager(Libro l1){
 void ManagerLibro::mostrarTablaLibros(Libro* l, int cantidadDeRegistros){
 
     //Libro l;
-    cout << "+------+---------------------+--------+----------+-------------+----------+------+" << endl;
-    cout << "| Cod  | Título              | Autor  | ISBN     | Género      | Cant.      Año  |" << endl;
-    cout << "+------+---------------------+--------+----------+-------------+----------+------+" << endl;
+    cout << "+------+---------------------+--------+-------------+----------+------+" << endl;
+    cout << "| Cod  | Título              | Autor  | Género      | Cant.      Año  |" << endl;
+    cout << "+------+---------------------+--------+-------------+----------+------+" << endl;
 
     for(int x = 0; x < cantidadDeRegistros; x++){
+       if (l[x].getEstado()== true){
         cout << "| " << setw(4) << l[x].getCodLibro()
             << " | " << setw(20) << left << string(l[x].getNombreDeLibro()).substr(0,25)
             << " | " << setw(4) << l[x].getCodAutor()
-            << " | " << setw(8) << l[x].getISBN()
             << " | " << setw(10) << string(l[x].getGenero()).substr(0,10)
             << " | " << setw(6) << l[x].getCantidadEjemplares()
             << " | " << setw(10) << l[x].getAnioDePublicacion()
             << " |" << endl;
+        }
     }
 
-    cout << "+------+---------------------+--------+----------+-------------+------------+------+" << endl;
+    cout << "+------+---------------------+--------+-------------+----------+------+" << endl;
 
     }
 
@@ -181,7 +182,8 @@ void ManagerLibro::buscarLibroPorCodigo(){ //preguntar si esto puede ser un int 
     libroSolicitado = obtenerLibroPorCodigo(codLibroSolicitado);
 
     cout << "Corrobore que los datos sean correctos: " << endl;
-    libroSolicitado.mostrarInfo();
+    mostrarInfoManager(libroSolicitado);
+    //libroSolicitado.mostrarInfo();
 }
 
 void ManagerLibro::bajaLogicaLibro(){
@@ -197,14 +199,20 @@ void ManagerLibro::bajaLogicaLibro(){
 
    librobaja = obtenerLibroPorCodigo(codLibroBaja);
 
-   cout << "Presione 1 si el libro que desea dar de baja es el siguiente. Presione 0 en caso contrario: " << endl;
-   librobaja.mostrarInfo();
+   cout << "***********************SELECCIONE LA OPCION CORRECTA ******************************************" << endl;
+   cout << endl;
+   cout << "Presione 1 si el libro que desea dar de baja es el siguiente. " <<  endl;
+   cout << "Presione 0 en caso contrario " << endl;
+   cout << "***********************************************************************************************" << endl;
+
+   //librobaja.mostrarInfo();
+   mostrarInfoManager(librobaja);
 
    cin >> opcion;
 
    if(opcion == 1){
         librobaja.setEstado(false);
-        librobaja.setCantidadEjemplares(100);
+        //librobaja.setCantidadEjemplares(100);
         archivobajaestado.modificarArchivoLibro(librobaja);
         cout << "Se ha dado de baja correctamenta. " << endl;
    }
@@ -226,17 +234,20 @@ void ManagerLibro::modificarLibro(){
     libroModificado = obtenerLibroPorCodigo(codLibro);
 
     cout << "Elija el dato que quiere modificar: " << endl;
-    libroModificado.mostrarInfoParaModificar();
+    //libroModificado.mostrarInfoParaModificar();
+    mostrarInfoParaModificarNUEVO(libroModificado);
 
     cin >> opcion;
 
     while (opcion != 0){
 
-        libroModificado.cargarLibroModificado(opcion);
+        //libroModificado.cargarLibroModificado(opcion);
+        cargarLibroModificadoNUEVO(libroModificado, opcion);
 
         system("cls");
 
-        libroModificado.mostrarInfoParaModificar();
+        mostrarInfoParaModificarNUEVO(libroModificado);
+        //libroModificado.mostrarInfoParaModificar();
         cin >>opcion;
     }
 
@@ -300,8 +311,8 @@ void ManagerLibro::listarLibrosPorAutor(){
     int vecPosiciones[5];
     int posicion;
     int codAutor;
-     ArchivoLibro arhivoLibro;
-    int cantReg;
+    ArchivoLibro arhivoLibro;
+    int cantLibros;
     Libro *vecLibros = nullptr;
     Libro libroobtenido;
 
@@ -311,35 +322,37 @@ void ManagerLibro::listarLibrosPorAutor(){
     cin.getline(nombreAutor, 20);
 
 
-    int cantidad = archivoAutor.buscarAutorPorNombre(nombreAutor, vecPosiciones);    // De archivoAutor
+    int cantidadAutores = archivoAutor.buscarAutorPorNombre(nombreAutor, vecPosiciones);    // De archivoAutor
 
-    if (cantidad <= 0 )
+    if (cantidadAutores <= 0 )
     {
         cout << "No existe el Autor"<< endl;
         system("pause");
         return;
     }
 
-    //por ahora solo muestra el primero falta pedirle a Pri que modifique el buscar por apellido.
-    posicion = vecPosiciones [0];
-    autorbuscado = archivoAutor.obtenerAutorArchivo(posicion);
-    managerAutor.mostrarInfo(autorbuscado);
+    cantLibros = arhivoLibro.contarRegistros();
+    vecLibros = new Libro[cantLibros];
 
-    cout << endl << "Listado de Libros del Autor: " << endl << endl;
+    arhivoLibro.obtenerVectorLibros(cantLibros, vecLibros);
 
 
-    cantReg = arhivoLibro.contarRegistros();
-    vecLibros = new Libro[cantReg];
+    for (int z = 0; z < cantidadAutores; z++){
+    /////////////////
+        autorbuscado = archivoAutor.obtenerAutorArchivo(vecPosiciones[z]);
+        managerAutor.mostrarInfo(autorbuscado);
 
-    arhivoLibro.obtenerVectorLibros(cantReg, vecLibros);
+        cout << endl << "Listado de Libros del Autor: " << endl << endl;
 
-    for(int x=0; x<cantReg; x++){
-        if(vecLibros[x].getCodAutor()==autorbuscado.getCodAutor() && vecLibros[x].getEstado() == true){
-            vecLibros[x].mostrarInfo();
-            cout << "*******************" << endl;
+        for(int x=0; x<cantLibros; x++){
+            if(vecLibros[x].getCodAutor()==autorbuscado.getCodAutor() && vecLibros[x].getEstado() == true){
+                //vecLibros[x].mostrarInfo();
+                mostrarInfoManager(vecLibros[x]);
+                cout << "*******************" << endl;
+            }
         }
+///////////////////
     }
-
     delete[]vecLibros;
     system("pause");
 
@@ -434,3 +447,93 @@ void ManagerLibro::mostrarTablaDeVectores(Libro* listaDeLibros, int* vecCantidad
     cout << "+------+---------------------+--------+----------+" << endl;
     system("pause");
     }
+
+  void ManagerLibro::mostrarInfoParaModificarNUEVO(Libro libroParaModificar){
+
+    cout << "Datos del libro: " << endl;
+    cout << "1. nombre del Libro: " << libroParaModificar.getNombreDeLibro() << endl;
+    cout << "2. código del libro: " << libroParaModificar.getCodLibro() << endl;
+    cout << "3. código del autor:  " << libroParaModificar.getCodAutor() << endl;
+    cout << "4. ISBN del libro " << libroParaModificar.getISBN()<< endl;
+    cout << "5. género del libro: " << libroParaModificar.getGenero() << endl;
+    cout << "6. cantidad de ejemplares del libro:  " << libroParaModificar.getCantidadEjemplares() << endl;
+    cout << "7. año de publicación " << libroParaModificar.getAnioDePublicacion() << endl << endl;
+    //cout << "Estado: " << _estado;
+
+    cout << "0. para guardar los cambios.  " << endl;
+}
+
+void ManagerLibro::cargarLibroModificadoNUEVO(Libro &libroModificado, int opcion){
+    //variables auxiliares
+    char isbn[20];
+    char nombreDeLibro[50];
+    char genero[50];
+    int codLibro;
+    int codAutor;
+    int cantidadEjemplares;
+    int anioDePublicacion;
+
+
+    switch(opcion)
+        {
+    case 1:
+        cout << "Ingrese el nuevo nombre del Libro: " << endl;
+        cin.ignore();
+        cin.getline(nombreDeLibro, 50);
+        libroModificado.setNombreDeLibro(nombreDeLibro);
+
+        break;
+    case 2:
+        cout << "Ingrese el nuevo código de libro: " << endl;
+        //cin.ignore();
+        cin >> codLibro;
+        libroModificado.setCodLibro(codLibro);
+
+        break;
+
+    case 3:
+
+        cout << "Ingrese el código de autor" << endl;
+        cin >> codAutor;
+        libroModificado.setCodAutor(codAutor);
+        break;
+
+    case 4:
+        cout << "Ingrese el ISBN: " << endl;
+        cin.getline(isbn,20);
+        libroModificado.setISBN(isbn);
+        break;
+    case 5:
+
+        cout << "Ingrese género " << endl;
+        cin.ignore();
+        cin.getline(genero, 20);
+        libroModificado.setGenero(genero);
+
+        break;
+
+    case 6:
+        cout << "Ingrese cantidad de ejemplares: " << endl;
+        //cin.ignore();
+        cin >>(cantidadEjemplares);
+        libroModificado.setCantidadEjemplares(cantidadEjemplares);
+        break;
+
+    case 7:
+
+        cout << "Ingrese el año de publicación del libro: " << endl;
+        cin >> anioDePublicacion;
+        libroModificado.setAnioDePublicacion(anioDePublicacion);
+
+        break;
+
+    case 0:
+        return ;
+        break;
+
+    default:
+            cout<< "LA SELECCION ES INCORRECTA"<<endl;
+
+    }
+}
+

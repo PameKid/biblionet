@@ -21,6 +21,8 @@ public:
     int buscarIndiceLibro(Libro* libro, int cantidadRegistro, int codLibro);
     void ordenarRanking(Libro* vecLibros,int cantidadRegistros, int* vecTorCantidadPrestamos);
     void mostrarTablaDeVectores(Libro* listaDeLibros, int* vecCantidadesPrestamos);
+    void mostrarInfoParaModificarNUEVO(Libro libroParaModificar);
+    void cargarLibroModificadoNUEVO(Libro &libroModificado, int opcion);
 };
 
 
