@@ -1,5 +1,5 @@
 #include "ManagerPago.h"
-#include<cstring>
+#include <cstring>
 //#include "ArchivoSocio.h"
 #include <cstdio>
 #include <iostream>
@@ -111,6 +111,23 @@ void ManagerPago::listarpagos()
     archipago.leerArchivo();
     system("pause");
 
+}
 
+void ManagerPago::buscarPagoCodigo(){
+
+    char codPagoSolicitado[20];
+    Pagos pagoConsultado;
+    ArchivoPagos archiPago;
+
+    //falta validar el codigo ingresado
+    cout << "Ingrese el código del pago para buscar" << endl;
+    cin >> codPagoSolicitado;
+
+    pagoConsultado = archiPago.devolverArchivoPagoPorCodigo(codPagoSolicitado);
+    cout << "Corrobore que los datos sean correctos: " << endl;
+    cout << endl;
+    pagoConsultado.mostrarDatos();
+
+    system("pause");
 
 }

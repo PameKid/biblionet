@@ -1,6 +1,6 @@
 #include <iostream>
 #include "ArchivoPagos.h"
-
+#include <cstring>
 using namespace std;
 
 int ArchivoPagos::AgregarArchivoPago(Pagos pagonuevo)
@@ -48,6 +48,8 @@ int ArchivoPagos::leerArchivo()
 
 bool ArchivoPagos :: socioAlDia(int codSocio)
 {
+
+
     Pagos pago;
     FILE* Ppago;
     Fecha fechaActual;
@@ -75,4 +77,28 @@ bool ArchivoPagos :: socioAlDia(int codSocio)
 
     fclose(Ppago);
     return false;
+}
+
+Pagos ArchivoPagos::devolverArchivoPagoPorCodigo(char* codPago){
+    Pagos p1;
+    Pagos pagoVacio;
+    FILE* pPago;
+
+
+    pPago = fopen("Pagos.dat", "rb");
+
+    if(pPago == nullptr){
+        cout << "No se pudo leer el archivo." << endl;
+        return p1;
+    }
+
+    while((fread(&p1,sizeof(Pagos),1,pPago))== 1){
+        if(strcmp(codPago,p1.getCodPago()) == 0){ //devuelve 0 si son iguales
+            fclose(pPago);
+            return p1;
+        }
+     fclose(pPago);
+     return pagoVacio;
+
+    }
 }
