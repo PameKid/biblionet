@@ -7,18 +7,14 @@
 #include "ArchivoPrestamos.h"
 using namespace std;
 
-<<<<<<< HEAD
+
 void ManagerPago::agregarPago(Pagos &p1)
 {
     //variables auxiliares
     int codSocio, mesPagado,  anioPagado;
     float importe;
     char codPago[20],  cadenaAuxiliar[20];;
-=======
-void ManagerPago::agregarPago(Pagos &p1) {
-    int codSocio, mesPagado, anioPagado, importe;
-    char codPago[20], cadenaAuxiliar[20];
->>>>>>> 47ec5ac8d2ca6919186b40cad98270b2c98c8308
+
     Fecha fechaDePago;
 
     cout << "*************************" << endl;
@@ -31,12 +27,7 @@ void ManagerPago::agregarPago(Pagos &p1) {
     p1.setFechaDePago(fechaDePago);
     fechaDePago.mostrarFecha();
 
-<<<<<<< HEAD
     // valida y settea socio
-
-=======
-    // Código de socio
->>>>>>> 47ec5ac8d2ca6919186b40cad98270b2c98c8308
     codSocio = ingresarCodSocio();
     if (codSocio == -1) return;
     p1.setCodSocio(codSocio);
@@ -46,12 +37,7 @@ void ManagerPago::agregarPago(Pagos &p1) {
     if (mesPagado == -1) return;
     p1.setMesPagado(mesPagado);
 
-<<<<<<< HEAD
     //valida y settea anio
-
-=======
-    // Año
->>>>>>> 47ec5ac8d2ca6919186b40cad98270b2c98c8308
     int anioActual = fechaDePago.getAnio();
     anioPagado = ingresarAnio(anioActual);
     if (anioPagado == -1) return;
@@ -110,11 +96,10 @@ void ManagerPago::agregarPago(Pagos &p1) {
     cout << "*                                     *" << endl;
     cout << "***************************************" << endl;
 
-<<<<<<< HEAD
+
     cout << "Codigo de pago generado: " << codPago << endl << endl;
     cout << "Los datos fueron guardados correctamente: " << endl;
-=======
->>>>>>> 47ec5ac8d2ca6919186b40cad98270b2c98c8308
+
     system("pause");
 }
 
