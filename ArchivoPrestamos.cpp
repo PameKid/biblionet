@@ -208,17 +208,23 @@ bool ArchivoPrestamo::consultarPenalidades(int codSocio, int mesPagado){
     FILE* pPrestamo;
     Prestamo p1;
 
-    pPrestamo = fopen("Prestamos.dat", "rb");
+    pPrestamo = fopen("Prestamos.dat","rb"); // nombre correcto del archivo
 
     if(pPrestamo == nullptr){
-        cout << "No se pudo abrir el archivo " << endl;
+        cout << "No se pudo leer el archivo de préstamos." << endl;
         return false;
     }
-//    while(fread(&p1,sizeof(Prestamo),1,pPrestamo) == 1){
-//        if(p1.getCodSocio()== codSocio && p1.getFechaPrestamo().getMes()== mesPagado -1){
-//            p1.
-//        }
 
+    while((fread(&p1,sizeof(Prestamo),1,pPrestamo)) == 1){
+        if(p1.getCodSocio() == codSocio && p1.getFechaPrestamo().getMes() == mesPagado - 1){
+            if(p1.devolucionVencida(p1.getFechaVencimiento(), p1.getFechaDevolucion())){
+                cout << " Penalidad detectada: devolución fuera de término" << endl;
+                return true;
+            }
+        }
     }
 
+    fclose(pPrestamo);
+    return false;
+}
 

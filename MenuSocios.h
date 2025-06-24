@@ -13,12 +13,13 @@ void menuSocios()
     {
         system("cls");
         cout << "**********¡SOCIOS!**********" << endl<< endl;
-        cout << "1. BUSCAR SOCIO POR DNI" << endl;
-        cout << "2. LISTAR SOCIOS" << endl;
-        cout << "3. ALTA DE SOCIO" << endl;
-        cout << "4. BAJA DE SOCIO" << endl;
-        cout << "5. MODIFICAR SOCIO" << endl;
-        cout << "0. VOLVER AL MENU ANTERIOR" << endl;
+        cout << "       ~ MENU SOCIOS ~     " << endl<<endl;
+        cout << " 1. BUSCAR SOCIO POR DNI" << endl;
+        cout << " 2. LISTAR SOCIOS" << endl;
+        cout << " 3. ALTA DE SOCIO" << endl;
+        cout << " 4. BAJA DE SOCIO" << endl;
+        cout << " 5. MODIFICAR SOCIO" << endl;
+        cout << " 0. VOLVER AL MENU ANTERIOR" << endl;
         cout << "----------------------------" << endl;
         cout << "SELECCIONAR OPCION: ";
         cin >>opc;
@@ -51,7 +52,6 @@ void menuSocios()
             break;
         default:
             cout<< "LA SELECCION ES INCORRECTA"<<endl;
-
         }
     }
 }

@@ -9,13 +9,14 @@ void menuReportes(){
      ManagerSocio ms;
     while(true){
         system("cls");
-        cout << "*******¡REPORTES!*******" << endl;
-        cout << "1. PRESTAMOS AL MES" << endl;
-        cout << "2. SOCIOS Y FECHAS DE DEVOLUCIONES" << endl;
-        cout << "3. RANKINGS DE LIBROS MAS PRESTADOS" << endl;
-        cout << "0. VOLVER AL MENU ANTERIOR" << endl;
+        cout << "*********¡REPORTES!*********" << endl<< endl;
+        cout << "      ~ MENU REPORTES ~     " << endl<<endl;
+        cout << " 1. PRESTAMOS AL MES" << endl;
+        cout << " 2. SOCIOS CON CUOTA PENDIENTE" << endl;
+        cout << " 3. RANKINGS DE LIBROS MAS PRESTADOS" << endl;
+        cout << " 0. VOLVER AL MENU ANTERIOR" << endl;
         cout << "-----------------------------------" << endl;
-        cout << "SELECCIONAR OPCION" << endl;
+        cout << "SELECCIONAR OPCION: ";
         cin >>opc;
         system("cls");
          ManagerLibro ml;

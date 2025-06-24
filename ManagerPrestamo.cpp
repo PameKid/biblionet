@@ -30,6 +30,7 @@ void ManagerPrestamo::cargarPrestamo(Prestamo &objetoPrestamo){
 
     //carga de fecha actual
     fechaPrestamo.cargarFechaActual();
+   //fechaPrestamo.setMes(5);
     objetoPrestamo.setFechaPrestamo(fechaPrestamo);
     fechaPrestamo.mostrarFecha();
 

@@ -102,4 +102,22 @@ void Prestamo::cargarPrestamo(){
     cout << "----------------------------------------------" << endl;
 }
 
-void Prestamo::cargarDevolucion(){}
+bool Prestamo::devolucionVencida(Fecha fechaVencimiento,Fecha fechaDevolucion){
+    if(fechaDevolucion.getAnio()> fechaVencimiento.getAnio()){
+        return true;
+    }
+    else if(fechaDevolucion.getAnio() == fechaVencimiento.getAnio()){
+        if(fechaDevolucion.getMes()> fechaVencimiento.getMes()){
+            return true;
+        }
+        else if(fechaDevolucion.getMes() == fechaVencimiento.getMes()){
+            if(fechaDevolucion.getDia()> fechaVencimiento.getDia()){
+                return true;
+            }
+
+        }
+    }
+    return false;
+}
+
+

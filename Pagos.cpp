@@ -90,3 +90,11 @@ void Pagos::mostrarDatos(){
     cout << endl;
 
 }
+float Pagos::calcularPenalidad(float importe){
+    float importeFinal , montoAsumar;
+    float porcentaje = 5;
+
+    montoAsumar = (importe * porcentaje)/ 100;
+    importeFinal = montoAsumar + importe;
+    return importeFinal;
+}

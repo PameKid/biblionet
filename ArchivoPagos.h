@@ -8,7 +8,7 @@ public:
 
     int AgregarArchivoPago(Pagos pagonuevo);
     int leerArchivo();
-    void buscarPagoPorCodigo(int codPago);
+    Pagos devolverArchivoPagoPorCodigo(char* codPago);
     void listarPagosDelMes();
     bool socioAlDia(int codSocio) ;
 

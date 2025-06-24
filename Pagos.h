@@ -39,4 +39,5 @@ public:
    // void cargarPago();
     void mostrarDatos();
     bool estaAlDia();
+    float calcularPenalidad(float importe);
 };
