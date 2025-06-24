@@ -27,7 +27,9 @@ public:
     Fecha cargarFechaActual();
     void mostrarFecha();
     Fecha calcularVencimiento(Fecha fechaInicial);
-
+    bool validarAnio();
+    bool validarMes();
+    bool validarDia();
 
 };
 

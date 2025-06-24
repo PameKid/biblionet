@@ -16,7 +16,7 @@ void menuAutor()
         cout << " 2. LISTAR AUTORES" << endl;
         cout << " 3. ALTA DE AUTOR" << endl;
         cout << " 4. BAJA DE AUTOR" << endl;
-        cout << " 5. MODIFICAR AUTOR" << endl;
+        //cout << " 5. MODIFICAR AUTOR << endl;
         cout << " 0. VOLVER AL MENU ANTERIOR" << endl;
         cout << "-----------------------------" << endl;
         cout << "SELECCIONAR OPCION: ";

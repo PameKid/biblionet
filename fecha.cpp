@@ -55,68 +55,136 @@ std::string Fecha::toString()
 
 
 void Fecha :: cargarFecha()
-{
-    //cin.ignore();
-    cout << "Ingrese anio de nacimiento: ";
-    cin>> _anio;
-    cout << "Ingrese mes de nacimiento: ";
-    cin>>_mes;
-    cout << "Ingrese dia de nacimiento: ";
-    cin >> _dia;
-}
 
-Fecha Fecha::cargarFechaPrestamo()
-{
-    cout << "Ingrese el anio de pago: " << endl;
-    cin >> _anio;
+    {
+        cout << "Ingrese anio de nacimiento: ";
+        cin >> _anio;
+        while (validarAnio() == false)
+        {
+            cout << "Anio invalido. Intente de nuevo: ";
+            cin >> _anio;
+        }
 
-    cout << "Ingrese el mes de pago: " << endl;
-    cin >> _mes;
+        cout << "Ingrese mes de nacimiento: ";
+        cin >> _mes;
+        while (validarMes() == false)
+        {
+            cout << "Mes invalido. Intente de nuevo: ";
+            cin >> _mes;
+        }
 
-    cout <<"Ingrese el día de pago: " << endl;
-    cin >> _dia;
-}
+        cout << "Ingrese dia de nacimiento: ";
+        cin >> _dia;
+        while (validarDia() == false)
+        {
+            cout << "Dia invalido para el mes/anio ingresado. Intente de nuevo: ";
+            cin >> _dia;
+        }
+    }
 
-Fecha Fecha::cargarFechaActual()
-{
-    time_t rawtime;
-    struct tm* timeinfo;
+    Fecha Fecha::cargarFechaPrestamo()
+    {
 
-    time(&rawtime);
-    timeinfo = localtime(&rawtime);
+        cout << "Ingrese el anio de pago: " << endl;
+        cin >> _anio;
+        cout << "Ingrese el mes de pago: " << endl;
+        cin >> _mes;
 
-    _anio = timeinfo->tm_year+1900;
-    _mes = timeinfo->tm_mon+1;
-    _dia = timeinfo->tm_mday;
-}
+        cout <<"Ingrese el día de pago: " << endl;
+        cin >> _dia;
+    }
 
-void Fecha::mostrarFecha()
-{
-    cout  << _dia << "/" << _mes << "/"<< _anio << endl;
-}
+    Fecha Fecha::cargarFechaActual()
+    {
+        time_t rawtime;
+        struct tm* timeinfo;
 
-Fecha Fecha::calcularVencimiento(Fecha fechaInicial) {
-    int diasDeVencimiento = 10;
-    // Preparamos una estructura tm con la fecha inicial
-    std::tm t = {};
-    t.tm_mday = fechaInicial.getDia();
-    t.tm_mon  = fechaInicial.getMes() - 1; // tm_mon va de 0 a 11
-    t.tm_year = fechaInicial.getAnio() - 1900; // tm_year cuenta desde 1900
+        time(&rawtime);
+        timeinfo = localtime(&rawtime);
 
-    // Convertimos a time_t y sumamos los días en segundos
-    std::time_t tiempo = std::mktime(&t);
-    tiempo += diasDeVencimiento * 24 * 60 * 60; // sumamos los días como segundos
+        _anio = timeinfo->tm_year+1900;
+        _mes = timeinfo->tm_mon+1;
+        _dia = timeinfo->tm_mday;
+    }
 
-    // Convertimos de vuelta a tm
-    std::tm* nuevaFecha = std::localtime(&tiempo);
+    void Fecha::mostrarFecha()
+    {
+        cout  << _dia << "/" << _mes << "/"<< _anio << endl;
+    }
 
-    // Creamos la nueva Fecha
-    Fecha vencimiento;
-    vencimiento.setDia(nuevaFecha->tm_mday);
-    vencimiento.setMes(nuevaFecha->tm_mon + 1);
-    vencimiento.setAnio(nuevaFecha->tm_year + 1900);
+    Fecha Fecha::calcularVencimiento(Fecha fechaInicial)
+    {
+        int diasDeVencimiento = 10;
+        // Preparamos una estructura tm con la fecha inicial
+        std::tm t = {};
+        t.tm_mday = fechaInicial.getDia();
+        t.tm_mon  = fechaInicial.getMes() - 1; // tm_mon va de 0 a 11
+        t.tm_year = fechaInicial.getAnio() - 1900; // tm_year cuenta desde 1900
 
-    return vencimiento;
+        // Convertimos a time_t y sumamos los días en segundos
+        std::time_t tiempo = std::mktime(&t);
+        tiempo += diasDeVencimiento * 24 * 60 * 60; // sumamos los días como segundos
 
-}
+        // Convertimos de vuelta a tm
+        std::tm* nuevaFecha = std::localtime(&tiempo);
 
+        // Creamos la nueva Fecha
+        Fecha vencimiento;
+        vencimiento.setDia(nuevaFecha->tm_mday);
+        vencimiento.setMes(nuevaFecha->tm_mon + 1);
+        vencimiento.setAnio(nuevaFecha->tm_year + 1900);
+
+        return vencimiento;
+
+    }
+
+    bool Fecha :: validarAnio()
+    {
+        if (_anio > 0 && _anio < 2025)
+        {
+            return true;
+        }
+    }
+
+
+    bool Fecha :: validarMes()
+    {
+
+        if (_mes > 0 && _mes <= 12 )
+        {
+
+            return true;
+        }
+    }
+
+    bool Fecha:: validarDia()
+    {
+        if (_dia < 1)
+        {
+            return false;
+        }
+        if (_mes == 1 || _mes == 3 || _mes == 5 || _mes == 7 || _mes == 8 || _mes == 10 || _mes == 12)
+        {
+            return _dia <= 31;
+        }
+
+        else if (_mes == 4 || _mes == 6 || _mes == 9 || _mes == 11)
+        {
+            return _dia <= 30;
+        }
+        else if (_mes == 2)
+        {
+            bool bisiesto = (_anio % 4 == 0 && _anio % 100 != 0) || (_anio % 400 == 0);
+            if (bisiesto)
+            {
+                return _dia <= 29;
+            }
+            else
+            {
+                return _dia <= 28;
+            }
+        }
+
+        return false;
+
+    }

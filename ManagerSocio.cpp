@@ -27,7 +27,9 @@ void ManagerSocio::cargarSocio()
     {
         cout << "El dni ingresado ya existe, intente con otro o ingrese 0 para volver al menu: ";
         cin.getline (dni,9);
-        if (strcmp(dni, "0") == 0)
+
+        return;
+        //if (strcmp(dni, "0") == 0)
         {
             return;
         }

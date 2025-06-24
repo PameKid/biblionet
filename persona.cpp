@@ -7,8 +7,7 @@ using namespace std;
 // Desarrollo constrcutores
 Persona::Persona()
 {
-    _fechaDeNacimiento = Fecha();
-    _estado = true;
+
 }
 Persona :: Persona (const char* nombre, const char* apellido, Fecha fechaDeNacimiento)
 {
