@@ -29,13 +29,6 @@ void ManagerLibro::cargarLibroManager(Libro &l1){
     cin.getline(nombreDeLibro, 50);
     l1.setNombreDeLibro(nombreDeLibro);
 
-//    cout << "Ingrese el código del libro:" << endl;
-//    cin >> codLibro;
-//    while (codLibro < 0){
-//        cout << "Ingrese un valor mayor a 0:" << endl;
-//        cin >> codLibro;
-//    }
-
 
     //utiliza la cantidad de registros para asignarle un codigo
     codLibro = archivoLibro.contarRegistros();
@@ -95,6 +88,10 @@ void ManagerLibro::cargarLibroManager(Libro &l1){
     }
 
     l1.setAnioDePublicacion(anioDePublicacion);
+
+    cout << "Los datos se han cargado correctamente" << endl;
+    system("pause");
+
 
 }
 
@@ -179,6 +176,7 @@ void ManagerLibro::buscarLibroPorCodigo(){ //preguntar si esto puede ser un int 
     cout << "Ingrese el código del libro que desea buscar" << endl;
     cin >> codLibroSolicitado;
 
+    //validar que el codigo de libro exista en archivo libro
     libroSolicitado = obtenerLibroPorCodigo(codLibroSolicitado);
 
     cout << "Corrobore que los datos sean correctos: " << endl;

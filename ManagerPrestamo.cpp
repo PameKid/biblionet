@@ -75,6 +75,7 @@ void ManagerPrestamo::cargarPrestamo(Prestamo &objetoPrestamo){
     //Valida la cantidad de prestamos por socio
     if(archivoPrestamo.cantidadLibrosPorSocio(codigoSocio) > 3){
         cout << "Excede la cantidad de prestamos" << endl;
+        system("pause");
     }
 
 

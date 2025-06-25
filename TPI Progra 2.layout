@@ -2,36 +2,88 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
-	<File name="MenuReportes.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="ManagerPago.h" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1014" topLine="15" />
+			<Cursor1 position="144" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="ManagerPrestamo.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="ManagerPago.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2501" topLine="0" />
+		</Cursor>
+		<Folding>
+			<Collapse line="11" />
+			<Collapse line="106" />
+			<Collapse line="114" />
+			<Collapse line="124" />
+		</Folding>
+	</File>
+	<File name="Libro.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="285" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="ManagerLibro.h" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="666" topLine="1" />
+		</Cursor>
+	</File>
+	<File name="Libro.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3922" topLine="85" />
+		</Cursor>
+	</File>
+	<File name="ArchivoPrestamos.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4497" topLine="5" />
+		</Cursor>
+		<Folding>
+			<Collapse line="3" />
+			<Collapse line="22" />
+			<Collapse line="45" />
+			<Collapse line="67" />
+			<Collapse line="99" />
+			<Collapse line="121" />
+			<Collapse line="146" />
+			<Collapse line="165" />
+			<Collapse line="186" />
+			<Collapse line="206" />
+		</Folding>
+	</File>
+	<File name="ManagerSocio.h" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="ManagerPrestamo.h" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="246" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="Validaciones.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="fecha.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="2569" topLine="90" />
-		</Cursor>
-	</File>
-	<File name="ManagerPrestamo.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="4686" topLine="0" />
+			<Cursor1 position="151" topLine="0" />
 		</Cursor>
 		<Folding>
-			<Collapse line="5" />
-			<Collapse line="119" />
-			<Collapse line="132" />
-			<Collapse line="144" />
-			<Collapse line="161" />
+			<Collapse line="7" />
+			<Collapse line="14" />
+			<Collapse line="21" />
+			<Collapse line="26" />
+			<Collapse line="31" />
+			<Collapse line="36" />
+			<Collapse line="41" />
+			<Collapse line="46" />
+			<Collapse line="51" />
+			<Collapse line="57" />
+			<Collapse line="68" />
+			<Collapse line="80" />
+			<Collapse line="93" />
+			<Collapse line="97" />
 		</Folding>
 	</File>
-	<File name="ArchivoAutor.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="ArchivoLibro.h" open="1" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="2433" topLine="84" />
+			<Cursor1 position="0" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="Pagos.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -39,55 +91,114 @@
 			<Cursor1 position="314" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="ManagerPago.cpp" open="1" top="1" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="ManagerPrestamo.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="3088" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="ManagerLibro.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="4185" topLine="0" />
+			<Cursor1 position="5951" topLine="0" />
 		</Cursor>
 		<Folding>
-			<Collapse line="10" />
-			<Collapse line="55" />
-			<Collapse line="59" />
-			<Collapse line="100" />
-			<Collapse line="112" />
-			<Collapse line="135" />
-			<Collapse line="143" />
-			<Collapse line="188" />
-			<Collapse line="223" />
-			<Collapse line="266" />
-			<Collapse line="305" />
-			<Collapse line="432" />
-			<Collapse line="450" />
-			<Collapse line="465" />
+			<Collapse line="5" />
+			<Collapse line="120" />
+			<Collapse line="133" />
+			<Collapse line="145" />
+			<Collapse line="162" />
 		</Folding>
-	</File>
-	<File name="ArchivoSocio.cpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="928" topLine="243" />
-		</Cursor>
-	</File>
-	<File name="Libro.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="3922" topLine="136" />
-		</Cursor>
 	</File>
 	<File name="ArchivoPago.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="1052" topLine="54" />
 		</Cursor>
 	</File>
-	<File name="ArchivoPrestamos.h" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="ManagerAutor.cpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="696" topLine="0" />
+			<Cursor1 position="1370" topLine="0" />
+		</Cursor>
+		<Folding>
+			<Collapse line="5" />
+			<Collapse line="38" />
+			<Collapse line="71" />
+			<Collapse line="104" />
+			<Collapse line="114" />
+		</Folding>
+	</File>
+	<File name="ArchivoLibro.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2953" topLine="99" />
+		</Cursor>
+	</File>
+	<File name="ManagerLibro.cpp" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="12470" topLine="53" />
+		</Cursor>
+		<Folding>
+			<Collapse line="10" />
+			<Collapse line="97" />
+			<Collapse line="109" />
+			<Collapse line="132" />
+			<Collapse line="140" />
+			<Collapse line="162" />
+			<Collapse line="171" />
+			<Collapse line="186" />
+			<Collapse line="264" />
+			<Collapse line="290" />
+			<Collapse line="303" />
+			<Collapse line="359" />
+			<Collapse line="383" />
+			<Collapse line="408" />
+			<Collapse line="430" />
+			<Collapse line="448" />
+			<Collapse line="463" />
+		</Folding>
+	</File>
+	<File name="MenuLibros.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1077" topLine="15" />
+		</Cursor>
+	</File>
+	<File name="MenuReportes.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1014" topLine="15" />
+		</Cursor>
+	</File>
+	<File name="MenuAutor.h" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="ManagerSocio.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1643" topLine="39" />
+			<Cursor1 position="1643" topLine="152" />
+		</Cursor>
+	</File>
+	<File name="ArchivoPrestamos.h" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="696" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="ArchivoAutor.h" open="1" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="Validaciones.cpp" open="1" top="1" tabpos="13" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3846" topLine="0" />
+		</Cursor>
+		<Folding>
+			<Collapse line="6" />
+			<Collapse line="29" />
+			<Collapse line="64" />
+			<Collapse line="103" />
+			<Collapse line="135" />
+		</Folding>
+	</File>
+	<File name="ArchivoSocio.cpp" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4361" topLine="243" />
+		</Cursor>
+	</File>
+	<File name="ManagerAutor.h" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="ArchivoPagos.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -95,44 +206,20 @@
 			<Cursor1 position="176" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="ManagerPago.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="ArchivoAutor.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="293" topLine="0" />
+			<Cursor1 position="2138" topLine="18" />
 		</Cursor>
-	</File>
-	<File name="ManagerLibro.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="945" topLine="3" />
-		</Cursor>
+		<Folding>
+			<Collapse line="7" />
+			<Collapse line="24" />
+			<Collapse line="45" />
+			<Collapse line="63" />
+		</Folding>
 	</File>
 	<File name="Pagos.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="2157" topLine="63" />
-		</Cursor>
-	</File>
-	<File name="ArchivoPrestamos.cpp" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="5636" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="ManagerAutor.cpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1370" topLine="45" />
-		</Cursor>
-	</File>
-	<File name="Libro.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="285" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="MenuLibros.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1077" topLine="15" />
-		</Cursor>
-	</File>
-	<File name="ArchivoLibro.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1888" topLine="90" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>
