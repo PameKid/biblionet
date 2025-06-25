@@ -113,9 +113,9 @@ Autor ArchivoAutor::obtenerAutorArchivo(int pos)
     FILE *pAutor;
     pAutor=fopen("Autor.dat","rb");
     autor.setCodAutor(-1);
-    if(pAutor==nullptr)   ///NULL
+    if(pAutor==nullptr)
     {
-        /// cout<<"ERROR DE ARCHIVO"<<endl;
+
         return autor;
     }
 
