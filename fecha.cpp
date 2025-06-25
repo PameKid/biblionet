@@ -61,7 +61,7 @@ void Fecha :: cargarFecha()
         cin >> _anio;
         while (validarAnio() == false)
         {
-            cout << "Anio invalido. Intente de nuevo: ";
+            cout << "Anio incorrecto, Intente de nuevo: ";
             cin >> _anio;
         }
 
@@ -69,7 +69,7 @@ void Fecha :: cargarFecha()
         cin >> _mes;
         while (validarMes() == false)
         {
-            cout << "Mes invalido. Intente de nuevo: ";
+            cout << "Mes incorrecto, Intente de nuevo: ";
             cin >> _mes;
         }
 
@@ -77,7 +77,7 @@ void Fecha :: cargarFecha()
         cin >> _dia;
         while (validarDia() == false)
         {
-            cout << "Dia invalido para el mes/anio ingresado. Intente de nuevo: ";
+            cout << "Dia incorrecto, Intente de nuevo: ";
             cin >> _dia;
         }
     }
