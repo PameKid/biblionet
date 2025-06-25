@@ -30,7 +30,7 @@ void ManagerPrestamo::cargarPrestamo(Prestamo &objetoPrestamo){
 
     //carga de fecha actual
     fechaPrestamo.cargarFechaActual();
-   //fechaPrestamo.setMes(5);
+   //fechaPrestamo.setMes(5); PARA LA PRUEBA DE SEBA EN PAGOS
     objetoPrestamo.setFechaPrestamo(fechaPrestamo);
     fechaPrestamo.mostrarFecha();
 
@@ -73,9 +73,12 @@ void ManagerPrestamo::cargarPrestamo(Prestamo &objetoPrestamo){
     }
 
     //Valida la cantidad de prestamos por socio
-    if(archivoPrestamo.cantidadLibrosPorSocio(codigoSocio) > 3){
+    int cantidadDeLibrosPorSocio = archivoPrestamo.cantidadLibrosPorSocio(codigoSocio);
+    if(cantidadDeLibrosPorSocio >= 3){
+       // cout << "contador: " << cantidadDeLibrosPorSocio << endl;
         cout << "Excede la cantidad de prestamos" << endl;
         system("pause");
+        return;
     }
 
 

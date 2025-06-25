@@ -11,9 +11,9 @@ void menuReportes(){
         system("cls");
         cout << "*********¡REPORTES!*********" << endl<< endl;
         cout << "      ~ MENU REPORTES ~     " << endl<<endl;
-        cout << " 1. PRESTAMOS AL MES" << endl;
-        cout << " 2. SOCIOS CON CUOTA PENDIENTE" << endl;
-        cout << " 3. RANKINGS DE LIBROS MAS PRESTADOS" << endl;
+
+        cout << " 1. SOCIOS CON CUOTA PENDIENTE" << endl;
+        cout << " 2. RANKINGS DE LIBROS MAS PRESTADOS" << endl;
         cout << " 0. VOLVER AL MENU ANTERIOR" << endl;
         cout << "-----------------------------------" << endl;
         cout << "SELECCIONAR OPCION: ";
@@ -22,22 +22,14 @@ void menuReportes(){
          ManagerLibro ml;
          switch(opc)
         {
-        //case 1:
-          //  menuLibros();
-          //  break;
-        case 2:
+
+        case 1:
             ms.listarSociosNoAlDia();
             system("pause");
             break;
-        case 3:
+        case 2:
            ml.listarRankingLibro();
             break;
-        //case 4:
-          //  menuPagos();
-          //  break;
-        //case 5:
-          //  menuReportes();
-          //  break;
         case 0:
             return;
             break;
