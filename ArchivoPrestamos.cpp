@@ -166,7 +166,7 @@ int ArchivoPrestamo:: modificarArchivoPrestamo(Prestamo prestamoModificar){
 int ArchivoPrestamo::cantidadLibrosPorSocio(int codSocio){
     FILE* pPrestamo;
     Prestamo p1;
-    int contadorDePrestamos;
+    int contadorDePrestamos = 0;
 
     pPrestamo = fopen("Prestamos.dat", "rb");
 
