@@ -19,27 +19,6 @@ int ArchivoLibro::agregarArchivoLibro(Libro libronuevo){
     return 2; //regresa 2 si se guardó correctamente
 }
 
-//recorre el archivo de libros y
-//int ArchivoLibro::leerArchivo(){
-//    Libro l1;
-//    FILE* plibro;
-//
-//    plibro = fopen("libro.dat", "rb");
-//
-//    if(plibro == nullptr){
-//        cout << "No se pudo leer el archivo." << endl;
-//        return -1;
-//    }
-//
-//    while((fread(&l1,sizeof(Libro),1,plibro))== 1){
-//        if(l1.getEstado() == true){
-//
-//        l1.mostrarInfo();
-//        }
-//    }
-//    fclose(plibro);
-//}
-
 int ArchivoLibro::contarRegistros(){
     FILE* plibro;
 

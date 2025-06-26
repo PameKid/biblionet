@@ -11,7 +11,7 @@ void menuLibros(){
         cout << "**********¡LIBROS!**********" << endl<< endl;
         cout << "      ~ MENU LIBROS ~     " << endl<<endl;
         cout << " 1. BUSCAR LIBRO POR CODIGO" << endl;
-        cout << " 2. BUSCAR LIBRO POR AUTOR" << endl;
+        cout << " 2. BUSCAR LIBRO POR NOMBRE DE AUTOR" << endl;
         cout << " 3. LISTAR LIBROS" << endl;
         cout << " 4. ALTA LIBRO" << endl;
         cout << " 5. BAJA LIBRO" << endl;

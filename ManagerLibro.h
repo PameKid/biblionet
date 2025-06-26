@@ -16,6 +16,7 @@ public:
     void modificarLibro();
     Libro obtenerLibroPorCodigo(int codLibro);
     void descontarEjemplares(int codLibro);
+    void sumarEjemplares(int codLibro);
     void listarLibrosPorAutor();
     void listarRankingLibro();
     int buscarIndiceLibro(Libro* libro, int cantidadRegistro, int codLibro);

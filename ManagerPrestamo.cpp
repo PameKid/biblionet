@@ -166,8 +166,10 @@ void ManagerPrestamo::buscarPrestamoCodigo(){
 void ManagerPrestamo::devolverPrestamo(){
     ArchivoPrestamo archiPrestamo;
     Prestamo prestamoDevuelto;
+    Libro libroSumaEjemplar;
     char codigoPrestamo[20];
     Fecha fechaDeDevolucion;
+    ManagerLibro ml;
 
     cout << "Ingrese el codigo del prestamo para la devolucion: " << endl;
     cin.ignore();
@@ -182,6 +184,7 @@ void ManagerPrestamo::devolverPrestamo(){
      fechaDeDevolucion.cargarFechaActual();
      prestamoDevuelto.setFechaDevolucion(fechaDeDevolucion);
      prestamoDevuelto.setDevolucion(true); //porque cambia el atributo devuelto a true si esta devuelto
+     ml.sumarEjemplares(prestamoDevuelto.getCodLibro());
 
      archiPrestamo.modificarArchivoPrestamo(prestamoDevuelto);
 

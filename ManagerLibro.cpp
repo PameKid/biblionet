@@ -110,23 +110,23 @@ void ManagerLibro::mostrarInfoManager(Libro l1){
 void ManagerLibro::mostrarTablaLibros(Libro* l, int cantidadDeRegistros){
 
     //Libro l;
-    cout << "+------+---------------------+--------+-------------+----------+------+" << endl;
-    cout << "| Cod  | Título              | Autor  | Género      | Cant.      Año  |" << endl;
-    cout << "+------+---------------------+--------+-------------+----------+------+" << endl;
+    cout << "+------+------------------------+---------+-------------+----------+------+" << endl;
+    cout << "| Cod  | Título                 | Autor   | Género      | Cant.      Año  |" << endl;
+    cout << "+------+------------------------+---------+-------------+----------+------+" << endl;
 
     for(int x = 0; x < cantidadDeRegistros; x++){
        if (l[x].getEstado()== true){
-        cout << "| " << setw(4) << l[x].getCodLibro()
+        cout << "| " << setw(4) << right << l[x].getCodLibro()
             << " | " << setw(20) << left << string(l[x].getNombreDeLibro()).substr(0,25)
-            << " | " << setw(4) << l[x].getCodAutor()
-            << " | " << setw(10) << string(l[x].getGenero()).substr(0,10)
-            << " | " << setw(6) << l[x].getCantidadEjemplares()
-            << " | " << setw(10) << l[x].getAnioDePublicacion()
+            << " | " << setw(4) << right << l[x].getCodAutor()
+            << " | " << setw(10) << left << string(l[x].getGenero()).substr(0,10)
+            << " | " << setw(6) << right << l[x].getCantidadEjemplares()
+            << " | " << setw(10) << right << l[x].getAnioDePublicacion()
             << " |" << endl;
         }
     }
 
-    cout << "+------+---------------------+--------+-------------+----------+------+" << endl;
+    cout << "+------+---------------------+--------+-------------+----------+----------+" << endl;
 
     }
 
@@ -299,6 +299,19 @@ void ManagerLibro::descontarEjemplares(int codLibro){
     libroPrestado.setCantidadEjemplares(cantidadEjemplares);
 
     archiLibro.modificarArchivoLibro(libroPrestado);
+}
+
+void ManagerLibro::sumarEjemplares(int codLibro){
+    ArchivoLibro archiLibro;
+    Libro libroDevuelto;
+    int cantidadEjemplares;
+
+    libroDevuelto = obtenerLibroPorCodigo(codLibro);
+    cantidadEjemplares = libroDevuelto.getCantidadEjemplares()+ 1;
+
+    libroDevuelto.setCantidadEjemplares(cantidadEjemplares);
+
+    archiLibro.modificarArchivoLibro(libroDevuelto);
 }
 
 void ManagerLibro::listarLibrosPorAutor(){
