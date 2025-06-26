@@ -11,6 +11,7 @@ void menuReportes(){
         system("cls");
         cout << "*********¡REPORTES!*********" << endl<< endl;
         cout << "      ~ MENU REPORTES ~     " << endl<<endl;
+
         cout << " 1. SOCIOS CON CUOTA PENDIENTE" << endl;
         cout << " 2. RANKINGS DE LIBROS MAS PRESTADOS" << endl;
         cout << " 0. VOLVER AL MENU ANTERIOR" << endl;
