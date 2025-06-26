@@ -13,7 +13,7 @@ void ManagerPago::agregarPago(Pagos &p1)
     //variables auxiliares
     int codSocio, mesPagado,  anioPagado;
     float importe;
-    char codPago[20],  cadenaAuxiliar[20];;
+    char codPago[20],  cadenaAuxiliar[20];
 
     Fecha fechaDePago;
 
